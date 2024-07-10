@@ -1,0 +1,80 @@
+.callout {
+  display: block;
+  padding: 2.5em;
+  margin: 1em 0 2.5em;
+
+  background: $color-offwhite url($image-path + 'watermark.svg') no-repeat right 2em center;
+  border-radius: 9px;
+
+  h2 {
+    margin: 0 0 .5rem;
+    font-size: em(30, 18);
+  }
+  h3 {
+    margin: 0 0 .5rem;
+    font-size: em(24, 18);
+  }
+  p:last-child {
+    padding: 0;
+  }
+}
+
+.highlight {
+  margin: 1.5rem 0 3rem;
+  padding: 2.5em;
+
+  border: 1px solid $border-color;
+  border-radius: 9px;
+
+  h2 {
+    margin-top: 0;
+    font-size: em(22, 18);
+  }
+  h3 {
+    margin-top: 0;
+    font-size: em(20, 18);
+  }
+  p, ul, ol {
+    &:last-child { margin-bottom: 0; padding-bottom: 0; }
+  }
+}
+
+blockquote {
+  display: block;
+  margin: 1.5rem 0 3rem;
+  padding: 0 0 0 1.5em;
+  border-left: 12px solid $color-offwhite;
+
+  color: $primary-color-alt;
+  font-size: em(36, 18);
+  font-weight: bold;
+  line-height: 1.2;
+  letter-spacing: 0;
+
+  .quote-icon {
+    margin-bottom: .5em;
+
+    svg path { fill: $primary-color-alt; }
+  }
+
+  p {
+    padding: 0 0 .75em;
+
+    &:last-child {
+      padding: 0;
+    }
+  }
+}
+
+.embed {
+  margin: 0 0 2em;
+
+  iframe {
+    max-width: 100%;
+  }
+  iframe[src*="youtube"], iframe[src*="vimeo"] {
+    aspect-ratio: 16/9;
+    width: 100% !important;
+    height: auto !important;
+  }
+}

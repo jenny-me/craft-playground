@@ -1,0 +1,47 @@
+fieldLayouts:
+  29c674f5-670b-46c5-8189-fafdebc49f18:
+    tabs:
+      -
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            warning: null
+            width: 100
+          -
+            fieldUid: 3a8c532c-4e83-4152-b1d1-e216f06aa2dd # Accordion
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+handle: accordions
+hasTitleField: true
+name: Accordions
+section: 9cf8b488-d41b-4b02-b945-b52944c6d419 # Accordions
+sortOrder: 1
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

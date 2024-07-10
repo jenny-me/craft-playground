@@ -1,0 +1,66 @@
+field: 539845be-b512-43f8-9249-1cfb872aa97a # Quick Links
+fieldLayouts:
+  86c3a3bc-1045-433f-98ce-49f7bfe81833:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 1144963d-389b-4bc1-8e8a-17b7cf3f3625 # Link Text
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 50
+          -
+            fieldUid: ab6dca6f-df21-4a72-b4f1-b9ace25fcdb3 # Link Location
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 50
+        name: Content
+        sortOrder: 1
+fields:
+  1144963d-389b-4bc1-8e8a-17b7cf3f3625: # Link Text
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: qLinkText
+    instructions: ''
+    name: 'Link Text'
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  ab6dca6f-df21-4a72-b4f1-b9ace25fcdb3: # Link Location
+    columnSuffix: null
+    contentColumnType: string(255)
+    fieldGroup: null
+    handle: qLinkLocation
+    instructions: ''
+    name: 'Link Location'
+    searchable: true
+    settings:
+      maxLength: '255'
+      placeholder: null
+      types:
+        - url
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Url
+handle: quickLink
+name: Link
+sortOrder: 1

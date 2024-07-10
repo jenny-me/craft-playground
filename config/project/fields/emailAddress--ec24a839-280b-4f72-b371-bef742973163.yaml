@@ -1,0 +1,12 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: ae5efb3a-2ce9-4bea-a606-d71f9faee980 # Team
+handle: emailAddress
+instructions: ''
+name: 'Email Address'
+searchable: true
+settings:
+  placeholder: ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Email

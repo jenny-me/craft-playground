@@ -1,0 +1,123 @@
+.accordion {
+  width: 100%;
+  margin-bottom: 2em;
+
+  p,
+  ul {
+    &:last-child {
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  &__button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin: 1px 0 0;
+    padding: .75rem 2rem;
+    width: 100%;
+    
+    border: 1px solid $primary-color-alt;
+    background: $primary-color-alt;
+    
+    text-align: left;
+    color: $color-white;
+    font-size: 1em;
+    font-weight: 700;
+    transition: 0.2s;
+    cursor: pointer;
+
+    &:first-of-type {
+      border-top-left-radius: 9px;
+      border-top-right-radius: 9px;
+    }
+
+    &:last-of-type {
+      border-bottom-left-radius: 9px;
+      border-bottom-right-radius: 9px;
+    }
+
+    &::after {
+      display: inline-flex;
+      content: ' ';
+
+			background-image: url($image-path + 'icon-accordion.svg');
+			background-size: 12px 12px;
+      background-repeat: no-repeat;
+      background-position: center;
+
+			height: 36px; width: 36px;
+      border: 1px solid rgba($color-white, .33);
+      border-radius: 50%;
+
+      transform: rotate(45deg);
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      outline: none;
+      cursor: pointer;
+      
+      border: 1px solid $primary-color;
+      background: $primary-color;
+    }
+  }
+
+  &__button.expanded {
+    // background: rgba($link-color, .25);
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+
+    &::after {
+      transform: rotate(0deg);
+    }
+  }
+
+  &__section {
+    max-height: 0vh;
+    overflow: hidden;
+    padding: 0;
+    opacity: 1;
+    
+    border-left: 1px solid $primary-color-alt;
+    border-right: 1px solid $primary-color-alt;
+    background: $color-white;
+  }
+
+  &__section.open {
+    overflow: auto;
+    visibility: visible;
+
+    max-height: 1000vh;
+    padding: 2em;
+
+    border-bottom: 1px solid $primary-color-alt;
+    animation: appear 0.25s linear;
+
+    &:last-of-type {
+      border-bottom-left-radius: 9px;
+      border-bottom-right-radius: 9px;
+    }
+    h2, h3 {
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+  @keyframes appear {
+    0% {
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(6px);
+    }
+    100% {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+  }
+}

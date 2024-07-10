@@ -1,0 +1,135 @@
+field: b87e394d-cc4c-462d-ab8b-46b760bd6fa8 # Admin Links
+fieldLayouts:
+  6336cf97-103e-4fe7-a6f8-f0d4df1e5995:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: ed864d8e-5e1b-40af-88ae-0c7bcac705e5 # Icon
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f8b71348-d7fc-4135-9ff8-513a1990ae87
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            elementCondition: null
+            fieldUid: bb373d17-5b84-4f48-a329-67c0efa72028 # Link Text
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4e66c209-90b3-450f-8ef3-daad0ef73474
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            elementCondition: null
+            fieldUid: 57a2f3e6-923d-4d85-a4f2-d71397b72824 # Link Location
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e7f3a38e-04b8-4aee-a4f3-a6db3b6366dd
+            userCondition: null
+            warning: null
+            width: 50
+        name: Content
+        uid: a4afd064-e9c0-432c-9fee-d81a924d0b68
+        userCondition: null
+fields:
+  57a2f3e6-923d-4d85-a4f2-d71397b72824: # Link Location
+    columnSuffix: null
+    contentColumnType: string(255)
+    fieldGroup: null
+    handle: aLinkLocation
+    instructions: null
+    name: 'Link Location'
+    searchable: true
+    settings:
+      maxLength: 255
+      types:
+        - url
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Url
+  bb373d17-5b84-4f48-a329-67c0efa72028: # Link Text
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: aLinkText
+    instructions: null
+    name: 'Link Text'
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  ed864d8e-5e1b-40af-88ae-0c7bcac705e5: # Icon
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: aLinkIcon
+    instructions: null
+    name: Icon
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      allowSubfolders: false
+      allowUploads: true
+      allowedKinds:
+        - image
+      branchLimit: null
+      defaultUploadLocationSource: 'volume:09c09568-4b70-4b1a-a334-24e0b0a5ed09' # Content Images
+      defaultUploadLocationSubpath: icons
+      localizeRelations: false
+      maintainHierarchy: false
+      maxRelations: 1
+      minRelations: null
+      previewMode: full
+      restrictFiles: true
+      restrictLocation: false
+      restrictedDefaultUploadSubpath: null
+      restrictedLocationSource: 'volume:09c09568-4b70-4b1a-a334-24e0b0a5ed09' # Content Images
+      restrictedLocationSubpath: null
+      selectionCondition:
+        __assoc__:
+          -
+            - elementType
+            - craft\elements\Asset
+          -
+            - fieldContext
+            - global
+          -
+            - class
+            - craft\elements\conditions\assets\AssetCondition
+      selectionLabel: 'Add icon'
+      showSiteMenu: false
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      sources:
+        - 'volume:09c09568-4b70-4b1a-a334-24e0b0a5ed09' # Content Images
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+handle: adminLink
+name: Link
+sortOrder: 1

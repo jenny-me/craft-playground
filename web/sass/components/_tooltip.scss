@@ -1,0 +1,59 @@
+
+  .tooltip {
+    cursor: pointer;
+    margin-left: 5px;
+    flex: 0 0 20px;
+    position: relative;
+
+    //Tooltip text container
+    &::before {
+      position: absolute;
+      top: -47px;
+      left: -60px;
+      background-color: rgba($color-black, .95);
+      border-radius: 3px;
+      color: white;
+      content: attr(aria-label); //This pulls in the text from the element with the tooltip
+      padding: 10px;
+      text-transform: none;
+      transition: all 0.2s ease;
+      width: 120px;
+    }
+
+    //Tooltip arrow
+    &::after {
+      position: absolute;
+      top: -12px;
+      left: 9px;
+      border-left: 3px solid transparent;
+      border-right: 3px solid transparent;
+      border-top: 3px solid $color-black;
+      content: " ";
+      font-size: 0;
+      line-height: 0;
+      margin-left: -3px;
+      width: 0;
+    }
+
+    //Setting up the transition
+    &::before,
+    &::after {
+      color: #fff;
+      font-family: $accent-font;
+      font-size: 12px;
+      opacity: 0;
+      pointer-events: none;
+      text-align: center;
+    }
+
+    //Triggering the transition
+    &:hover::before,
+    &:hover::after {
+      opacity: 1;
+      transition: all 0.2s ease;
+    }
+
+    img {
+      display: inline-block;
+    }
+  }

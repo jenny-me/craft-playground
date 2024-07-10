@@ -1,0 +1,78 @@
+field: ee3e359f-97fb-4b27-b2e8-a8e94d5c3ad0 # Article Content
+fieldLayouts:
+  d67ed4ba-11e3-46a0-a81a-6a30c7353fdc:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: a25dc298-330c-436d-96c5-ba21153c6afe # Block Quote
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ae3f7a83-9b55-47d7-a8d0-a2e5d2123a49
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: e09390f1-1303-4a63-97fd-7e36a7cf53f1 # Attribution (Optional)
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: df8682f3-3ef7-4eba-8ef8-6e4a81c4a501
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: c8816483-0567-4b97-bd94-992499d66806
+        userCondition: null
+fields:
+  a25dc298-330c-436d-96c5-ba21153c6afe: # Block Quote
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: blockQuote
+    instructions: null
+    name: 'Block Quote'
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: 400
+      code: false
+      columnType: text
+      initialRows: 4
+      multiline: true
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  e09390f1-1303-4a63-97fd-7e36a7cf53f1: # Attribution (Optional)
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: attribution
+    instructions: null
+    name: 'Attribution (Optional)'
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: text
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: blockQuote
+name: 'Block Quote'
+sortOrder: 3

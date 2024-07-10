@@ -1,0 +1,249 @@
+field: cb81b757-fe4f-4892-ae2e-7e5ea7522b26 # Sidebar
+fieldLayouts:
+  df04e706-267a-49ea-ba0e-847c53c3834f:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: da06540e-6d2a-4729-b490-c4c9f3f88aad # Image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 88260c13-9cb4-4d29-8e3f-ea07bc07487c
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            elementCondition: null
+            fieldUid: 20f1850a-5dae-4d5f-9e45-5a3cbe8fb835 # Background Color
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c2a134cc-1462-4ec3-b0ef-4e447d99ac43
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            elementCondition: null
+            fieldUid: 5bd0186e-c6ef-41ba-8ee3-472d586664af # Subheader
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 278effcd-1fdf-4aa5-9322-4af929eae1cc
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 65ab7727-7209-4425-83c9-f98b0327f93d # Header
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5bf95713-743f-43fd-b175-0e6deae4d93d
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 3c0e8e48-b722-4550-9a64-1e8f09a05ec4 # Text
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 87c6469c-a187-44cc-8b41-a505f9296ffd
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 6cc6d336-c023-43cf-96df-03c7a803737d # Button
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 3c3a9b1a-5849-48f5-847b-8e65d6f083aa
+            userCondition: null
+            warning: null
+            width: 50
+        name: Content
+        uid: 4dd1fce6-1ab3-4a95-be2c-12fa3251b0bb
+        userCondition: null
+fields:
+  3c0e8e48-b722-4550-9a64-1e8f09a05ec4: # Text
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: sText
+    instructions: null
+    name: Text
+    searchable: true
+    settings:
+      availableTransforms: '*'
+      availableVolumes: '*'
+      ckeConfig: 394290e3-acd0-43fe-a489-c9b3a464da29 # Simple
+      columnType: text
+      defaultTransform: null
+      enableSourceEditingForNonAdmins: true
+      purifierConfig: null
+      purifyHtml: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      showWordCount: false
+      wordLimit: null
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\ckeditor\Field
+  5bd0186e-c6ef-41ba-8ee3-472d586664af: # Subheader
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: sCategory
+    instructions: null
+    name: Subheader
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  6cc6d336-c023-43cf-96df-03c7a803737d: # Button
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: sButton
+    instructions: null
+    name: Button
+    searchable: true
+    settings:
+      availableTransforms: '*'
+      availableVolumes: '*'
+      ckeConfig: 24868552-5789-4a70-86fa-affa85c04159 # Button
+      columnType: text
+      defaultTransform: null
+      enableSourceEditingForNonAdmins: true
+      purifierConfig: null
+      purifyHtml: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      showWordCount: false
+      wordLimit: null
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\ckeditor\Field
+  20f1850a-5dae-4d5f-9e45-5a3cbe8fb835: # Background Color
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: sBkgd
+    instructions: null
+    name: 'Background Color'
+    searchable: true
+    settings:
+      columnType: string
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - Light
+            -
+              - value
+              - light
+            -
+              - default
+              - '1'
+        -
+          __assoc__:
+            -
+              - label
+              - Dark
+            -
+              - value
+              - dark
+            -
+              - default
+              - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Dropdown
+  65ab7727-7209-4425-83c9-f98b0327f93d: # Header
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: sHeader
+    instructions: null
+    name: Header
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  da06540e-6d2a-4729-b490-c4c9f3f88aad: # Image
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: sImage
+    instructions: '16:9 aspect ratio'
+    name: Image
+    searchable: true
+    settings:
+      allowSelfRelations: false
+      allowSubfolders: false
+      allowUploads: true
+      allowedKinds:
+        - image
+      branchLimit: null
+      defaultUploadLocationSource: 'volume:09c09568-4b70-4b1a-a334-24e0b0a5ed09' # Content Images
+      defaultUploadLocationSubpath: null
+      localizeRelations: false
+      maintainHierarchy: false
+      maxRelations: 1
+      minRelations: null
+      previewMode: full
+      restrictFiles: true
+      restrictLocation: false
+      restrictedDefaultUploadSubpath: null
+      restrictedLocationSource: 'volume:09c09568-4b70-4b1a-a334-24e0b0a5ed09' # Content Images
+      restrictedLocationSubpath: null
+      selectionLabel: 'Add image'
+      showSiteMenu: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      sources:
+        - 'volume:09c09568-4b70-4b1a-a334-24e0b0a5ed09' # Content Images
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+handle: customSidebar
+name: 'Custom Sidebar'
+sortOrder: 1

@@ -1,0 +1,78 @@
+// BREAKPOINTS
+$xsmall-screen: em(500);
+$small-screen: em(700);
+$medium-screen: em(950);
+$large-screen: em(1200);
+$xlarge-screen: em(1600);
+
+// WIDTHS
+$small-width: rem(500);
+$limited-width: rem(740);
+$max-width: rem(1160);
+$extended-width: rem(1440);
+
+$side-gap: 30px;
+
+// PATHS
+$image-path: "/images/";
+$font-path: "/fonts/";
+
+// COLORS
+
+$color-grey-light: #e5e5e5;
+$color-grey: #515154;
+$color-grey-dark: #1E2121;
+
+$color-offwhite: #F2F6FA;
+$color-white: #fff;
+$color-black: #000;
+
+
+// Template 
+$color-blue: #2964B0;
+$color-blue-mid: #003A62;
+$color-blue-dark: #001540;
+
+$color-teal: #00787E;
+$color-teal-light: #109299;
+
+$primary-color: $color-blue;
+$primary-color-alt: $color-blue-dark;
+$primary-gradient: $color-blue-mid;
+
+$secondary-color: $color-teal;
+$secondary-color-alt: $color-teal-light;
+
+
+// BACKGROUNDS
+$bkgd-body: $color-white;
+
+
+// CORE FONTS
+$main-font: 'Roboto', sans-serif;
+$accent-font: 'Roboto Slab', serif;
+$condensed-font: 'Roboto Condensed', sans-serif;
+
+// FONT STYLES
+$font-color: $color-grey;
+
+$font-size: 3vw;
+$min-font: rem(14px);
+$max-font: rem(18px);
+$main-lineheight: 1.5;
+
+$link-color: $secondary-color;
+$hover-color: $primary-color-alt;
+
+$hr-color: $color-grey-light;
+$border-color: rgba($primary-color-alt, .25);
+
+$highlight-color: rgba($primary-color, 0.2);
+
+// DONATION FORM
+$donate-highlight-color: $secondary-color;
+$donate-secondary-color: $primary-color;
+$donate-hr-color: $hr-color;
+$donate-input-radius: 5px;
+$donate-input-border: 1px solid $hr-color;
+$donate-input-background: $color-white;

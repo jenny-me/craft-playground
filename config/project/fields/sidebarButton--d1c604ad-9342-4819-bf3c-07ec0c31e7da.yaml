@@ -1,0 +1,21 @@
+columnSuffix: null
+contentColumnType: text
+fieldGroup: 96cc2c98-ff02-48eb-ae38-f6f12745a1dd # Sidebar
+handle: sidebarButton
+instructions: ''
+name: 'Sidebar Button'
+searchable: true
+settings:
+  availableTransforms: '*'
+  availableVolumes: '*'
+  ckeConfig: 24868552-5789-4a70-86fa-affa85c04159 # Button
+  columnType: text
+  defaultTransform: ''
+  enableSourceEditingForNonAdmins: true
+  purifierConfig: ''
+  purifyHtml: '1'
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: true
+translationKeyFormat: null
+translationMethod: none
+type: craft\ckeditor\Field

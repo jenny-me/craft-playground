@@ -1,0 +1,93 @@
+/* FILTERS */
+.filters {
+  border-radius: 8px;
+  box-shadow: 0px 3px 30px rgba($color-black, .05), 0px 1px 8px rgba($color-black, .08);
+  padding: 1em;
+  margin-bottom: 2em;
+  background: $color-offwhite;
+
+  .directorySearch {
+    display: flex;
+    justify-content: center;
+    align-self: flex-end;
+    flex-wrap: wrap;
+  }
+
+  .search-field {
+    flex: 0 1 100%;
+    margin: 0 0 1em 0;
+
+    @media screen and (min-width: $xsmall-screen) {
+      flex: 0 1 40%;
+      margin: 0 1em 0 0;
+      align-self: flex-end;
+    }
+
+    &.with-label {
+      @media screen and (min-width: $medium-screen) {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+      }
+    }
+  }
+
+  label {
+    display: block;
+    margin: 0 0 .25em 0;
+
+    font-size: .8em;
+    text-transform: uppercase;
+    white-space: nowrap;
+
+    @media screen and (min-width: $medium-screen) {
+      margin: 0 1em 0 0;
+    }
+  }
+
+  select {
+    display: block;
+    flex: 1;
+    width: 100%;
+    height: 44px;
+    margin: 0;
+    padding: 0 2em 0 1em;
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: $color-white url($image-path + 'icon-dropdown.svg') no-repeat;
+    background-position: calc(100% - 12px) 50%;
+    border: 1px solid $hr-color;
+    border-radius: 3px;
+    box-shadow: 0 1px 6px 0 rgba($link-color, .1);
+
+    color: $link-color;
+  }
+
+  input[type=text], input[type=search] {
+    -webkit-appearance:none;
+    width: 100%;
+    height: 44px;
+    padding: 0 1em 0 2.5em;
+    margin: 0;
+
+    background: $color-white url($image-path + "icon-search-dark.svg") no-repeat;
+    background-position: 12px 50%;
+    background-size: 16px;
+
+    border: 1px solid $hr-color;
+    border-radius: 3px;
+    box-shadow: 0 1px 6px 0 rgba($link-color, .1);
+
+    transition: all .1s ease-out;
+
+    &::placeholder {
+      color: rgba($color-black, .75);
+    }
+    &:focus, &:active {
+      outline: none;
+      border: 1px solid $color-black;
+      box-shadow: 0 1px 12px 0 rgba($link-color, .1),
+    }
+  }
+}

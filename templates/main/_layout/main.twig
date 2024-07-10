@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  {% if seomatic is not defined %}
+  <title>{% if entry.title is defined %}{{ entry.title }} - {% endif %}{{ siteName }}</title>
+  <meta name="description" content="">
+  {% endif %}
+
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  {% include 'main/_layout/_favicon.twig' %}
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Roboto+Slab&family=Roboto:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/stylesheets/screen.css">
+
+
+  {% include 'main/_layout/_analytics.twig' %}
+  {% if adminSettings.headerTags %}
+    {{ adminSettings.headerTags|raw }}
+  {% endif %}
+</head>
+<body>
+
+  {% if adminSettings.bodyTags %}
+    {{ adminSettings.bodyTags|raw }}
+  {% endif %}
+
+{% cache %}
+
+<nav id="fullScreenMenu" class="fullScreenMenu" data-modal data-modal-manual-close hidden>
+  <h1 class="visuallyhidden">Site Navigation</h1>
+  <div class="menuContainer fadeup" data-modal-document>
+    <div class="mobile-header">
+      <div class="logo">
+        <a href="/"><img src="/images/logo.svg" alt="{{ siteName }}"></a>
+      </div>
+      <button class="close-menu" data-modal-close-btn>
+        <img src="/images/icon-close.svg" alt="" /><span class="visuallyhidden">Close menu</span>
+      </button>
+    </div>
+    <div class="mobile-menu">
+      {% include 'main/_layout/_main-nav.twig' %}
+    </div>
+    <div class="mobile-btns button">
+      <ul>
+        {% for block in generalInfo.adminLinks.all() %}
+          <li><a href="{{ block.aLinkLocation }}">{{ block.aLinkText }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<header id="header" class="mast">
+  <div id="skip-link">
+    <a href="#main">Skip to content</a>
+  </div>
+  <div class="top-bar">
+    <div class="container">
+      {% if generalInfo.topLinks.count() > 0 %}
+      <div class="top-links">
+          {% for block in generalInfo.topLinks.all() %}
+            <a href="{{ block.tLinkLocation }}">
+              {% set icon = block.tLinkIcon.one() %}
+              {% if icon and icon.extension == 'svg' %}
+                {{ svg(icon) }}
+              {% endif %}
+              {{ block.tLinkText }}
+            </a>
+          {% endfor %}
+      </div>
+      {% endif %}
+      <form action="{{ url('search/results') }}" class="header-search">
+        <fieldset>
+          <legend id="siteSearch" class="visuallyhidden">Site Search</legend>
+          <input type="search" placeholder="Search" name="q" aria-label="Enter search keywords">
+          <button class="submitSearch" type="submit"><img src="/images/icon-search.svg" alt="" /><span class="visuallyhidden">Submit Search</span></button>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+  <div class="container">
+    <div class="logo">
+      <a href="/"><img src="/images/logo.svg" alt="{{ siteName }}"></a>
+    </div>
+    <button class="menu" data-modal-open="fullScreenMenu">
+      <span class="strokes" aria-hidden="true">
+        <span class="stroke"></span>
+        <span class="stroke"></span>
+        <span class="stroke"></span>
+      </span>
+      Menu
+    </button>
+    <div class="main-nav">
+      <nav>
+        {% include 'main/_layout/_main-nav.twig' %}
+      </nav>
+    </div>
+    <div class="admin-btns button">
+      <ul>
+        {% for block in generalInfo.adminLinks.all() %}
+          <li><a href="{{ block.aLinkLocation }}"{% if block.aLinkLocation starts with "https://" %} target="_blank"{% endif %}>
+            {% set icon = block.aLinkIcon.one() %}
+            {{ block.aLinkText }}
+            {% if icon and icon.extension == 'svg' %}
+              <span class="link-icon">{{ svg(icon) }}</span>
+            {% endif %}
+          </a></li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</header>
+{% endcache %}
+
+{% block main %}
+{% endblock %}
+
+{% include '_elements/_call-to-action.twig' %}
+
+{% cache %}
+<footer class="footer">
+  <div class="footer-top">
+    <div class="container">
+      <ul class="social">
+        {% if generalInfo.linkedinLink %}<li><a href="{{ generalInfo.linkedinLink }}" target="_blank">{{ svg('@webroot/images/icon-linkedin.svg') }}<span class="visuallyhidden">LinkedIn</span></a></li>{% endif %}
+        {% if generalInfo.facebookLink %}<li><a href="{{ generalInfo.facebookLink }}" target="_blank">{{ svg('@webroot/images/icon-facebook.svg') }}<span class="visuallyhidden">Facebook</span></a></li>{% endif %}
+        {% if generalInfo.youtubeLink %}<li><a href="{{ generalInfo.youtubeLink }}" target="_blank">{{ svg('@webroot/images/icon-youtube.svg') }}<span class="visuallyhidden">YouTube</span></a></li>{% endif %}
+        {% if generalInfo.twitterLink %}<li><a href="{{ generalInfo.twitterLink }}" target="_blank">{{ svg('@webroot/images/icon-twitter.svg') }}<span class="visuallyhidden">Twitter</span></a></li>{% endif %}
+        {% if generalInfo.instagramLink %}<li><a href="{{ generalInfo.instagramLink }}" target="_blank">{{ svg('@webroot/images/icon-instagram.svg') }}<span class="visuallyhidden">Instagram</span></a></li>{% endif %}
+        {% if generalInfo.tiktokLink %}<li><a href="{{ generalInfo.tiktokLink }}" target="_blank">{{ svg('@webroot/images/icon-tiktok.svg') }}<span class="visuallyhidden">TikTok</span></a></li>{% endif %}
+      </ul>
+    </div>
+  </div>
+  <div class="footer-btm">
+    <div class="container">
+      <div class="copyright">
+        &copy;{{ now|date('Y') }} <br>
+        {% for page in craft.entries.section('aboutThisSite').hideFromMenu('not 1').level('1').all() %}
+        {% if loop.index != 1 %}<span class="divider">|</span> {% endif %}<a href="{{ page.url }}">{{ page.title }}</a>
+        {% endfor %}
+      </div>
+      <div class="quick-links">
+        {% if generalInfo.quickLinksHeader %}<p>{{ generalInfo.quickLinksHeader }}</p>{% endif %} 
+        {% for block in generalInfo.quickLinks.all() %}
+          {% if loop.index != 1 %}<span class="divider">|</span> {% endif %}<a href="{{ block.qLinkLocation }}">{{ block.qLinkText }}</a>
+        {% endfor %}    
+      </div>
+    </div>
+  </div>
+</footer>
+{% endcache %}
+
+<script src="/js/lazyload.js" async></script>
+<script src="/js/aria.modal.min.js" async></script>
+<script src="/js/skin.min.js" async></script>
+
+
+{# Button to go to admin page #}
+{% if currentUser and ( currentUser.admin or currentUser.isInGroup('fullAdmin') ) and entry is defined %}
+  <div class="edit">
+    <a href="{{ entry.cpEditUrl }}" target="_blank">Edit this page</a>
+  </div>
+{% endif %}
+
+</body>
+</html>

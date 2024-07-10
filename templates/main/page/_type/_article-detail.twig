@@ -1,0 +1,48 @@
+{% extends "main/_layout/main" %}
+
+{% block main %}
+
+{% include "_elements/_redirect.twig" %}
+
+{% set referrerArray = craft.app.request.referrer|split('/') %}
+{% set referrerPage = referrerArray[referrerArray|length - 1] %}
+{% if referrerPage %}
+  {% set parentPage = craft.entries().slug(referrerPage).one() %}
+{% else %}
+  {% set parentPage = craft.entries().section('mainNavigation').type('articleListing').one() %}
+{% endif %}
+
+<main id="main" class="content">
+  <section class="text-banner">
+    <div class="container">
+      <div class="banner-icon"><img src="/images/icon-logo.svg" alt="" /></div>
+      <div class="banner-content">
+        {% set category = entry.articleCategory %}
+        <p class="small-header">{{ entry.postDate | date("F d, Y") }} {% if category|length %} | {% for cat in category.all() %}{% if loop.first == false %}, {% endif %}{{ cat.title }}{% endfor %}{% endif %}</p>
+        <h1>{{ entry.title }}</h1>
+        
+      </div>
+    </div>
+  </section>
+
+  <section class="main-content">
+    {% set mainImage = entry.bannerImage.one() %}
+    {% if mainImage|length %}
+    <p><img src="{{ mainImage.getUrl('largeImage') }}" alt="{{ mainImage.alt }}" class="lazyload" loading="lazy"></p>
+    {% endif %}
+
+    {% if entry.introduction %}
+    <p class="largetext">{{ entry.introduction }}</p>
+    {% endif %}
+
+    {% include "_elements/_article-content.twig" %}
+  </section>
+  <section class="sub-content">
+    <div class="side-nav">
+      {% include 'main/_layout/_sub-nav.twig' %}
+    </div>
+    {% include "_elements/_sidebar.twig" %}
+  </section>
+</main>
+
+{% endblock %}

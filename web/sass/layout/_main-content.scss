@@ -1,0 +1,10 @@
+.main-content {
+  padding: 0 0 4em 0;
+}
+.sub-content {
+  padding: 0 0 4em 0;
+
+  @media all and (max-width: $medium-screen) {
+    padding: 0 0 2em 0;
+  }
+}

@@ -1,0 +1,19 @@
+columnSuffix: null
+contentColumnType: text
+fieldGroup: d2675e11-a907-490e-9054-e8230587241c # Template
+handle: headerTags
+instructions: 'Code, such as tracking scripts, that need to go in the HEAD tag.'
+name: 'Header Tags'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: '1'
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

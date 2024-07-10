@@ -1,0 +1,13 @@
+{% if entry is defined and entry.callToAction %}
+  <div class="call-to-action">
+    <div class="container">
+      {{ entry.callToAction }}
+    </div>
+  </div>
+{% elseif generalInfo.callToAction %}
+  <div class="call-to-action">
+    <div class="container">
+      {{ generalInfo.callToAction }}
+    </div>
+  </div>
+{% endif %}

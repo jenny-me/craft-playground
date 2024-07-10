@@ -1,0 +1,16 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: d2675e11-a907-490e-9054-e8230587241c # Template
+handle: adminLinks
+instructions: null
+name: 'Admin Links'
+searchable: true
+settings:
+  contentTable: '{{%matrixcontent_adminlinks}}'
+  maxBlocks: 2
+  minBlocks: null
+  propagationKeyFormat: null
+  propagationMethod: all
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

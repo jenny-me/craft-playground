@@ -1,0 +1,150 @@
+table {
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+  max-width: 100%;
+
+  margin-bottom: 3em;
+  box-shadow: 0 1px 3px 0 rgba($color-black, .1),
+              0 4px 20px 0 rgba($color-black, .15);
+
+  overflow-x: auto;
+
+  border-collapse: collapse;
+  border-spacing: 0;
+
+  -webkit-overflow-scrolling: touch;
+
+  background: linear-gradient(
+        to right,
+        rgba($color-black, 0.2) 0%,
+        rgba($color-black, 0) 75%
+      )
+      0 center,
+    linear-gradient(
+        to left,
+        rgba($color-black, 0.2) 0%,
+        rgba($color-black, 0) 75%
+      )
+      100% center;
+  background-size: 10px 100%, 10px 100%;
+  background-attachment: scroll, scroll;
+  background-repeat: no-repeat;
+
+  @media (min-width: $xsmall-screen) {
+    display: table; // forces table to have 100% width
+  }
+
+  tbody, thead {
+    width: 100%;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+
+    li {
+      margin-bottom: 0;
+    }
+  }
+  .caption, p, ul, ol {
+    &:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+  }
+
+  td,
+  th {
+    border-bottom: 1px solid rgba($primary-color, .06);
+    font-family: $main-font;
+    font-size: .85em;
+    line-height: 1.4;
+
+    padding: 10px 20px;
+    text-align: left;
+  }
+  th {
+    background: $primary-color;
+
+    color: $color-white;
+    font-size: .9em;
+    font-weight: 500;
+    line-height: 1.35;
+    text-transform: uppercase;
+  }
+
+  // change these gradients from white to your background colour if it differs
+  // gradient on the first cells to hide the left shadow
+  td:first-child {
+    background-image: linear-gradient(
+      to right,
+      rgba($bkgd_body, 1) 50%,
+      rgba($bkgd_body, 0) 100%
+    );
+    background-repeat: no-repeat;
+    background-size: 20px 100%;
+  }
+
+  // gradient on the last cells to hide the right shadow
+  td:last-child {
+    background-image: linear-gradient(
+      to left,
+      rgba($bkgd_body, 1) 50%,
+      rgba($bkgd_body, 0) 100%
+    );
+    background-repeat: no-repeat;
+    background-position: 100% 0;
+    background-size: 20px 100%;
+  }
+
+  tr:nth-of-type(even) {
+    td {
+      background-color: rgba($primary-color, .05);
+    }
+
+    td:first-child {
+      background-image: linear-gradient(
+        to right,
+        rgba($color-offwhite, 1) 50%,
+        rgba($color-offwhite, 0) 100%
+      );
+    }
+
+    // gradient on the last cells to hide the right shadow
+    td:last-child {
+      background-image: linear-gradient(
+        to left,
+        rgba($color-offwhite, 1) 50%,
+        rgba($color-offwhite, 0) 100%
+      );
+    }
+  }
+}
+
+.layoutTable {
+  position: relative;
+  width: 100%;
+  table-layout: fixed;
+  line-height: 1.5;
+
+  td {
+    padding: 6px;
+    vertical-align: top;
+  }
+
+  @media screen and (max-width: $medium-screen) {
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
+      display: block;
+      overflow: hidden;
+      box-sizing: border-box !important;
+      float: left;
+      clear: left;
+      width: 100%;
+    }
+  }
+}

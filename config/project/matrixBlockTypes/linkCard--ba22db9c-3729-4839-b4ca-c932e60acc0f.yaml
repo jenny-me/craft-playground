@@ -1,0 +1,188 @@
+field: 04a6347e-01d0-47c2-a384-9358d1534b15 # Link List
+fieldLayouts:
+  23e66a3d-b062-467c-9028-07f07159b883:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 86ad5b8c-5431-493b-a4e0-501341d06128 # Icon
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 98aeba41-cdd6-4760-ab50-e6c85ea5cd0f
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: e978128f-65ac-4eec-b298-916edc922462 # Link Location
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f316b861-0d89-4887-840f-5aa2e908c19a
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: fb09db4b-475e-43a7-8a3d-48be475228ae # Header
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 79d1b8e0-7eee-4f9d-a53b-add75e0600ee
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 107e858c-59ae-4985-b21d-3c3e173122c4 # Content
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ea119ae0-7f68-4f39-a297-ad3e25425d0f
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: c38b631b-caf7-4fe0-b275-4d824290cbe2
+        userCondition: null
+fields:
+  86ad5b8c-5431-493b-a4e0-501341d06128: # Icon
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: lcIcon
+    instructions: null
+    name: Icon
+    searchable: true
+    settings:
+      allowSelfRelations: false
+      allowSubfolders: false
+      allowUploads: false
+      allowedKinds:
+        - image
+      branchLimit: null
+      defaultUploadLocationSource: 'volume:09c09568-4b70-4b1a-a334-24e0b0a5ed09' # Content Images
+      defaultUploadLocationSubpath: null
+      localizeRelations: false
+      maintainHierarchy: false
+      maxRelations: 1
+      minRelations: null
+      previewMode: full
+      restrictFiles: true
+      restrictLocation: true
+      restrictedDefaultUploadSubpath: null
+      restrictedLocationSource: 'volume:09c09568-4b70-4b1a-a334-24e0b0a5ed09' # Content Images
+      restrictedLocationSubpath: icons
+      selectionCondition:
+        __assoc__:
+          -
+            - elementType
+            - craft\elements\Asset
+          -
+            - fieldContext
+            - global
+          -
+            - class
+            - craft\elements\conditions\assets\AssetCondition
+      selectionLabel: 'Add icon'
+      showSiteMenu: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      sources: '*'
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  107e858c-59ae-4985-b21d-3c3e173122c4: # Content
+    columnSuffix: etahjlvh
+    contentColumnType: text
+    fieldGroup: null
+    handle: lcContent
+    instructions: null
+    name: Content
+    searchable: false
+    settings:
+      availableTransforms: '*'
+      availableVolumes: '*'
+      ckeConfig: 394290e3-acd0-43fe-a489-c9b3a464da29 # Simple
+      columnType: text
+      defaultTransform: ''
+      enableSourceEditingForNonAdmins: true
+      purifierConfig: null
+      purifyHtml: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\ckeditor\Field
+  e978128f-65ac-4eec-b298-916edc922462: # Link Location
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: lcLocation
+    instructions: null
+    name: 'Link Location'
+    searchable: true
+    settings:
+      allowSelfRelations: false
+      branchLimit: null
+      localizeRelations: false
+      maintainHierarchy: false
+      maxRelations: 1
+      minRelations: null
+      selectionCondition:
+        __assoc__:
+          -
+            - elementType
+            - craft\elements\Entry
+          -
+            - fieldContext
+            - global
+          -
+            - class
+            - craft\elements\conditions\entries\EntryCondition
+      selectionLabel: 'Add location'
+      showSiteMenu: true
+      sources: '*'
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Entries
+  fb09db4b-475e-43a7-8a3d-48be475228ae: # Header
+    columnSuffix: null
+    contentColumnType: string(120)
+    fieldGroup: null
+    handle: lcHeader
+    instructions: null
+    name: Header
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: 30
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: linkCard
+name: 'Link Card'
+sortOrder: 1

@@ -1,0 +1,122 @@
+#carousel {
+  ul {
+    margin: 0;
+    padding: 0;
+
+    li {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  .slide {
+    display: none;
+    visibility: hidden;
+
+    width: 100%;
+
+    &.current {
+      visibility: visible;
+      display: flex;
+    }
+  }
+  .slidenav {
+    display: flex;
+    justify-content: center;
+
+    padding: 1.25em 0;
+
+    li {
+      padding: 0.25em;
+    }
+    button {
+      cursor: pointer;
+      display: block;
+      height: 14px;
+      width: 14px;
+
+      border: 1px solid $link-color;
+      border-radius: 50%;
+      background: transparent;
+      color: $color-offwhite;
+      font-size: 1px;
+      line-height: 1px;
+
+      &.current {
+        border-color: $link-color;
+        background: $link-color;
+        color: $link-color;
+        opacity: 1;
+      }
+      &:hover, &:focus, &:active {
+        border-color: $hover-color;
+        background: $hover-color;
+        color: $hover-color;
+      }
+    }
+  }
+
+  .controls {
+    position: absolute;
+    bottom: 1em;
+    right: 5vw;
+    max-width: 33%;
+
+    display: flex;
+    justify-content: flex-end;
+
+    button {
+      -webkit-appearance: none !important;
+      cursor: pointer;
+
+      height: 40px;
+      width: 40px;
+      margin: 0 5px;
+
+      background: darken($secondary-color, 10%);
+      box-shadow: 1px 1px 12px rgba(255,255,255,.25);
+      border: 2px solid $color-white;
+      border-radius: 50%;
+      transition: all .2s ease-in-out;
+
+      font-size: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      &:before {
+        display: block;
+        content: '';
+        background-repeat: no-repeat;
+        background-size: 20px;
+        width: 20px;
+        height: 20px;
+      }
+
+      &.btn-prev:before {
+        background-image: url($image-path + 'icon-previous.svg');
+      }
+
+      &.btn-next:before {
+        background-image: url($image-path + 'icon-next.svg');
+      }
+      &[data-start="true"]:before {
+        background-image: url($image-path + 'icon-play.svg');
+        margin-left: 2px;
+        background-size: 18px;
+        width: 18px;
+        height: 18px;
+      }
+      &[data-stop="true"]:before {
+        background-image: url($image-path + 'icon-pause.svg');
+      }
+
+      &:hover, &:active, &:focus {
+        background: $secondary-color;
+        box-shadow: none;
+      }
+    }
+  }
+}

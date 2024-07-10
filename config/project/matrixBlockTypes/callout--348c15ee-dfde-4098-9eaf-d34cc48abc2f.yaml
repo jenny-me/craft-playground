@@ -1,0 +1,50 @@
+field: e443c70e-6db5-423b-bd28-6ce9cc2cbb61 # Page Content
+fieldLayouts:
+  75d58f0c-9c01-41f9-a48a-3f2385c95d6b:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: c7b15c92-61d8-4bdd-90ee-8e008dc753b2 # Callout Text
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 531537e2-e7cd-4d14-a1d1-d86dff024edc
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: fed05702-2cc4-4113-a10f-fb5ffbe831c9
+        userCondition: null
+fields:
+  c7b15c92-61d8-4bdd-90ee-8e008dc753b2: # Callout Text
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: calloutText
+    instructions: null
+    name: 'Callout Text'
+    searchable: true
+    settings:
+      availableTransforms: '*'
+      availableVolumes: '*'
+      ckeConfig: 22fb5883-b7a7-4de3-b53a-4dc7f6f13767 # Standard
+      columnType: text
+      defaultTransform: null
+      enableSourceEditingForNonAdmins: true
+      purifierConfig: null
+      purifyHtml: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: true
+      showWordCount: false
+      wordLimit: null
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\ckeditor\Field
+handle: callout
+name: Callout
+sortOrder: 6

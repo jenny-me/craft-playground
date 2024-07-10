@@ -1,0 +1,21 @@
+columnSuffix: null
+contentColumnType: text
+fieldGroup: eee1b2bc-0e51-477d-a3ab-5b0f0b0849fe # Homepage
+handle: heroText
+instructions: null
+name: 'Hero Text'
+searchable: true
+settings:
+  availableTransforms: '*'
+  availableVolumes: '*'
+  ckeConfig: 22fb5883-b7a7-4de3-b53a-4dc7f6f13767 # Standard
+  columnType: text
+  defaultTransform: ''
+  enableSourceEditingForNonAdmins: true
+  purifierConfig: null
+  purifyHtml: true
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+translationKeyFormat: null
+translationMethod: none
+type: craft\ckeditor\Field

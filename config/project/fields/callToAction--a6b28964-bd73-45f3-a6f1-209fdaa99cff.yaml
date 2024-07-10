@@ -1,0 +1,21 @@
+columnSuffix: jmrsfqag
+contentColumnType: text
+fieldGroup: a0fe5b36-2aa4-45c6-aa52-4f2b211d203b # Common
+handle: callToAction
+instructions: null
+name: 'Call To Action'
+searchable: false
+settings:
+  availableTransforms: '*'
+  availableVolumes: '*'
+  ckeConfig: 22fb5883-b7a7-4de3-b53a-4dc7f6f13767 # Standard
+  columnType: text
+  defaultTransform: ''
+  enableSourceEditingForNonAdmins: true
+  purifierConfig: null
+  purifyHtml: true
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+translationKeyFormat: null
+translationMethod: none
+type: craft\ckeditor\Field

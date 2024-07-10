@@ -1,0 +1,28 @@
+{% for block in entry.articleContent.all() %}
+{% switch block.type %}
+  {% case 'textArea' %}
+    <div class="{% if block.addDropCap %}dropcap{% endif %}">
+      {{ block.textArea }}
+    </div>
+
+  {% case 'blockQuote' %}
+    <blockquote>
+      <p>{{ block.blockQuote|striptags('<br>')|raw }}</p>
+      {% if block.attribution %}
+      <p class="attribution">- {{ block.attribution }}</p>
+      {% endif %}
+    </blockquote>
+
+  {% case 'articleCallout' %}
+    <div class="callout">
+      {{ block.callText }}
+    </div>
+
+  {% case 'video' %}
+    <div class="embed video">
+      {# Must be a plain text field. Redactor will allow initial save of widget with purifying turned off but will not save the code in the DB properly so it disappears on second page edit. #}
+      {{ block.video|raw }}
+    </div>
+
+{% endswitch %}
+{% endfor %}

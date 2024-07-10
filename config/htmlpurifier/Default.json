@@ -1,0 +1,15 @@
+{
+  "Attr.AllowedFrameTargets": [
+    "_blank"
+  ],
+  "Attr.AllowedRel": [
+    "noopener",
+    "noreferrer"
+  ],
+  "Attr.EnableID": true,
+  "HTML.AllowedComments": [
+    "pagebreak"
+  ],
+  "HTML.SafeIframe": true,
+  "URI.SafeIframeRegexp": "%^(https?:)?//(www\\.google(?:-nocookie)?\\.com/maps/embed|app\\.powerbi\\.com/view|player\\.vimeo\\.com/video/|www\\.youtube(?:-nocookie)?\\.com/embed/)%"
+}

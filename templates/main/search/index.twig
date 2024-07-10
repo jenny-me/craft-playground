@@ -1,0 +1,21 @@
+{% extends "main/_layout/main" %}
+
+{% block main %}
+<main id="main" class="content article-detail">
+
+  <section class="text-banner">
+    <div class="container">
+      <h1>Search</h1>
+    </div>
+  </section>
+          
+  <section class="main-content">
+    <form class="search-form" action="{{ url('search/results') }}">
+      <input type="search" placeholder="Search" name="q" title="Search">
+      <button class="submitSearch" type="submit"><img src="/images/icon-search.svg" alt="Submit Search" /></button>
+    </form>
+
+  </section>
+</main>
+{% endblock %}
+

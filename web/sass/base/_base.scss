@@ -1,0 +1,213 @@
+/************* HTML Styles *************/
+*,
+*::before,
+*::after { box-sizing: inherit; }
+
+@viewport { width:device-width; }
+
+html {
+  overflow-x: auto;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  scroll-padding-top: 7em;
+}
+body {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+
+  background: $bkgd-body;
+
+  color: $font-color;
+  font-size: clamp($min-font, $font-size, $max-font);
+  font-family: $main-font;
+  line-height: $main-lineheight;
+  letter-spacing: 0.09px;
+}
+
+h1 {
+  margin: 0 0 1.1rem;
+
+  color: $color-blue-dark;
+  font-size: em(64, 18);
+  font-family: $main-font;
+  font-weight: bold;
+  line-height: 1.2;
+  letter-spacing: 0;
+}
+
+h2 {
+  margin: .375em 0 .75em;
+
+  color: $color-blue-dark;
+  font-size: em(40, 18);
+  font-family: $main-font;
+  font-weight: bold;
+  line-height: 1.25;
+  letter-spacing: 0;
+}
+
+h3 {
+  margin: .5em 0 .75em;
+
+  color: $color-blue-dark;
+  font-size: em(22, 18);
+  font-family: $main-font;
+  font-weight: bold;
+  line-height: 1.25;
+  letter-spacing: 0;
+}
+
+h4 {
+  margin: 0 0 0.5rem;
+
+  color: $font-color;
+  font-size: 1em;
+  font-family: $main-font;
+  font-weight: bold;
+  line-height: 1.1;
+}
+
+h5 {
+  margin: 0 0 1.5rem;
+
+  color: $font-color;
+  font-size: 0.8rem;
+  font-family: $main-font;
+  font-weight: bold;
+  line-height: 1.1;
+}
+
+h6 {
+  margin: 0 0 1.25rem;
+
+  color: $secondary-color;
+  font-size: .9em;
+  font-family: $main-font;
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+blockquote {
+  font-family: inherit;
+  font-size: 0.95em;
+  line-height: 1.4;
+}
+
+table {
+  border-collapse: collapse;
+}
+sup,
+sub {
+  font-size: 80%;
+}
+p {
+  margin: 0;
+  padding: 0 0 1.25em;
+}
+ul,
+ol {
+  margin: 0;
+  padding: 0 0 1.5em;
+}
+
+ul ul,
+ol ol {
+  padding: 0;
+}
+
+ul li {
+  margin: 0 0 0.75em 2em;
+  padding: 0;
+}
+
+ul li * {
+  margin-top: 0;
+}
+ul li p {
+  margin: 0;
+  padding: 0;
+}
+ol li {
+  margin: 0 0 0.5rem 2rem;
+}
+a,
+a:link,
+a:visited {
+  color: $link-color;
+  font-weight: 400;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  outline: none;
+  cursor: pointer;
+
+  transition: color 0.2s ease-out,
+            background 0.2s ease-in,
+            opacity 0.2s ease-out,
+            text-decoration 0.2s ease-out,
+            border 0.2s ease-out,
+            box-shadow 0.2s ease-out;
+}
+a:hover,
+a:active,
+a:focus {
+  color: $hover-color;
+}
+a:active, a:focus {
+  outline: rgb(94, 158, 215) auto 5px;
+}
+
+img {
+  width: auto;
+  max-width: 100%;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid $hr-color;
+  margin: 1em 0;
+  padding: 0;
+  clear: both;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+textarea {
+  resize: vertical;
+}
+
+input,
+textarea,
+select {
+  font-family: $main-font;
+  font-size: 1em;
+}
+
+figure {
+  margin: 0;
+}
+figcaption {
+  display: block;
+}
+
+::-moz-selection {
+  background: $highlight-color;
+  text-shadow: none;
+}
+::selection {
+  background: $highlight-color;
+  text-shadow: none;
+}

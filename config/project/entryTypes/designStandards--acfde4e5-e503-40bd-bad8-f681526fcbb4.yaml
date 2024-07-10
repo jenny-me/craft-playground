@@ -1,0 +1,226 @@
+fieldLayouts:
+  3571d033-08b4-418f-9f5a-a18c73463870:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 5418377f-261a-42f8-87e2-cd30e8ccbfae
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 5000939c-89e2-4d6f-9834-1c687aab2a67 # Page Subheader
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 850eb7c1-6150-469e-8a0c-ac28f3734205
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 4bf5b183-a3e2-40c5-8700-7432e9538c38 # Page Headline
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ca5c1092-7b51-48c4-a7a1-3ca17dac7262
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 008e770f-a3a4-434a-b63b-1b8708ed1e0a # Introduction
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5251d620-fbca-4081-bd0d-703a05162f91
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: ee144f97-4b7a-45dd-977c-70f605d0139f
+            userCondition: null
+          -
+            elementCondition: null
+            fieldUid: e443c70e-6db5-423b-bd28-6ce9cc2cbb61 # Page Content
+            instructions: null
+            label: 'Content Blocks'
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 15ce8bbc-a23c-4402-b5b2-04c114f1527c
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 70d736ba-a0b5-4795-9749-f23b9081b8b9
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: cb81b757-fe4f-4892-ae2e-7e5ea7522b26 # Sidebar
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 084e1034-3aca-48c8-9ebc-87c9c644708c
+            userCondition: null
+            warning: null
+            width: 100
+        name: Sidebar
+        uid: 477fe682-e51c-4efb-b406-52d939a16f87
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 0ebd966a-c731-4c35-ab55-e4a45bbf57fb # Feature
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5e10d065-3679-417e-b441-c7bae72d9685
+            userCondition: null
+            warning: null
+            width: 100
+        name: Feature
+        uid: 48653121-3e6b-44fc-a5e4-18931270a973
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            dismissible: false
+            elementCondition: null
+            style: tip
+            tip: 'This field will override the Call To Action set in the Globals section. Leave blank to use the global call to action.'
+            type: craft\fieldlayoutelements\Tip
+            uid: ce691fde-88ab-43ee-850f-389f934b90fe
+            userCondition: null
+          -
+            elementCondition: null
+            fieldUid: a6b28964-bd73-45f3-a6f1-209fdaa99cff # Call To Action
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 864bfef1-585b-471c-b6fd-91bcb1609cb6
+            userCondition: null
+            warning: null
+            width: 100
+        name: 'Call To Action'
+        uid: d0de3568-7c59-44df-9f25-a85e77d8a011
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 0fd07fef-7348-4b4c-befd-c5223fd96a24 # Hide From Menu
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 3e01bbd7-85f9-4ee5-903a-e2412e6c0c7d
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: 666771c6-1154-4bfd-baed-76a852b6aeae
+            userCondition: null
+          -
+            elementCondition: null
+            fieldUid: eeab7427-1cf0-4e89-9c47-8a728055aa59 # Internal Redirect
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 7dc4172f-1981-46d3-9a0d-a1cbdfad54be
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: 361fc348-788e-4919-9220-4a9f92326eb0 # External Redirect
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c89ddeff-ae08-4cbe-8b00-f4ac465e427f
+            userCondition: null
+            warning: null
+            width: 50
+        name: Utilities
+        uid: beee1e1d-434a-4ddb-93d7-50c078a9fa6e
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: b2ee82f0-cd65-4af1-98ba-7ad7159079b1 # SEO Settings
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c54bd0e3-3343-4ed1-8299-fc6ebf59f10b
+            userCondition: null
+            warning: null
+            width: 100
+        name: 'SEO & Sharing'
+        uid: c4e6e3c2-9f98-4209-935a-9001d2548c05
+        userCondition: null
+handle: designStandards
+hasTitleField: true
+name: 'Content Page'
+section: 4d63c242-f66b-49ba-afd6-b9c650174a3c # Design Standards
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+sortOrder: 1
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

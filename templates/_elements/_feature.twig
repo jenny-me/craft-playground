@@ -1,0 +1,28 @@
+{% if entry.feature|length %}
+  <section class="feature full-width">
+    {% for block in entry.feature.all() %}
+    <div class="feature-row {{ block.featureBkgdColor }} {{ block.featurePosition }}">
+      <div class="feature-image">
+        {% set image = block.featureImage.one() %}
+        {% if image %}
+        <figure>
+          <img src="{{ image.getUrl('largeImage') }}" alt="{{ image.alt }}" class="lazyload" loading="lazy">
+        </figure>
+        {% endif %}
+      </div>
+      <div class="feature-text">
+        <div class="feature-content">
+          {% if block.featureCategory %}<p class="small-header">{{ block.featureCategory }}</p>{% endif %}
+          {% if block.featureHeader %}<h2>{{ block.featureHeader }}</h2>{% endif %}
+          {{ block.featureDescription }}
+          {% if block.featureButton %}
+          <div class="feature-btn white-button">
+            {{ block.featureButton }}
+          </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </section>
+{% endif %}

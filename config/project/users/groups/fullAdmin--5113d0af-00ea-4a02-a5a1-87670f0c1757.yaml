@@ -1,0 +1,250 @@
+description: ''
+handle: fullAdmin
+name: 'Full Admin'
+permissions:
+  - accesscp
+  - accesscpwhensystemisoff
+  - accessplugin-freeform
+  - accessplugin-retour
+  - accessplugin-seomatic
+  - accesssitewhensystemisoff
+  - 'assignusergroup:5113d0af-00ea-4a02-a5a1-87670f0c1757' # Full Admin
+  - assignuserpermissions
+  - 'createentries:25ae185f-dbd4-4176-890b-361656dd20a7' # Events
+  - 'createentries:2a8eda51-0fb9-4ceb-8f44-926b62a63b00' # Departments
+  - 'createentries:4d63c242-f66b-49ba-afd6-b9c650174a3c' # Design Standards
+  - 'createentries:60577ea3-2137-46c8-b44a-0736ac037ddb'
+  - 'createentries:6627270b-638d-4b21-97d2-981d19b14aed'
+  - 'createentries:997a1264-e357-4928-804a-7ba8038c3c6e'
+  - 'createentries:9cf8b488-d41b-4b02-b945-b52944c6d419' # Accordions
+  - 'createentries:a2d587c1-ef32-4193-8f69-c695ddc657a4' # Shared Sidebar
+  - 'createentries:c614886f-7b46-45cf-8f75-f3f09aeb988d' # Team
+  - 'createentries:c8b4e00a-e8c7-484b-aba4-3d886a74949b' # Categories
+  - 'createentries:cfe2ab11-e0d6-4828-9b60-768ca1081018' # Navigation - Main
+  - 'createentries:d3829cc7-529e-4c9c-a1e0-7e4a16f52c48' # About This Site
+  - 'createentries:d3885f31-e47b-4749-9045-33cd387e376e'
+  - 'createentries:dbaf3ae8-8593-4d77-910a-f8ca7908fba1'
+  - 'createentries:f4852ecd-fc05-44f4-ad84-59146c9fc2af'
+  - 'createentries:fb76a5df-125f-4073-988b-2d2f9ad8cf28' # Articles
+  - 'createfolders:09c09568-4b70-4b1a-a334-24e0b0a5ed09' # Content Images
+  - 'createfolders:2e5c842f-0a49-4b42-b54b-cfb54d581e07' # Documents
+  - 'deleteassets:09c09568-4b70-4b1a-a334-24e0b0a5ed09' # Content Images
+  - 'deleteassets:2e5c842f-0a49-4b42-b54b-cfb54d581e07' # Documents
+  - 'deleteentries:25ae185f-dbd4-4176-890b-361656dd20a7' # Events
+  - 'deleteentries:2a8eda51-0fb9-4ceb-8f44-926b62a63b00' # Departments
+  - 'deleteentries:4d63c242-f66b-49ba-afd6-b9c650174a3c' # Design Standards
+  - 'deleteentries:60577ea3-2137-46c8-b44a-0736ac037ddb'
+  - 'deleteentries:6627270b-638d-4b21-97d2-981d19b14aed'
+  - 'deleteentries:997a1264-e357-4928-804a-7ba8038c3c6e'
+  - 'deleteentries:9cf8b488-d41b-4b02-b945-b52944c6d419' # Accordions
+  - 'deleteentries:a2d587c1-ef32-4193-8f69-c695ddc657a4' # Shared Sidebar
+  - 'deleteentries:c614886f-7b46-45cf-8f75-f3f09aeb988d' # Team
+  - 'deleteentries:c8b4e00a-e8c7-484b-aba4-3d886a74949b' # Categories
+  - 'deleteentries:cfe2ab11-e0d6-4828-9b60-768ca1081018' # Navigation - Main
+  - 'deleteentries:d3829cc7-529e-4c9c-a1e0-7e4a16f52c48' # About This Site
+  - 'deleteentries:d3885f31-e47b-4749-9045-33cd387e376e'
+  - 'deleteentries:dbaf3ae8-8593-4d77-910a-f8ca7908fba1'
+  - 'deleteentries:f4852ecd-fc05-44f4-ad84-59146c9fc2af'
+  - 'deleteentries:fb76a5df-125f-4073-988b-2d2f9ad8cf28' # Articles
+  - 'deletepeerassets:09c09568-4b70-4b1a-a334-24e0b0a5ed09' # Content Images
+  - 'deletepeerassets:2e5c842f-0a49-4b42-b54b-cfb54d581e07' # Documents
+  - 'deletepeerentries:25ae185f-dbd4-4176-890b-361656dd20a7' # Events
+  - 'deletepeerentries:2a8eda51-0fb9-4ceb-8f44-926b62a63b00' # Departments
+  - 'deletepeerentries:4d63c242-f66b-49ba-afd6-b9c650174a3c' # Design Standards
+  - 'deletepeerentries:60577ea3-2137-46c8-b44a-0736ac037ddb'
+  - 'deletepeerentries:6627270b-638d-4b21-97d2-981d19b14aed'
+  - 'deletepeerentries:997a1264-e357-4928-804a-7ba8038c3c6e'
+  - 'deletepeerentries:9cf8b488-d41b-4b02-b945-b52944c6d419' # Accordions
+  - 'deletepeerentries:a2d587c1-ef32-4193-8f69-c695ddc657a4' # Shared Sidebar
+  - 'deletepeerentries:c614886f-7b46-45cf-8f75-f3f09aeb988d' # Team
+  - 'deletepeerentries:c8b4e00a-e8c7-484b-aba4-3d886a74949b' # Categories
+  - 'deletepeerentries:cfe2ab11-e0d6-4828-9b60-768ca1081018' # Navigation - Main
+  - 'deletepeerentries:d3829cc7-529e-4c9c-a1e0-7e4a16f52c48' # About This Site
+  - 'deletepeerentries:d3885f31-e47b-4749-9045-33cd387e376e'
+  - 'deletepeerentries:dbaf3ae8-8593-4d77-910a-f8ca7908fba1'
+  - 'deletepeerentries:f4852ecd-fc05-44f4-ad84-59146c9fc2af'
+  - 'deletepeerentries:fb76a5df-125f-4073-988b-2d2f9ad8cf28' # Articles
+  - 'deletepeerentrydrafts:25ae185f-dbd4-4176-890b-361656dd20a7' # Events
+  - 'deletepeerentrydrafts:2a8eda51-0fb9-4ceb-8f44-926b62a63b00' # Departments
+  - 'deletepeerentrydrafts:4d63c242-f66b-49ba-afd6-b9c650174a3c' # Design Standards
+  - 'deletepeerentrydrafts:60577ea3-2137-46c8-b44a-0736ac037ddb'
+  - 'deletepeerentrydrafts:6451f8ed-ab88-477b-afbc-50b5307ea547' # Homepage - Main
+  - 'deletepeerentrydrafts:6627270b-638d-4b21-97d2-981d19b14aed'
+  - 'deletepeerentrydrafts:997a1264-e357-4928-804a-7ba8038c3c6e'
+  - 'deletepeerentrydrafts:9cf8b488-d41b-4b02-b945-b52944c6d419' # Accordions
+  - 'deletepeerentrydrafts:a2d587c1-ef32-4193-8f69-c695ddc657a4' # Shared Sidebar
+  - 'deletepeerentrydrafts:c614886f-7b46-45cf-8f75-f3f09aeb988d' # Team
+  - 'deletepeerentrydrafts:c8b4e00a-e8c7-484b-aba4-3d886a74949b' # Categories
+  - 'deletepeerentrydrafts:cfe2ab11-e0d6-4828-9b60-768ca1081018' # Navigation - Main
+  - 'deletepeerentrydrafts:d3829cc7-529e-4c9c-a1e0-7e4a16f52c48' # About This Site
+  - 'deletepeerentrydrafts:d3885f31-e47b-4749-9045-33cd387e376e'
+  - 'deletepeerentrydrafts:dbaf3ae8-8593-4d77-910a-f8ca7908fba1'
+  - 'deletepeerentrydrafts:f4852ecd-fc05-44f4-ad84-59146c9fc2af'
+  - 'deletepeerentrydrafts:fb76a5df-125f-4073-988b-2d2f9ad8cf28' # Articles
+  - deleteusers
+  - 'editglobalset:068789d9-5d0e-4df1-a5a7-98d8af561729' # General Information
+  - 'editglobalset:28ba8eca-19ce-4f61-9640-964ab33313fc' # Page Errors
+  - 'editimages:09c09568-4b70-4b1a-a334-24e0b0a5ed09' # Content Images
+  - 'editimages:2e5c842f-0a49-4b42-b54b-cfb54d581e07' # Documents
+  - 'editpeerimages:09c09568-4b70-4b1a-a334-24e0b0a5ed09' # Content Images
+  - 'editpeerimages:2e5c842f-0a49-4b42-b54b-cfb54d581e07' # Documents
+  - editusers
+  - freeform-dashboardaccess
+  - freeform-fieldsaccess
+  - freeform-fieldsmanage
+  - freeform-formsaccess
+  - freeform-formscreate
+  - freeform-formsdelete
+  - freeform-formsmanage
+  - 'freeform-formsmanage:1'
+  - freeform-formsmanageindividual
+  - freeform-notificationsaccess
+  - freeform-notificationsmanage
+  - freeform-pro-exportprofilesaccess
+  - freeform-pro-exportprofilesmanage
+  - freeform-resources
+  - freeform-settingsaccess
+  - freeform-submissionsaccess
+  - freeform-submissionsmanage
+  - 'freeform-submissionsmanage:1'
+  - freeform-submissionsmanageindividual
+  - freeform-submissionsread
+  - 'freeform-submissionsread:1'
+  - freeform-submissionsreadindividual
+  - impersonateusers
+  - moderateusers
+  - registerusers
+  - 'replacefiles:09c09568-4b70-4b1a-a334-24e0b0a5ed09' # Content Images
+  - 'replacefiles:2e5c842f-0a49-4b42-b54b-cfb54d581e07' # Documents
+  - 'replacepeerfiles:09c09568-4b70-4b1a-a334-24e0b0a5ed09' # Content Images
+  - 'replacepeerfiles:2e5c842f-0a49-4b42-b54b-cfb54d581e07' # Documents
+  - 'retour:dashboard'
+  - 'retour:redirects'
+  - 'retour:shortlinks'
+  - 'saveassets:09c09568-4b70-4b1a-a334-24e0b0a5ed09' # Content Images
+  - 'saveassets:2e5c842f-0a49-4b42-b54b-cfb54d581e07' # Documents
+  - 'saveentries:25ae185f-dbd4-4176-890b-361656dd20a7' # Events
+  - 'saveentries:2a8eda51-0fb9-4ceb-8f44-926b62a63b00' # Departments
+  - 'saveentries:4d63c242-f66b-49ba-afd6-b9c650174a3c' # Design Standards
+  - 'saveentries:60577ea3-2137-46c8-b44a-0736ac037ddb'
+  - 'saveentries:6451f8ed-ab88-477b-afbc-50b5307ea547' # Homepage - Main
+  - 'saveentries:6627270b-638d-4b21-97d2-981d19b14aed'
+  - 'saveentries:997a1264-e357-4928-804a-7ba8038c3c6e'
+  - 'saveentries:9cf8b488-d41b-4b02-b945-b52944c6d419' # Accordions
+  - 'saveentries:a2d587c1-ef32-4193-8f69-c695ddc657a4' # Shared Sidebar
+  - 'saveentries:c614886f-7b46-45cf-8f75-f3f09aeb988d' # Team
+  - 'saveentries:c8b4e00a-e8c7-484b-aba4-3d886a74949b' # Categories
+  - 'saveentries:cfe2ab11-e0d6-4828-9b60-768ca1081018' # Navigation - Main
+  - 'saveentries:d3829cc7-529e-4c9c-a1e0-7e4a16f52c48' # About This Site
+  - 'saveentries:d3885f31-e47b-4749-9045-33cd387e376e'
+  - 'saveentries:dbaf3ae8-8593-4d77-910a-f8ca7908fba1'
+  - 'saveentries:f4852ecd-fc05-44f4-ad84-59146c9fc2af'
+  - 'saveentries:fb76a5df-125f-4073-988b-2d2f9ad8cf28' # Articles
+  - 'savepeerassets:09c09568-4b70-4b1a-a334-24e0b0a5ed09' # Content Images
+  - 'savepeerassets:2e5c842f-0a49-4b42-b54b-cfb54d581e07' # Documents
+  - 'savepeerentries:25ae185f-dbd4-4176-890b-361656dd20a7' # Events
+  - 'savepeerentries:2a8eda51-0fb9-4ceb-8f44-926b62a63b00' # Departments
+  - 'savepeerentries:4d63c242-f66b-49ba-afd6-b9c650174a3c' # Design Standards
+  - 'savepeerentries:60577ea3-2137-46c8-b44a-0736ac037ddb'
+  - 'savepeerentries:6627270b-638d-4b21-97d2-981d19b14aed'
+  - 'savepeerentries:997a1264-e357-4928-804a-7ba8038c3c6e'
+  - 'savepeerentries:9cf8b488-d41b-4b02-b945-b52944c6d419' # Accordions
+  - 'savepeerentries:a2d587c1-ef32-4193-8f69-c695ddc657a4' # Shared Sidebar
+  - 'savepeerentries:c614886f-7b46-45cf-8f75-f3f09aeb988d' # Team
+  - 'savepeerentries:c8b4e00a-e8c7-484b-aba4-3d886a74949b' # Categories
+  - 'savepeerentries:cfe2ab11-e0d6-4828-9b60-768ca1081018' # Navigation - Main
+  - 'savepeerentries:d3829cc7-529e-4c9c-a1e0-7e4a16f52c48' # About This Site
+  - 'savepeerentries:d3885f31-e47b-4749-9045-33cd387e376e'
+  - 'savepeerentries:dbaf3ae8-8593-4d77-910a-f8ca7908fba1'
+  - 'savepeerentries:f4852ecd-fc05-44f4-ad84-59146c9fc2af'
+  - 'savepeerentries:fb76a5df-125f-4073-988b-2d2f9ad8cf28' # Articles
+  - 'savepeerentrydrafts:25ae185f-dbd4-4176-890b-361656dd20a7' # Events
+  - 'savepeerentrydrafts:2a8eda51-0fb9-4ceb-8f44-926b62a63b00' # Departments
+  - 'savepeerentrydrafts:4d63c242-f66b-49ba-afd6-b9c650174a3c' # Design Standards
+  - 'savepeerentrydrafts:60577ea3-2137-46c8-b44a-0736ac037ddb'
+  - 'savepeerentrydrafts:6451f8ed-ab88-477b-afbc-50b5307ea547' # Homepage - Main
+  - 'savepeerentrydrafts:6627270b-638d-4b21-97d2-981d19b14aed'
+  - 'savepeerentrydrafts:997a1264-e357-4928-804a-7ba8038c3c6e'
+  - 'savepeerentrydrafts:9cf8b488-d41b-4b02-b945-b52944c6d419' # Accordions
+  - 'savepeerentrydrafts:a2d587c1-ef32-4193-8f69-c695ddc657a4' # Shared Sidebar
+  - 'savepeerentrydrafts:c614886f-7b46-45cf-8f75-f3f09aeb988d' # Team
+  - 'savepeerentrydrafts:c8b4e00a-e8c7-484b-aba4-3d886a74949b' # Categories
+  - 'savepeerentrydrafts:cfe2ab11-e0d6-4828-9b60-768ca1081018' # Navigation - Main
+  - 'savepeerentrydrafts:d3829cc7-529e-4c9c-a1e0-7e4a16f52c48' # About This Site
+  - 'savepeerentrydrafts:d3885f31-e47b-4749-9045-33cd387e376e'
+  - 'savepeerentrydrafts:dbaf3ae8-8593-4d77-910a-f8ca7908fba1'
+  - 'savepeerentrydrafts:f4852ecd-fc05-44f4-ad84-59146c9fc2af'
+  - 'savepeerentrydrafts:fb76a5df-125f-4073-988b-2d2f9ad8cf28' # Articles
+  - 'seomatic:content-meta'
+  - 'seomatic:content-meta:facebook'
+  - 'seomatic:content-meta:general'
+  - 'seomatic:content-meta:twitter'
+  - 'seomatic:dashboard'
+  - 'seomatic:global-meta'
+  - 'seomatic:global-meta:facebook'
+  - 'seomatic:global-meta:general'
+  - 'seomatic:global-meta:twitter'
+  - 'seomatic:site-settings'
+  - 'seomatic:site-settings:identity'
+  - 'seomatic:site-settings:social'
+  - 'seomatic:tracking-scripts'
+  - 'seomatic:tracking-scripts:facebookpixel'
+  - 'seomatic:tracking-scripts:googleanalytics'
+  - 'seomatic:tracking-scripts:googletagmanager'
+  - 'seomatic:tracking-scripts:gtag'
+  - 'seomatic:tracking-scripts:hubspot'
+  - 'seomatic:tracking-scripts:linkedininsight'
+  - 'viewassets:09c09568-4b70-4b1a-a334-24e0b0a5ed09' # Content Images
+  - 'viewassets:2e5c842f-0a49-4b42-b54b-cfb54d581e07' # Documents
+  - 'viewentries:25ae185f-dbd4-4176-890b-361656dd20a7' # Events
+  - 'viewentries:2a8eda51-0fb9-4ceb-8f44-926b62a63b00' # Departments
+  - 'viewentries:4d63c242-f66b-49ba-afd6-b9c650174a3c' # Design Standards
+  - 'viewentries:60577ea3-2137-46c8-b44a-0736ac037ddb'
+  - 'viewentries:6451f8ed-ab88-477b-afbc-50b5307ea547' # Homepage - Main
+  - 'viewentries:6627270b-638d-4b21-97d2-981d19b14aed'
+  - 'viewentries:997a1264-e357-4928-804a-7ba8038c3c6e'
+  - 'viewentries:9cf8b488-d41b-4b02-b945-b52944c6d419' # Accordions
+  - 'viewentries:a2d587c1-ef32-4193-8f69-c695ddc657a4' # Shared Sidebar
+  - 'viewentries:c614886f-7b46-45cf-8f75-f3f09aeb988d' # Team
+  - 'viewentries:c8b4e00a-e8c7-484b-aba4-3d886a74949b' # Categories
+  - 'viewentries:cfe2ab11-e0d6-4828-9b60-768ca1081018' # Navigation - Main
+  - 'viewentries:d3829cc7-529e-4c9c-a1e0-7e4a16f52c48' # About This Site
+  - 'viewentries:d3885f31-e47b-4749-9045-33cd387e376e'
+  - 'viewentries:dbaf3ae8-8593-4d77-910a-f8ca7908fba1'
+  - 'viewentries:f4852ecd-fc05-44f4-ad84-59146c9fc2af'
+  - 'viewentries:fb76a5df-125f-4073-988b-2d2f9ad8cf28' # Articles
+  - 'viewpeerassets:09c09568-4b70-4b1a-a334-24e0b0a5ed09' # Content Images
+  - 'viewpeerassets:2e5c842f-0a49-4b42-b54b-cfb54d581e07' # Documents
+  - 'viewpeerentries:25ae185f-dbd4-4176-890b-361656dd20a7' # Events
+  - 'viewpeerentries:2a8eda51-0fb9-4ceb-8f44-926b62a63b00' # Departments
+  - 'viewpeerentries:4d63c242-f66b-49ba-afd6-b9c650174a3c' # Design Standards
+  - 'viewpeerentries:60577ea3-2137-46c8-b44a-0736ac037ddb'
+  - 'viewpeerentries:6627270b-638d-4b21-97d2-981d19b14aed'
+  - 'viewpeerentries:997a1264-e357-4928-804a-7ba8038c3c6e'
+  - 'viewpeerentries:9cf8b488-d41b-4b02-b945-b52944c6d419' # Accordions
+  - 'viewpeerentries:a2d587c1-ef32-4193-8f69-c695ddc657a4' # Shared Sidebar
+  - 'viewpeerentries:c614886f-7b46-45cf-8f75-f3f09aeb988d' # Team
+  - 'viewpeerentries:c8b4e00a-e8c7-484b-aba4-3d886a74949b' # Categories
+  - 'viewpeerentries:cfe2ab11-e0d6-4828-9b60-768ca1081018' # Navigation - Main
+  - 'viewpeerentries:d3829cc7-529e-4c9c-a1e0-7e4a16f52c48' # About This Site
+  - 'viewpeerentries:d3885f31-e47b-4749-9045-33cd387e376e'
+  - 'viewpeerentries:dbaf3ae8-8593-4d77-910a-f8ca7908fba1'
+  - 'viewpeerentries:f4852ecd-fc05-44f4-ad84-59146c9fc2af'
+  - 'viewpeerentries:fb76a5df-125f-4073-988b-2d2f9ad8cf28' # Articles
+  - 'viewpeerentrydrafts:25ae185f-dbd4-4176-890b-361656dd20a7' # Events
+  - 'viewpeerentrydrafts:2a8eda51-0fb9-4ceb-8f44-926b62a63b00' # Departments
+  - 'viewpeerentrydrafts:4d63c242-f66b-49ba-afd6-b9c650174a3c' # Design Standards
+  - 'viewpeerentrydrafts:60577ea3-2137-46c8-b44a-0736ac037ddb'
+  - 'viewpeerentrydrafts:6451f8ed-ab88-477b-afbc-50b5307ea547' # Homepage - Main
+  - 'viewpeerentrydrafts:6627270b-638d-4b21-97d2-981d19b14aed'
+  - 'viewpeerentrydrafts:997a1264-e357-4928-804a-7ba8038c3c6e'
+  - 'viewpeerentrydrafts:9cf8b488-d41b-4b02-b945-b52944c6d419' # Accordions
+  - 'viewpeerentrydrafts:a2d587c1-ef32-4193-8f69-c695ddc657a4' # Shared Sidebar
+  - 'viewpeerentrydrafts:c614886f-7b46-45cf-8f75-f3f09aeb988d' # Team
+  - 'viewpeerentrydrafts:c8b4e00a-e8c7-484b-aba4-3d886a74949b' # Categories
+  - 'viewpeerentrydrafts:cfe2ab11-e0d6-4828-9b60-768ca1081018' # Navigation - Main
+  - 'viewpeerentrydrafts:d3829cc7-529e-4c9c-a1e0-7e4a16f52c48' # About This Site
+  - 'viewpeerentrydrafts:d3885f31-e47b-4749-9045-33cd387e376e'
+  - 'viewpeerentrydrafts:dbaf3ae8-8593-4d77-910a-f8ca7908fba1'
+  - 'viewpeerentrydrafts:f4852ecd-fc05-44f4-ad84-59146c9fc2af'
+  - 'viewpeerentrydrafts:fb76a5df-125f-4073-988b-2d2f9ad8cf28' # Articles

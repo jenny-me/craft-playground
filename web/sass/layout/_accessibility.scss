@@ -1,0 +1,33 @@
+#skip-link {
+	position:relative;
+	z-index:5;
+	float:left;
+	
+	a, a:link, a:visited {
+		position:absolute;
+		z-index:5;
+		top:-999em;	
+		left:0px;
+		
+		display:block;
+		width:150px;
+		padding:7px 10px;
+		border:1px solid #CCC;
+		outline:0;
+		background:#FFF;
+	
+    color:#333;
+    font-size: 16px;
+		line-height:1.2;
+		font-weight:bold;
+		text-decoration:none;
+	}
+	a:focus, a:active {
+		top: 0px;
+		*zoom:1
+	}
+	a:hover, a:active, a:focus {
+		background: $link-color;
+		color: $color-white;
+	}
+}

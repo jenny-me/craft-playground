@@ -1,0 +1,169 @@
+fieldLayouts:
+  e17b95f4-10f0-4928-b622-0e5077052683:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dismissible: false
+            elementCondition: null
+            style: tip
+            tip: 'Use the "Sort Name" to override the order in which people are listed. You can use either letters, or numbers. Values of "1" or "A" will display first.'
+            type: craft\fieldlayoutelements\Tip
+            uid: a491ff28-06d0-4b26-b122-fab925b5af12
+            userCondition: null
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: Name
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 0c6e6495-6c29-4736-b8bc-bdddc7f67d00
+            userCondition: null
+            warning: null
+            width: 75
+          -
+            elementCondition: null
+            fieldUid: f2e19a8d-b052-4274-b359-f8e2ab12c5c2 # Sort Name
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e2859c00-b849-45d1-9807-90d332202ecd
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            elementCondition: null
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: 30e426be-d2a1-402f-ad4d-9129be75095b
+            userCondition: null
+          -
+            elementCondition: null
+            fieldUid: a64724f0-6e64-41c4-937c-403b1b7b6867 # Job Title
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 3d6ef560-ae18-4b09-a444-eb55ceaece0d
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 75aec594-2dcf-44fb-a1ba-96085836b122 # Profile Image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e5df69af-291c-4ab6-ad20-7b29b2c38b34
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: eee29027-1221-4408-8d4f-103fe2b2605c # Department
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a6fad453-6dc4-4b8c-adf7-f6a5e4e2792d
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: 54e49db7-04f5-4441-87c2-66c06ea0906e
+            userCondition: null
+          -
+            elementCondition: null
+            fieldUid: ec24a839-280b-4f72-b371-bef742973163 # Email Address
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c24222c6-00c9-43d6-b0e9-515c8911ddd0
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: e258acb8-56d0-4a36-923a-fa04fb32dc99 # Phone Number
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b7445f4c-e807-4df2-b1d4-bed49cf22ba7
+            userCondition: null
+            warning: null
+            width: 50
+        name: Details
+        uid: fb5ef0a2-5d96-4322-b969-00044b5e0fc5
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: c3d93cba-5e1d-4058-92ba-59f83011eb9c # Bio
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ba35dc98-2c6d-4db0-ad4c-dae6a851ab9a
+            userCondition: null
+            warning: null
+            width: 100
+        name: Bio
+        uid: 376b349c-3305-4dda-af15-d785db3996d1
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: b2ee82f0-cd65-4af1-98ba-7ad7159079b1 # SEO Settings
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 932fc2f4-3c2b-4c69-87a7-8e1643655bd1
+            userCondition: null
+            warning: null
+            width: 100
+        name: 'SEO Settings'
+        uid: a1bb6c52-5564-417e-a85c-4e6d36915883
+        userCondition: null
+handle: team
+hasTitleField: true
+name: Team
+section: c614886f-7b46-45cf-8f75-f3f09aeb988d # Team
+sortOrder: 1
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

@@ -1,0 +1,21 @@
+{% extends "main/_layout/main" %}
+
+{% block main %}
+
+{% include "_elements/_redirect.twig" %}
+
+<main id="main" class="landing">
+  {% include "_elements/_banner.twig" %}
+  
+  <section class="main-content">
+    {% if entry.introduction %}
+    <div class="landing-container">
+      <p class="largetext">{{ entry.introduction }}</p>
+    </div>
+    {% endif %}
+    
+    {% include "_elements/_landing-content.twig" %}
+  </section>
+</main>
+
+{% endblock %}

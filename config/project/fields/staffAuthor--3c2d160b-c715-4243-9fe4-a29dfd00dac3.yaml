@@ -1,0 +1,22 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: ae5efb3a-2ce9-4bea-a606-d71f9faee980 # Team
+handle: staffAuthor
+instructions: 'If the author is a member of the staff, select from the staff channel to pull in their directory title and image. If this is a guest author, use the additional fields below.'
+name: 'Staff Author'
+searchable: true
+settings:
+  allowSelfRelations: false
+  limit: '1'
+  localizeRelations: false
+  selectionLabel: 'Add author'
+  showSiteMenu: true
+  source: null
+  sources:
+    - 'section:c614886f-7b46-45cf-8f75-f3f09aeb988d' # Team
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Entries

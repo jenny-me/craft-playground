@@ -1,0 +1,21 @@
+columnSuffix: jugovfvn
+contentColumnType: text
+fieldGroup: eee1b2bc-0e51-477d-a3ab-5b0f0b0849fe # Homepage
+handle: locationsContent
+instructions: null
+name: 'Locations Content'
+searchable: false
+settings:
+  availableTransforms: '*'
+  availableVolumes: '*'
+  ckeConfig: 8d15965f-c69a-4fc1-ae32-1a973c85aeb6 # Full
+  columnType: text
+  defaultTransform: ''
+  enableSourceEditingForNonAdmins: true
+  purifierConfig: null
+  purifyHtml: true
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+translationKeyFormat: null
+translationMethod: none
+type: craft\ckeditor\Field

@@ -1,0 +1,41 @@
+{% extends "main/_layout/main" %}
+
+{% block main %}
+
+{% include "_elements/_redirect.twig" %}
+
+<main id="main" class="content">
+  {% include "_elements/_banner.twig" %}
+
+  <section class="main-content">
+    {% if entry.introduction %}
+    <p class="largetext">{{ entry.introduction }}</p>
+    {% endif %}
+
+    {% include "_elements/_article-content.twig" %}
+  </section>
+  <section class="sub-content">
+    {# <div class="side-nav">
+      {% include 'main/_layout/_sub-nav.twig' %}
+    </div> #}
+    <div class="side-block light">
+      <div class="side-text event-date">
+        <h3>Date</h3>
+        {{ entry.eventDate | date("M d, Y") }}{% if entry.endDate %} - {{ entry.endDate | date("M d, Y") }}{% endif %}
+        {% if entry.startTime %}
+        <hr>
+        <h3>Time</h3>
+        {{ entry.startTime | date('h:i a') }}{% if entry.endTime %} - {{ entry.endTime | date('h:i a') }}{% endif %}
+        {% endif %}
+        {% if entry.location %}
+        <hr>
+        <h3>Location</h3>
+        {{ entry.location }}
+        {% endif %}
+      </div>
+    </div>
+    {% include "_elements/_sidebar.twig" %}
+  </section>
+</main>
+
+{% endblock %}

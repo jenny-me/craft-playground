@@ -1,0 +1,24 @@
+defaultPlacement: end
+enableVersioning: true
+handle: contentCards
+name: 'Content Cards'
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  33e15c65-c8eb-45e6-a385-b793d2fcc64d: # Client Name
+    enabledByDefault: true
+    hasUrls: false
+    template: null
+    uriFormat: null
+type: channel

@@ -1,0 +1,21 @@
+columnSuffix: null
+contentColumnType: text
+fieldGroup: 50457ffa-e50e-4b28-a515-7a099e2204af # Events
+handle: noEventsMessage
+instructions: null
+name: 'No Events Message'
+searchable: false
+settings:
+  availableTransforms: '*'
+  availableVolumes: '*'
+  ckeConfig: 93fb68e0-cc2c-4f3f-90fd-b0182086bfa1 # Default
+  columnType: text
+  defaultTransform: ''
+  enableSourceEditingForNonAdmins: true
+  purifierConfig: null
+  purifyHtml: true
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+translationKeyFormat: null
+translationMethod: none
+type: craft\ckeditor\Field

@@ -1,0 +1,108 @@
+@media print {
+  // To get Chrome to show desktop media queries. Otherwise set to 568px
+  @page {
+    size: 330mm 427mm;
+    margin: 14mm;
+  }
+  .container {
+    width: 1170px;
+  }
+
+  .main-nav,
+  .menu,
+  .admin-btns,
+  .banner-image,
+  .filters,
+  .side-nav,
+  .global-cta,
+  .footer {
+    display: none;
+  }
+
+  .mast {
+    .container {
+      display: block;
+      max-width: 100%;
+      margin-bottom: 2em;
+    }
+    .logo {
+      margin: 0;
+      transform: none;
+    }
+    .main-logo {display: none;}
+    .fixed-logo {display: block;}
+  }
+  .banner.withBkgd .container {
+    color: $color-grey-dark;
+    text-shadow: none;
+  }
+  .main-content {
+    padding: 0;
+  }
+  .sub-content { 
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    gap: 20px;
+  }
+  .side-block {
+    border: 1px solid $color-grey;
+    color: $color-grey-dark !important;
+  }
+
+  a.button, a.button:link, a.button:visited,
+  .button a, .button a:link, .button a:visited,
+  input.button, button.button {
+    border: 2px solid $link-color !important;
+    color: $link-color !important; 
+  }
+  
+
+  // Home
+  .hero-text {
+    color: $color-black;
+    font-size: 1.1em;
+    text-shadow: none;
+  }
+  .link-list {
+    display: none;
+  }
+  .image-block {
+    margin: 1.5em 0;
+  }
+
+  .banner {
+    margin-top: 0px;
+
+    &.withBkgd {  
+      .banner-mask {
+        height: auto !important;
+        min-height: initial;
+      }
+    }
+  }  
+  .two-column {
+    .container {
+      display: flex;
+      justify-content: space-between;
+    }
+    .column-card {
+      flex: 0 1 48%;
+      .card-text {
+        flex: 1;
+      }
+      .card-image {
+        display: none;
+      }
+    }
+  }
+  .feature-row {
+    flex-direction: row;
+    border-top: 1px solid $color-black;
+    color: $color-black !important;
+
+    .feature-text {
+      text-align: left !important;
+    }
+  }  
+}

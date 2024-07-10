@@ -1,0 +1,141 @@
+field: e443c70e-6db5-423b-bd28-6ce9cc2cbb61 # Page Content
+fieldLayouts:
+  f23836a6-a253-41b0-891d-de51cc5dc3b0:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 702c2561-1ef5-40cd-b25c-cb6e00ff574f # Number of Columns
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 7c3109ca-727a-4935-a6a5-efc22c194269
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: 5f27f0c7-8430-4472-870f-fade3dfcf619 # Content Header
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 6e88cfcd-f06a-4ef2-ac4f-df70d0ca14ca
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: fe34fcdb-ffd5-4177-b7ef-66dde6611b78 # Content
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 80176563-3a6e-4ad4-a084-73e1bfcbc764
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 8f799ea4-43da-486f-a2e9-527fed87ab8a
+        userCondition: null
+fields:
+  5f27f0c7-8430-4472-870f-fade3dfcf619: # Content Header
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: ccHeader
+    instructions: null
+    name: 'Content Header'
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  702c2561-1ef5-40cd-b25c-cb6e00ff574f: # Number of Columns
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: ccNumColumns
+    instructions: null
+    name: 'Number of Columns'
+    searchable: false
+    settings:
+      columnType: string
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - Two
+            -
+              - value
+              - two
+            -
+              - default
+              - '1'
+        -
+          __assoc__:
+            -
+              - label
+              - Three
+            -
+              - value
+              - three
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Four
+            -
+              - value
+              - four
+            -
+              - default
+              - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Dropdown
+  fe34fcdb-ffd5-4177-b7ef-66dde6611b78: # Content
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: ccContent
+    instructions: null
+    name: Content
+    searchable: true
+    settings:
+      availableTransforms: '*'
+      availableVolumes: '*'
+      ckeConfig: 93fb68e0-cc2c-4f3f-90fd-b0182086bfa1 # Default
+      columnType: text
+      defaultTransform: null
+      enableSourceEditingForNonAdmins: true
+      purifierConfig: null
+      purifyHtml: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      showWordCount: false
+      wordLimit: null
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\ckeditor\Field
+handle: columnContent
+name: 'Column Content'
+sortOrder: 3

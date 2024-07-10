@@ -1,0 +1,137 @@
+field: 23ce64bc-06ae-4f6a-af06-d90093f40000 # Top Links
+fieldLayouts:
+  b1bb2ba8-7fa1-4667-bc88-ef363a4d79d3:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 093b6cf2-9825-42c2-af55-58545a843f02 # Icon
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f1cd50b9-8a86-4017-bcfe-7f48edbd6c40
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            elementCondition: null
+            fieldUid: 316d0995-ba15-4165-adac-98fa3b56d741 # Link Text
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d632865a-98c2-44cf-ac86-d758bf4bfd77
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            elementCondition: null
+            fieldUid: 65d91954-8fd4-4fe6-ae0c-21aa741ab87a # Link Location
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: edaaeac3-94a0-466f-b31a-b335cdb64cc8
+            userCondition: null
+            warning: null
+            width: 50
+        name: Content
+        uid: c8723938-55cc-4dc2-9fa9-3b7dc187a544
+        userCondition: null
+fields:
+  65d91954-8fd4-4fe6-ae0c-21aa741ab87a: # Link Location
+    columnSuffix: null
+    contentColumnType: string(255)
+    fieldGroup: null
+    handle: tLinkLocation
+    instructions: null
+    name: 'Link Location'
+    searchable: false
+    settings:
+      maxLength: 255
+      types:
+        - url
+        - tel
+        - email
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Url
+  093b6cf2-9825-42c2-af55-58545a843f02: # Icon
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: tLinkIcon
+    instructions: null
+    name: Icon
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      allowSubfolders: false
+      allowUploads: true
+      allowedKinds:
+        - image
+      branchLimit: null
+      defaultUploadLocationSource: 'volume:09c09568-4b70-4b1a-a334-24e0b0a5ed09' # Content Images
+      defaultUploadLocationSubpath: icons
+      localizeRelations: false
+      maintainHierarchy: false
+      maxRelations: 1
+      minRelations: null
+      previewMode: full
+      restrictFiles: true
+      restrictLocation: false
+      restrictedDefaultUploadSubpath: null
+      restrictedLocationSource: 'volume:09c09568-4b70-4b1a-a334-24e0b0a5ed09' # Content Images
+      restrictedLocationSubpath: null
+      selectionCondition:
+        __assoc__:
+          -
+            - elementType
+            - craft\elements\Asset
+          -
+            - fieldContext
+            - global
+          -
+            - class
+            - craft\elements\conditions\assets\AssetCondition
+      selectionLabel: 'Add icon'
+      showSiteMenu: false
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      sources:
+        - 'volume:09c09568-4b70-4b1a-a334-24e0b0a5ed09' # Content Images
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  316d0995-ba15-4165-adac-98fa3b56d741: # Link Text
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: tLinkText
+    instructions: null
+    name: 'Link Text'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: topLink
+name: Link
+sortOrder: 1

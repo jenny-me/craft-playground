@@ -1,0 +1,59 @@
+{% extends "main/_layout/main" %}
+
+{% block main %}
+
+<main id="main" class="content article-detail">
+
+  <section class="text-banner">
+    <div class="container">
+      <h1>Search</h1>
+    </div>
+  </section>
+
+  <section class="main-content">
+      
+{% set searchQuery = craft.app.request.getParam('q') %}
+
+{# Include all sections that do not have URLs #}
+{% set excludedSections = ['not', 'homepage', 'accordions', 'categories', 'departments', 'designStandards', 'hero', 'scholarships', 'sharedSidebar'] %}
+
+{% set mainPages = craft.entries().section(excludedSections).search(searchQuery).ids() %}
+
+{# Include all sections that can be pulled into the main content #}
+{% set checkParent = ['accordions'] %}
+{% set subPages = craft.entries().section(checkParent).search(searchQuery).all() %}
+
+{% set parentPages = craft.entries().section(excludedSections).relatedTo([
+  { element: subPages, field: 'pageContent.accordion.accordion' }
+]).ids() %}
+
+{% set searchResults = craft.entries({
+  id: mainPages|merge(parentPages),
+  search: searchQuery,
+  orderBy: 'score', 
+}) %}
+{% set allEntries = searchResults.all()|length %}
+
+{% paginate searchResults.limit(10) as pageInfo, pageEntries %}
+{% if allEntries %}
+    <p>{{ allEntries }} result(s) for <strong>{{ searchQuery }}</strong>:</p>
+
+    <ul class="content-list search-results">
+        {% for entry in pageEntries %}
+          <li><a href="{{ entry.url }}">{{ entry.title }}</a>
+            {% if entry.dirShortDescription %}<br>{{ entry.dirShortDescription }}
+            {% elseif entry.introduction %}<br>{{ entry.introduction }}
+            {% elseif entry.pageContent|length and entry.pageContent.type('text')|length %}<br>{{ entry.pageContent.type('text').one().text|striptags|truncate(200, splitSingleWord=false) }}{% endif %}</li>
+        {% endfor %}
+    </ul>
+
+    {% include '_elements/_pagination.twig' %}
+{% else %}
+    <p>Your search for “{{ searchQuery }}” didn’t return any results.</p>
+{% endif %}
+  
+  </section>
+</main>
+
+{% endblock %}
+

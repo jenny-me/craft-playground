@@ -1,0 +1,98 @@
+
+.link-list {
+  margin-top: 2em;
+  margin-bottom: 2em;
+  
+  @media all and (min-width: $medium-screen) {
+    margin-right: -50%;
+  }
+
+  ul {
+    margin: 0; padding: 0;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1em;
+  }
+
+  li {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    position: relative;
+    
+    padding: 1.5em;
+    background: $primary-color;
+    border-radius: 6px;
+
+    text-decoration: none;
+    color: $color-white;
+    font-weight: normal;
+    line-height: 1.2;
+    
+    &:hover, &:active, &:focus {
+      background: $primary-color-alt;
+    }
+  }
+  a {
+    &, &:link, &:visited {
+      color: inherit;
+      font-weight: inherit;
+      text-decoration: none;
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: 0px; left: 0px; right: 0px; bottom: 0px;
+        cursor: pointer;
+        border-radius: 6px;
+      }
+    }
+  }
+  .link-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 24px;
+    width: 24px;
+
+    margin-bottom: .5em;
+
+    svg path { fill: $color-white; }
+  }
+  h2 {
+    margin: 0 0 .25em;
+
+    color: inherit;
+    font-size: em(22, 18);
+  }
+}
+
+ul.statistics {
+  padding: 0; margin: 0;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  font-size: em(12,18);
+
+  @media all and (max-width: $small-screen) {
+    display: block;
+  }
+  
+  li {
+    margin: 0; padding: 0 1em 2em 0;
+    list-style: none;
+    flex: 0 0 33%;
+  }
+
+  strong {
+    display: block;
+
+    color: $color-blue;
+    font-size: em(40, 12);
+    font-weight: 700;
+    line-height: 1.05;
+  }
+}

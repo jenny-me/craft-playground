@@ -1,0 +1,78 @@
+.pagination {
+  padding: 1em 0;
+  margin-bottom: 2em;
+  border-top: 1px solid $hr-color;
+
+  display: flex;
+  justify-content: space-between;
+
+	@media (max-width: $medium-screen) {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+
+	.firstPage, .lastPage {
+		flex: 1;
+		a, button {
+      &, &:link, &:visited {
+        background: $link-color;
+        color: $color-white;
+        border-radius: 3px;
+        padding: .5em 1em;
+				text-decoration: none;
+      }
+
+			&:hover, &:active, &:focus {
+				background: $hover-color;
+			}
+		}
+	}
+
+	.middlePages {
+		flex: 2;
+		align-self: center;
+		width: calc(100% - 122px);
+		text-align: center;
+
+		@media (max-width: $medium-screen) {
+			order: 1;
+			margin-bottom: 12px;
+			width: 100%;
+		}
+
+		a {
+      &, &:link, &:visited {
+        padding: 0 4px;
+				text-decoration: none;
+
+        img {
+          height: 18px;
+        }
+      }
+
+			&:hover, &:active, &:focus {
+        img {
+          opacity: .75;
+        }
+      }
+		}
+	}
+
+	.firstPage {
+		@media (max-width: $medium-screen) {
+			order: 2;
+			margin-right: 6px;
+		}
+	}
+
+	.lastPage {
+		align-self: flex-end;
+		text-align: right;
+
+		@media (max-width: $medium-screen) {
+			order: 3;
+			margin-left: 6px;
+		}
+	}
+}

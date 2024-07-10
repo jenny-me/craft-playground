@@ -1,0 +1,51 @@
+field: aa69bfc6-16e6-4165-bbd6-75e46795733d # Landing Content
+fieldLayouts:
+  8d53827f-e97a-4133-80ec-6f4f14554ccc:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 1e34a5d0-55da-422d-92f3-071409a0737d # __blank__
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 171c7226-d1ec-4ea7-ace5-0125fb9d5ead
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: dbaf4f28-c4cc-47ad-a5bd-e8ed30b108b0
+        userCondition: null
+fields:
+  1e34a5d0-55da-422d-92f3-071409a0737d: # __blank__
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: contentCards
+    instructions: null
+    name: __blank__
+    searchable: true
+    settings:
+      allowSelfRelations: false
+      branchLimit: null
+      localizeRelations: false
+      maintainHierarchy: false
+      maxRelations: null
+      minRelations: null
+      selectionLabel: 'Add card'
+      showSiteMenu: true
+      sources:
+        - 'section:9bf127bc-7523-4192-bdd8-fe46e10e4211' # Content Cards
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Entries
+handle: contentCards
+name: 'Content Cards'
+sortOrder: 2

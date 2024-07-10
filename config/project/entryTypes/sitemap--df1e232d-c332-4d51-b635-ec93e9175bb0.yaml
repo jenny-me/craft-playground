@@ -1,0 +1,106 @@
+fieldLayouts:
+  17ad3323-9813-4dc6-a4e5-cae123cab463:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 1437f4ca-2983-4e57-a729-b198470840ed
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 4bf5b183-a3e2-40c5-8700-7432e9538c38 # Page Headline
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b53b437e-d7e4-46d9-8792-9f5ca821c890
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 008e770f-a3a4-434a-b63b-1b8708ed1e0a # Introduction
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 88fea23b-2d95-493f-b1a1-20161a292fab
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: be78585a-1088-48bb-8950-883bb4a523b1
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 0ebd966a-c731-4c35-ab55-e4a45bbf57fb # Feature
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 86f2bb34-f1bd-4cff-83f6-6c548dd0808f
+            userCondition: null
+            warning: null
+            width: 100
+        name: Feature
+        uid: 223ed76d-c3d8-495b-a130-b40d34f7288c
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: b2ee82f0-cd65-4af1-98ba-7ad7159079b1 # SEO Settings
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: dfe98e66-063e-4d56-8f7b-13a2e61b9065
+            userCondition: null
+            warning: null
+            width: 100
+        name: 'SEO Settings'
+        uid: d5c7a9ad-dc23-438d-b1c9-2cd138f1f1ac
+        userCondition: null
+handle: sitemap
+hasTitleField: true
+name: Sitemap
+section: d3829cc7-529e-4c9c-a1e0-7e4a16f52c48 # About This Site
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+sortOrder: 2
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

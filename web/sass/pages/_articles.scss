@@ -1,0 +1,53 @@
+$sidemargin:  minmax(5%, auto);
+$gap: minmax(2.5em, 8em);
+
+.article-detail {
+  display: grid;
+  grid-template-columns: $sidemargin auto $sidemargin;
+  grid-template-areas:
+    ". banner ."
+    ". content ."
+    ". sidebar ."
+    ". sideNav ."
+    ". related .";
+
+  @media screen and (min-width: $medium-screen) {
+    grid-template-columns: $sidemargin minmax(200px, 400px) $gap minmax(620px, 740px) $sidemargin;
+    grid-template-rows: auto max-content;
+    grid-template-areas:
+      ". banner banner banner ."
+      ". sideNav . content ."
+      ". sidebar . content ."
+      ". related related related .";
+  }
+
+  @media screen and (min-width: $max-width) {
+    grid-template-columns: $sidemargin minmax(180px, 280px) $gap minmax(600px, 740px) $gap minmax(180px, 280px) $sidemargin;
+    grid-template-areas:
+      ". banner banner banner banner banner ."
+      ". sideNav . content . sidebar ."
+      ". related related related related related .";
+  }
+
+
+  .text-banner {
+    grid-area: banner;
+    p.date {
+      display: block;
+      font-weight: 500;
+      text-transform: none;
+    }
+  }
+  .main-content {
+    grid-area: content;
+  }
+  .article-info {
+    grid-area: sideNav;
+  }
+  .sub-content {
+    grid-area: sidebar;
+  }
+  .related {
+    grid-area: related;
+  }
+}

@@ -1,0 +1,19 @@
+columnSuffix: null
+contentColumnType: text
+fieldGroup: a0fe5b36-2aa4-45c6-aa52-4f2b211d203b # Common
+handle: pageHeadline
+instructions: null
+name: 'Page Headline'
+searchable: true
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  columnType: null
+  initialRows: 4
+  multiline: false
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

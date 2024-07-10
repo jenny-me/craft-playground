@@ -1,0 +1,27 @@
+{% switch entry.type %}
+
+  {% case 'landingPage' %}
+    {% include 'main/page/_type/_landing' %}
+
+  {% case 'articleListing' %}
+    {% include 'main/page/_type/_article-listing' %}
+
+  {% case 'eventListing' %}
+    {% include 'main/page/_type/_event-listing' %}
+
+  {% case 'events' %}
+    {% include 'main/page/_type/_event-detail' %}
+
+  {% case 'staffListing' %}
+    {% include 'main/page/_type/_staff-listing' %}
+
+  {% case 'sitemap' %}
+    {% include 'main/page/_type/_sitemap' %}
+
+  {% case 'team' %}
+    {% include 'main/page/_type/_staff-detail' %}
+
+  {% default %}
+    {% include 'main/page/_type/_default' %}
+
+{% endswitch %}

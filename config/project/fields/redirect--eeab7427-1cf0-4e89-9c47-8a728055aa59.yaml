@@ -1,0 +1,21 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: a5d1cc92-1351-49c1-bd93-82b6d2865609 # Utilities
+handle: redirect
+instructions: 'If you would like to redirect this page to another page on the site, please select the location.'
+name: 'Internal Redirect'
+searchable: true
+settings:
+  allowSelfRelations: false
+  limit: '1'
+  localizeRelations: false
+  selectionLabel: 'Add location'
+  showSiteMenu: true
+  source: null
+  sources: '*'
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Entries

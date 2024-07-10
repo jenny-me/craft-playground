@@ -1,0 +1,100 @@
+#ddev-generated
+
+http:
+  routers:
+    
+    
+    craft-template-prowess-web-80-http:
+      
+      rule: HostRegexp(`craft-template-prowess.ddev.site`)
+      
+      middlewares:
+        - autodetect
+      service: "craft-template-prowess-web-80-http"
+      tls: false
+      entrypoints:
+        - http-80
+    
+    
+    craft-template-prowess-web-8025-http:
+      
+      rule: HostRegexp(`craft-template-prowess.ddev.site`)
+      
+      middlewares:
+        - autodetect
+      service: "craft-template-prowess-web-8025-http"
+      tls: false
+      entrypoints:
+        - http-8025
+    
+    
+    
+    
+    
+    
+    craft-template-prowess-web-80-https:
+      
+      rule: HostRegexp(`craft-template-prowess.ddev.site`)
+      
+      middlewares:
+        - autodetect
+      service: "craft-template-prowess-web-80-https"
+      
+      tls: true
+      
+      entrypoints:
+        - http-443
+    
+    
+    craft-template-prowess-web-8025-https:
+      
+      rule: HostRegexp(`craft-template-prowess.ddev.site`)
+      
+      middlewares:
+        - autodetect
+      service: "craft-template-prowess-web-8025-https"
+      
+      tls: true
+      
+      entrypoints:
+        - http-8026
+    
+    
+
+  # autodetect won't be needed in Traefik 3 https://github.com/traefik/traefik/pull/9546
+  middlewares:
+    autodetect:
+      contentType:
+        autoDetect: false
+
+  services:
+    
+    craft-template-prowess-web-80-http:
+      loadbalancer:
+        servers:
+          - url: http://ddev-craft-template-prowess-web:80
+    
+    craft-template-prowess-web-8025-http:
+      loadbalancer:
+        servers:
+          - url: http://ddev-craft-template-prowess-web:8025
+    
+    craft-template-prowess-web-80-https:
+    
+      loadbalancer:
+        servers:
+          - url: http://ddev-craft-template-prowess-web:80
+    
+    craft-template-prowess-web-8025-https:
+    
+      loadbalancer:
+        servers:
+          - url: http://ddev-craft-template-prowess-web:8025
+    
+
+
+tls:
+  certificates:
+    - certFile: /mnt/ddev-global-cache/traefik/certs/craft-template-prowess.crt
+      keyFile: /mnt/ddev-global-cache/traefik/certs/craft-template-prowess.key
+

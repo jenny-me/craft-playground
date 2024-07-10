@@ -1,0 +1,42 @@
+
+{% for block in entry.sidebar.all() %}
+  {% switch block.type %}
+
+  {% case 'customSidebar' %}
+    <div class="side-block {{ block.sBkgd }}">
+      {% set image = block.sImage.one() %}
+      {% if image %}
+      <img src="{{ image.getUrl() }}" alt="" class="lazyload" loading="lazy">
+      {% endif %}
+      <div class="side-text">
+        {% if block.sCategory %}<p class="small-header">{{ block.sCategory }}</p>{% endif %}
+        {% if block.sHeader %}<h2>{{ block.sHeader }}</h2>{% endif %}
+        {{ block.sText }}
+        {% if block.sButton %}
+        <div class="side-btn text-button">
+          {{ block.sButton }}
+        </div>
+        {% endif %}
+      </div>
+    </div>
+
+  {% case 'sharedSidebar' %}
+  {% set shareSide = block.sharedSidebar.one() %}
+  <div class="side-block {{ shareSide.sidebarBkgd }}">
+    {% set image = shareSide.sidebarImage.one() %}
+    {% if image %}
+    <img src="{{ image.getUrl() }}" alt="" class="lazyload" loading="lazy">
+    {% endif %}
+    <div class="side-text">
+      {% if shareSide.sidebarCategory %}<p class="small-header">{{ shareSide.sidebarCategory }}</p>{% endif %}
+      {% if shareSide.sidebarHeader %}<h2>{{ shareSide.sidebarHeader }}</h2>{% endif %}
+      {{ shareSide.sidebarText }}
+      {% if shareSide.sidebarButton %}
+      <div class="side-btn text-button">
+        {{ shareSide.sidebarButton }}
+      </div>
+      {% endif %}
+    </div>
+  </div>
+  {% endswitch %}
+{% endfor %}

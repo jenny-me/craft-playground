@@ -1,0 +1,94 @@
+/* Listing Page */
+.event-content {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+
+  @media all and (min-width: $small-screen) {
+    flex-direction: row;
+
+    .contentpane {
+      flex: 1;
+    }
+  }
+  h2 {
+    border-bottom: 1px solid $hr-color;
+    padding-bottom: .25em;
+  }
+}
+
+.event-list {
+  margin-bottom: 2em;
+}
+
+.past-events-header {
+  margin-top: 1.25em;
+}
+
+.past-event-list {
+  column-count: 2;
+  column-gap: 3em;
+
+  h3.event-header {
+    font-size: 1em;
+  }
+}
+
+.event-text {
+  margin-bottom: 1em;
+}
+.event-card {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em 0;
+
+  figure {
+    flex: 0 1 25%;
+    max-width: 350px;
+    margin: 0 2em 0 0;
+
+    img {
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+  .card-content {
+    flex: 1;
+    padding: 0;
+  }
+}
+
+.event-header {
+  margin-bottom: .25em;
+
+  a {
+    &, &:link, &:visited {
+      color: $link-color;
+      font-size: 1.1em;
+      font-weight: bold;
+      text-transform: none;
+      text-decoration: none;
+      line-height: 1.1;
+    }
+    &:hover, &:active, &:focus {
+      color: $hover-color;
+    }
+  }
+}
+p.date {
+  padding: 0;
+  margin-bottom: .5em;
+
+  display: flex;
+  align-items: center;
+
+  color: $color-grey-dark;
+  font-size: .8em;
+  font-weight: bold;
+  text-transform: uppercase;
+
+  svg {
+    display: block;
+    margin-right: 10px;
+  }
+}

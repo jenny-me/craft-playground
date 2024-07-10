@@ -1,0 +1,674 @@
+dateModified: 1720642811
+elementSources:
+  craft\elements\Entry:
+    -
+      defaultSort:
+        - postDate
+        - desc
+      disabled: false
+      key: '*'
+      tableAttributes:
+        - section
+        - postDate
+        - expiryDate
+        - link
+      type: native
+    -
+      heading: Home
+      type: heading
+    -
+      key: 'single:6451f8ed-ab88-477b-afbc-50b5307ea547' # Homepage - Main
+      type: native
+    -
+      key: 'section:dbaf3ae8-8593-4d77-910a-f8ca7908fba1'
+      type: native
+    -
+      heading: Navigation
+      type: heading
+    -
+      key: 'section:cfe2ab11-e0d6-4828-9b60-768ca1081018' # Navigation - Main
+      tableAttributes:
+        - dateUpdated
+        - revisionCreator
+        - type
+        - link
+      type: native
+    -
+      heading: Media
+      type: heading
+    -
+      key: 'section:fb76a5df-125f-4073-988b-2d2f9ad8cf28' # Articles
+      tableAttributes:
+        - postDate
+        - dateUpdated
+        - revisionCreator
+        - 'field:51e983c0-1445-40ec-aaa8-3ba7295f7d41' # Category
+        - type
+        - link
+      type: native
+    -
+      key: 'section:25ae185f-dbd4-4176-890b-361656dd20a7' # Events
+      tableAttributes:
+        - 'field:1d8d7d81-d684-49e5-9337-9895d5c97d89' # Event Date
+        - 'field:3985a56d-28e3-4872-a749-97aad1448bf9' # End Date
+        - dateUpdated
+        - 'field:328f9215-6260-4024-8ff4-7017c062ff22' # Thumbnail Image
+        - revisionCreator
+        - link
+      type: native
+    -
+      key: 'section:c8b4e00a-e8c7-484b-aba4-3d886a74949b' # Categories
+      tableAttributes:
+        - postDate
+        - expiryDate
+        - author
+        - link
+      type: native
+    -
+      heading: People
+      type: heading
+    -
+      key: 'section:2a8eda51-0fb9-4ceb-8f44-926b62a63b00' # Departments
+      tableAttributes:
+        - postDate
+        - expiryDate
+        - author
+        - link
+      type: native
+    -
+      key: 'section:c614886f-7b46-45cf-8f75-f3f09aeb988d' # Team
+      tableAttributes:
+        - 'field:f2e19a8d-b052-4274-b359-f8e2ab12c5c2' # Sort Name
+        - 'field:75aec594-2dcf-44fb-a1ba-96085836b122' # Profile Image
+        - dateUpdated
+        - revisionCreator
+        - 'field:eee29027-1221-4408-8d4f-103fe2b2605c' # Department
+        - link
+      type: native
+    -
+      heading: Directories
+      type: heading
+    -
+      heading: 'Shared Components'
+      type: heading
+    -
+      key: 'section:9cf8b488-d41b-4b02-b945-b52944c6d419' # Accordions
+      tableAttributes:
+        - postDate
+        - expiryDate
+        - author
+        - link
+      type: native
+    -
+      key: 'section:9bf127bc-7523-4192-bdd8-fe46e10e4211' # Content Cards
+      type: native
+    -
+      key: 'section:a2d587c1-ef32-4193-8f69-c695ddc657a4' # Shared Sidebar
+      type: native
+    -
+      heading: Utilities
+      type: heading
+    -
+      key: 'section:d3829cc7-529e-4c9c-a1e0-7e4a16f52c48' # About This Site
+      type: native
+    -
+      defaultSort:
+        - structure
+        - asc
+      disabled: false
+      key: 'section:4d63c242-f66b-49ba-afd6-b9c650174a3c' # Design Standards
+      tableAttributes:
+        - dateUpdated
+        - revisionCreator
+        - type
+        - link
+      type: native
+email:
+  fromEmail: $SYSTEM_EMAIL
+  fromName: $SENDER_NAME
+  replyToEmail: $REPLY_TO_EMAIL
+  template: ''
+  transportSettings:
+    command: '/usr/local/bin/mailpit sendmail -t --smtp-addr 127.0.0.1:1025'
+  transportType: craft\mail\transportadapters\Sendmail
+fs:
+  contentImages:
+    hasUrls: true
+    name: 'Content Images'
+    settings:
+      path: '@webroot/uploads/images'
+    type: craft\fs\Local
+    url: /uploads/images
+  documents:
+    hasUrls: true
+    name: Documents
+    settings:
+      path: '@webroot/uploads/documents'
+    type: craft\fs\Local
+    url: /uploads/documents
+meta:
+  __names__:
+    0a54d1cd-ee98-4603-8dd9-8990d68138b0: __blank__ # __blank__
+    00a56750-dfa1-4fd3-a2ce-7a6a08ca1ff5: Text # Text
+    0b6e57b9-a7e8-4c00-9bf0-69556267d86f: Description # Description
+    0c5f214f-5819-498e-8065-9b0ff0337b96: Description # Description
+    0ca4650b-a956-40cf-a0ae-1dadf8030a16: 'Article Type' # Article Type
+    0dca86f1-5c1d-46a0-93de-51b2fbe6c76b: 'Background Color' # Background Color
+    0eb42669-d404-4d00-9237-af21ea1b204a: 'Callout Button' # Callout Button
+    0ebd966a-c731-4c35-ab55-e4a45bbf57fb: Feature # Feature
+    0ec38a6a-3efc-496e-8340-98c87102f2b2: 'Pane Header' # Pane Header
+    0efa2b85-c80e-46e4-bec5-d3817469ab75: __blank__ # __blank__
+    0f4f2f41-4ea2-4d53-83e1-99345bd516ad: __blank__ # __blank__
+    0fd07fef-7348-4b4c-befd-c5223fd96a24: 'Hide From Menu' # Hide From Menu
+    1aa19e7f-1888-4f29-8ec2-32a2a0e8bc52: Description # Description
+    1c0db3c0-b8d3-4af6-b93f-0d75e9b6d626: 'Large Image' # Large Image
+    1d8d7d81-d684-49e5-9337-9895d5c97d89: 'Event Date' # Event Date
+    1d95716e-9729-476a-bd44-8a92eda97d05: 'Article List' # Article List
+    1e34a5d0-55da-422d-92f3-071409a0737d: __blank__ # __blank__
+    1f6ac5e9-5d58-459b-922e-d2108a8c94b0: Button # Button
+    1f21072a-eeaa-4eff-b98b-dcf4dd6bf798: Header # Header
+    1f65591e-8060-4d96-a199-ea47396c90f5: Blog # Blog
+    1fdcb033-a57f-44c9-a862-48bb151e640c: Category # Category
+    2a1a9bea-120c-4579-b2af-d8e6a1dad300: 'Background Color' # Background Color
+    2a4af31b-788c-4821-9bd0-b237737ce342: 'Background Color' # Background Color
+    2a5a0c5a-c78c-4db0-827b-d718253d1fce: Categories # Categories
+    2a8eda51-0fb9-4ceb-8f44-926b62a63b00: Departments # Departments
+    2bd7a3c7-4642-4aea-bf8a-6a0bc5e28109: Button # Button
+    2cb00cdf-4694-41cb-9d13-a155748c4df8: Errors # Errors
+    2dd1b1b6-89ea-4f45-88ad-ba36d7b5a857: Header # Header
+    2e5c842f-0a49-4b42-b54b-cfb54d581e07: Documents # Documents
+    2e7cbe9b-6277-43eb-9483-6b2f8e3bd00b: __blank__ # __blank__
+    2e285560-1288-4620-be45-b7e5af8dd969: Default # Default
+    2fd08cdc-dc50-43bf-a031-145dbe4c7b2d: 'Block 2 Button' # Block 2 Button
+    3a8c532c-4e83-4152-b1d1-e216f06aa2dd: Accordion # Accordion
+    3c0e8e48-b722-4550-9a64-1e8f09a05ec4: Text # Text
+    3c2d160b-c715-4243-9fe4-a29dfd00dac3: 'Staff Author' # Staff Author
+    003ee7b6-40e7-4291-ae30-981930be807f: Image # Image
+    3f3a3e19-6765-4304-951b-ba5fc5834b45: 'Pane Content' # Pane Content
+    4a965af1-dbf9-4b46-9e2e-0bd48f272195: Header # Header
+    04a6347e-01d0-47c2-a384-9358d1534b15: 'Link List' # Link List
+    4bcc7260-523f-4295-af3c-6270b0100ffb: Events # Events
+    4bf5b183-a3e2-40c5-8700-7432e9538c38: 'Page Headline' # Page Headline
+    4d63c242-f66b-49ba-afd6-b9c650174a3c: 'Design Standards' # Design Standards
+    4e132944-c0bd-4257-9af8-ef6163edbd56: 'Sidebar Background' # Sidebar Background
+    5a9e2ae8-faa3-4e95-bd57-8c4068cf09f2: 'Small Image' # Small Image
+    5ac6429d-f839-421b-83ed-027752441b13: 'Image Position' # Image Position
+    5b72d2fb-7ee9-40ac-b372-98abd9088d97: __blank__ # __blank__
+    5bd0186e-c6ef-41ba-8ee3-472d586664af: Subheader # Subheader
+    05ebe82b-095b-4c5e-a61b-87f8e9d8b323: __blank__ # __blank__
+    5f27f0c7-8430-4472-870f-fade3dfcf619: 'Content Header' # Content Header
+    5f4555e9-a9f9-445c-9b2e-7f7bbb259847: 'Add Drop Cap' # Add Drop Cap
+    6cc6d336-c023-43cf-96df-03c7a803737d: Button # Button
+    6d067805-797c-4986-9eef-6cbe884e80b0: 'Social Media' # Social Media
+    6d9f50a0-47f1-4ee3-b4f2-8b118ef5f33f: Image # Image
+    6df813e6-e54e-4f90-b0bc-6451a5112b19: Feature # Feature
+    6e2d2b7c-e9e5-45e6-8cde-05385a845ace: Categories # Categories
+    6e4da1df-02af-43ef-b8ff-ccd5306b03ca: 'Instagram Link' # Instagram Link
+    6fda8caa-7ab8-4b02-9413-8ddafa5123b2: 'Right Column' # Right Column
+    6ff2ebf4-0e58-490d-a91e-b9780029327c: __blank__ # __blank__
+    7a4a97e0-1c21-40d8-9b09-b6374db9f550: 'Image Block' # Image Block
+    7a7c0256-e49c-43c6-81fd-23b7ffd8966e: 'Background Color' # Background Color
+    7b1a96a4-67ef-4cf7-b2c5-c26501e8b806: Description # Description
+    7b10a165-38f5-4412-9588-b0065ae61fb4: 'Image Position' # Image Position
+    7b13d318-19e9-45d6-85af-dc9131901dda: __blank__ # __blank__
+    7b89f4b9-f98b-4191-b894-eb21eb22d08c: Callout # Callout
+    7b618a3b-57ed-406e-b460-d3f5a6a4177e: Button # Button
+    7c61b1b0-ca8f-4f31-9adf-8a17508b4b6d: Icon # Icon
+    7cbea03a-b8a8-4ddb-b7db-4f38cf2b218e: 'Hero Text' # Hero Text
+    7d600523-c08d-478f-ad0b-9a5a6901820f: Button # Button
+    8bff6edc-aed7-4b49-957d-96f4e3b2ec49: Image # Image
+    8ceccc96-fa09-4754-a536-ad607581db26: 'Text Area' # Text Area
+    8d0d6478-7459-4f52-8f66-e9b38c443433: Button # Button
+    8d5709a7-7536-4915-914b-e7345ba31c53: '2-Col Text' # 2-Col Text
+    8d15965f-c69a-4fc1-ae32-1a973c85aeb6: Full # Full
+    008e770f-a3a4-434a-b63b-1b8708ed1e0a: Introduction # Introduction
+    8eaa2338-c7d6-4cdb-914f-d5a99d9c8fa4: Attribution # Attribution
+    8ec39d65-f93d-45ba-a821-2f2f58c2e54d: 'Banner Image' # Banner Image
+    9b0a11b2-e23a-4513-9cd2-bbe769570122: Text # Text
+    9b9ed748-b120-4dca-b185-5fa7534c2dfe: Departments # Departments
+    9bf127bc-7523-4192-bdd8-fe46e10e4211: 'Content Cards' # Content Cards
+    09c09568-4b70-4b1a-a334-24e0b0a5ed09: 'Content Images' # Content Images
+    9cd14e55-f08e-4044-8c2b-69587551f1f2: __blank__ # __blank__
+    9cf8b488-d41b-4b02-b945-b52944c6d419: Accordions # Accordions
+    9d022d70-5d12-41ee-8e78-632ea81a48a5: 'Feature Block' # Feature Block
+    9fc0c8ef-bbc0-4efc-94a2-858bcff023d7: 'Column Content' # Column Content
+    10c53c00-2a58-4b74-a9e3-8741d72e7978: New # New
+    17dc2240-0caa-45df-9aa5-4af1f9cdf53a: 'Add Drop Cap' # Add Drop Cap
+    20a5a573-2119-4d7a-b5dd-92490fe7f46a: Articles # Articles
+    20f1850a-5dae-4d5f-9e45-5a3cbe8fb835: 'Background Color' # Background Color
+    22fb5883-b7a7-4de3-b53a-4dc7f6f13767: Standard # Standard
+    23ce64bc-06ae-4f6a-af06-d90093f40000: 'Top Links' # Top Links
+    23ea1c14-41d8-4b26-ae7f-c7083227b13f: 'Sidebar Header' # Sidebar Header
+    24c4d21f-129c-4673-a773-d33a096847a2: 'Content Page' # Content Page
+    25ae185f-dbd4-4176-890b-361656dd20a7: Events # Events
+    25af0fe6-3b6d-430d-820d-026621a5906d: Header # Header
+    28ba8eca-19ce-4f61-9640-964ab33313fc: 'Page Errors' # Page Errors
+    29c08caa-9f4c-4c3d-a548-953492c7a469: 'Show Pagination' # Show Pagination
+    29e10a50-58ef-4378-873f-fff77b8eebab: Button # Button
+    33e15c65-c8eb-45e6-a385-b793d2fcc64d: 'Client Name' # Client Name
+    36f2634b-ee6f-461a-8909-207a78d747df: Alert # Alert
+    41fce945-a4d5-455c-8040-43123d0ac3b7: 'Pane Content' # Pane Content
+    43c38197-b101-4bb7-a8ac-476bc3f711b3: 'Grid Header' # Grid Header
+    47b4a6f1-3ba8-4e5f-b82a-0d02a3ea1c63: Departments # Departments
+    51bd163b-f442-4eb3-9a05-78b9e0956dd3: Hero # Hero
+    51e983c0-1445-40ec-aaa8-3ba7295f7d41: Category # Category
+    52fedae5-24ae-4d85-9226-c5c400e40316: 'Add Video Icon to Thumbnail' # Add Video Icon to Thumbnail
+    55e10728-e207-457e-8c0c-0f801f4bc960: 'Team Landing' # Team Landing
+    57a2f3e6-923d-4d85-a4f2-d71397b72824: 'Link Location' # Link Location
+    57c702c3-4394-4afa-8fd8-c279497b4273: Accordion # Accordion
+    058a1fd5-a3f4-4155-bb70-d0c9e7c672f7: 'Article Type' # Article Type
+    59d0057c-f23d-481a-8944-83bed2b83459: 'Image Position' # Image Position
+    60ba6931-4f91-476d-8df6-1fc3352b6a09: __blank__ # __blank__
+    60f970f8-885e-42df-8003-3c556a2fb8c4: __blank__ # __blank__
+    65ab7727-7209-4425-83c9-f98b0327f93d: Header # Header
+    65d91954-8fd4-4fe6-ae0c-21aa741ab87a: 'Link Location' # Link Location
+    65fedb39-946f-4174-9e58-93bea951c90d: Content # Content
+    67abfb2f-915d-4b47-876a-7c8cd387d147: 'Link Location' # Link Location
+    68cec3df-7fc0-4628-bf11-c254a0186761: Category # Category
+    073fb3e1-7224-4794-955c-05d790dae175: Pane # Pane
+    75aec594-2dcf-44fb-a1ba-96085836b122: 'Profile Image' # Profile Image
+    77c10bb4-cb7c-4539-aa55-740affa8e488: 'Locations Content' # Locations Content
+    77c899f6-9535-4cc4-806b-0a0ecb8c08d0: 'Attribution (Optional)' # Attribution (Optional)
+    79c85500-47f6-4e32-bc16-ae621002ab36: Hero # Hero
+    80a04d4c-bd43-4dbc-91d7-55a38d2f8e7a: __blank__ # __blank__
+    82e71757-091a-4649-ba13-013bd4de4926: Categories # Categories
+    86ad5b8c-5431-493b-a4e0-501341d06128: Icon # Icon
+    87bc5ddc-c6c6-49c2-805b-b3540b8eb8ce: Attribution # Attribution
+    89c716d0-e374-4c83-afd1-c35120794e2c: 'Event Listing' # Event Listing
+    89f3dffe-510e-4efa-b043-9111243dd286: Accordions # Accordions
+    90c295e2-c048-4c9d-bbb8-29e0742061f8: 'Image Position' # Image Position
+    91e36b20-614d-4298-bdc3-73e6846fde5a: Categories # Categories
+    093b6cf2-9825-42c2-af55-58545a843f02: Icon # Icon
+    93fb68e0-cc2c-4f3f-90fd-b0182086bfa1: Default # Default
+    96cc2c98-ff02-48eb-ae38-f6f12745a1dd: Sidebar # Sidebar
+    96ff1dbd-ce27-41dd-ada5-f01578b116fc: Description # Description
+    106a680f-eca5-4a17-98fa-8095514e0fe2: Featured # Featured
+    107e858c-59ae-4985-b21d-3c3e173122c4: Content # Content
+    144e7a1a-1a14-4c96-ab59-70a824755712: Image # Image
+    165d6611-1096-4bd2-8e75-e2efefeccbcf: Header # Header
+    175c7b93-91d3-498b-abde-984588a04312: 'Shared Sidebar' # Shared Sidebar
+    187bc825-b538-4706-b878-758751c589f5: Listing # Listing
+    211e0dd8-8840-491a-ad78-61aa4918463b: 'End Time' # End Time
+    238b2dd7-4c7f-44d1-b389-eb0e73d7fc13: __blank__ # __blank__
+    251d7740-f830-4667-8d5d-a546ccadbd6a: __blank__ # __blank__
+    316d0995-ba15-4165-adac-98fa3b56d741: 'Link Text' # Link Text
+    324abe9c-99d9-4014-a8a7-f15ba58cb351: Button # Button
+    328f9215-6260-4024-8ff4-7017c062ff22: 'Thumbnail Image' # Thumbnail Image
+    0330b78e-df5f-4149-9dd1-22d700d997a3: Button # Button
+    348c15ee-dfde-4098-9eaf-d34cc48abc2f: Callout # Callout
+    361fc348-788e-4919-9220-4a9f92326eb0: 'External Redirect' # External Redirect
+    444bdc2f-c961-4fb6-ad22-9609e549feae: 'Sidebar Text' # Sidebar Text
+    455ec8b7-ed73-41b6-a766-2d6a2810ef99: Category # Category
+    484cc244-66cc-4c66-9fb2-b1761a2fda65: Text # Text
+    491be1b2-90ec-4f4c-80d6-fccd72be54c9: Link # Link
+    511a0fd8-77fc-4efb-a163-e3a60ca1fb32: 'Link Location' # Link Location
+    521f4dea-1281-409e-94da-85c00e2f8d5a: 'LinkedIn Link' # LinkedIn Link
+    569d5467-33b1-4a96-802f-2887f3e4d0a6: 'Team Landing' # Team Landing
+    605d5bb4-4a98-4175-b74d-7590ab1fee10: Button # Button
+    680fb09d-379d-4d5e-b9cd-a5a96bd6fe9b: 'Show Pagination' # Show Pagination
+    702c2561-1ef5-40cd-b25c-cb6e00ff574f: 'Number of Columns' # Number of Columns
+    750ba7b7-0cec-4c75-97db-38cdbc2a8ef2: 'Content Cards' # Content Cards
+    836e759b-429b-4a57-8d52-986b34e6536d: Highlight # Highlight
+    850df1ff-cc95-40cb-a2cf-34e482ea08de: Header # Header
+    940b8c5f-b7cc-487a-ac43-dca95ed0b705: 'Landing Page' # Landing Page
+    1534e077-7067-4ba7-8fbe-a87347b1eef1: 'Image Position' # Image Position
+    001547b0-68c9-45c0-a036-58fa922abbb8: 'Callout Text' # Callout Text
+    1838baa0-cc0a-48c5-bc95-ecbd25bc4a17: 'Article Listing' # Article Listing
+    2590ea87-957c-4803-b6df-3679af7203e8: Header # Header
+    3985a56d-28e3-4872-a749-97aad1448bf9: 'End Date' # End Date
+    4057b65e-7781-4f2e-8ef9-0994472f0117: 'No Events Message' # No Events Message
+    4143f7c4-44bc-4ba4-821d-6db7e8a97fe3: 'Homepage - Main' # Homepage - Main
+    5113d0af-00ea-4a02-a5a1-87670f0c1757: 'Full Admin' # Full Admin
+    5354eb39-2665-42bb-883d-1fd13a05cd5a: Header # Header
+    06287d08-11ce-468f-ab00-de3fe37d69c3: 'Show Filters' # Show Filters
+    6451f8ed-ab88-477b-afbc-50b5307ea547: 'Homepage - Main' # Homepage - Main
+    6769b421-fde5-406f-a48c-f23c946d2af7: Image # Image
+    7594ac16-be77-4220-9902-7cb02aa0055e: 'Sidebar Image' # Sidebar Image
+    7727a07f-bc9f-444b-ab5f-36c95a9beb81: 'Image Position' # Image Position
+    8094ba7c-e3ad-4fb7-9e6f-95f8a95d62a4: Location # Location
+    8967fdbd-93cf-4d35-9c4b-214f416053ec: 'Twitter Link' # Twitter Link
+    9434d20f-fc4b-4fe4-8793-7c71c4fdf040: 'Hero Header' # Hero Header
+    9684fec7-4407-4fe0-af9c-fa88b28770ec: 'Block Quote' # Block Quote
+    021647fe-039f-49c3-bfc8-cdbc8f15d7e7: 'Link Text' # Link Text
+    49206fa5-d7fd-4851-8881-830ead40b8a0: Statistics # Statistics
+    49267d81-53ce-49af-9663-10778f270668: Subheader # Subheader
+    50457ffa-e50e-4b28-a515-7a099e2204af: Events # Events
+    51517dd9-ee37-4427-bcdc-e6851f27597a: __blank__ # __blank__
+    57466b56-523a-4257-9dee-d964ac3b6bb7: Image # Image
+    67602b23-e912-4bae-a1ee-31d8bfd30774: 'Image Position' # Image Position
+    68302d90-a22e-4ae6-8741-4229f6b349aa: __blank__ # __blank__
+    068789d9-5d0e-4df1-a5a7-98d8af561729: 'General Information' # General Information
+    74182caa-1040-4ae0-9225-70c94051473c: 'Block 1 Button' # Block 1 Button
+    86173fea-bb3c-4971-a0d8-213318793f2a: 'Body Tags' # Body Tags
+    248603cf-c425-4b34-9a35-88169bfa2718: __blank__ # __blank__
+    317068d2-4fce-4e56-b0bd-935d84fa58e9: 'Feature Block' # Feature Block
+    394290e3-acd0-43fe-a489-c9b3a464da29: Simple # Simple
+    412223be-d976-4ae5-b489-089c709e2081: 'Image Position' # Image Position
+    472031da-657d-4894-bdf8-978e5864c2d9: Embed # Embed
+    483627e0-0aac-432a-a831-573193963576: Image # Image
+    539845be-b512-43f8-9249-1cfb872aa97a: 'Quick Links' # Quick Links
+    607056ef-f785-421d-a9eb-eb27d95357fe: 'Facebook Link' # Facebook Link
+    636927f2-7ca7-4018-937a-8624bdf8ff57: 'Link Text' # Link Text
+    750744ac-34d4-41cf-95f2-e6176fb17cc9: 'Sidebar Subheader' # Sidebar Subheader
+    0910906d-0628-46e6-a4b2-d9e5c7f28f07: 'Left Column' # Left Column
+    940430d5-b3d7-41b4-b414-d3d47dc809b1: 'Page Size' # Page Size
+    1144963d-389b-4bc1-8e8a-17b7cf3f3625: 'Link Text' # Link Text
+    2523437e-074d-4587-b790-b3aacda5f4cc: Subheader # Subheader
+    5000939c-89e2-4d6f-9834-1c687aab2a67: 'Page Subheader' # Page Subheader
+    6110132d-ee7c-4644-985f-d73ca7ea68be: 'Locations Rotator' # Locations Rotator
+    6688070e-73c4-477a-bcf5-0b245c02fd5a: 'Image Block' # Image Block
+    14251265-afa8-414c-9c72-7e86cb2059e4: 'Admin Settings' # Admin Settings
+    24868552-5789-4a70-86fa-affa85c04159: Button # Button
+    61616004-72ff-46da-b037-5933efe61b63: Headline # Headline
+    67417465-6c72-45a3-88b5-6960d4fc3dae: 'Event Listing' # Event Listing
+    68144999-7f95-4814-9df2-93fa4c0637fc: Description # Description
+    80580736-eca1-4c21-afef-b1b37b3d3808: 'Homepage Content' # Homepage Content
+    82736590-78de-4acb-b8b7-618b72850dc0: Header # Header
+    98033313-8533-4eeb-a2ec-fc58645d2b66: 'Page Size' # Page Size
+    a0cc4a08-b0a9-4220-8ad7-72ce7f1c915f: 'Content Header' # Content Header
+    a0fe5b36-2aa4-45c6-aa52-4f2b211d203b: Common # Common
+    a1a3f8dd-1754-4cbd-ac30-6ce20ed1ea06: 'Callout Text' # Callout Text
+    a2d587c1-ef32-4193-8f69-c695ddc657a4: 'Shared Sidebar' # Shared Sidebar
+    a3b299fe-a607-489e-b61f-7deb5dd15f22: 'Show Filters' # Show Filters
+    a4bad73b-251b-4ca3-9df5-86401b8ddc3c: 'Callout Button' # Callout Button
+    a5d1cc92-1351-49c1-bd93-82b6d2865609: Utilities # Utilities
+    a6b28964-bd73-45f3-a6f1-209fdaa99cff: 'Call To Action' # Call To Action
+    a7a4a35a-0d36-4ba8-a837-e588c580b44e: Quote # Quote
+    a15a810c-1c24-4598-ba05-254e6add4dd4: Subheader # Subheader
+    a25dc298-330c-436d-96c5-ba21153c6afe: 'Block Quote' # Block Quote
+    a63bc0df-8056-47a2-a589-4b09d1435084: 'Image Position' # Image Position
+    a278f655-c790-433d-8347-e3d4141a4889: Description # Description
+    a846b7fe-56f9-4123-9528-69888b9452aa: 'YouTube Link' # YouTube Link
+    a9407fc5-b0cb-4a44-bff4-2ab8e18966a6: Description # Description
+    a64724f0-6e64-41c4-937c-403b1b7b6867: 'Job Title' # Job Title
+    a6663553-47f5-457f-acb0-1c791c775013: 'TikTok Link' # TikTok Link
+    aa69bfc6-16e6-4165-bbd6-75e46795733d: 'Landing Content' # Landing Content
+    ab6dca6f-df21-4a72-b4f1-b9ace25fcdb3: 'Link Location' # Link Location
+    ab46267e-c4ef-4c64-97d2-30be7da223b3: 'Shared Sidebar' # Shared Sidebar
+    abb0a90a-14e5-46e2-b0bc-14ea046316ee: 'Background Color' # Background Color
+    acf49cd6-ff27-4eaf-8bd3-308bfa5b8eb6: 'Article Listing' # Article Listing
+    acfde4e5-e503-40bd-bad8-f681526fcbb4: 'Content Page' # Content Page
+    ae5efb3a-2ce9-4bea-a606-d71f9faee980: Team # Team
+    afc3d6bf-4054-41ba-a711-9fbbbc4ea50f: 'Short Description' # Short Description
+    b061ed7f-fe1d-49ca-82ac-c959c611d091: Category # Category
+    b08ea451-bd06-4f26-83a5-b49918b7a819: 'Link Location' # Link Location
+    b2ee82f0-cd65-4af1-98ba-7ad7159079b1: 'SEO Settings' # SEO Settings
+    b43a4ca2-af3d-445e-a266-1fb04f4a1d96: Button # Button
+    b43c8469-478b-4d0d-8c1a-277df7f890fb: Content # Content
+    b87e394d-cc4c-462d-ab8b-46b760bd6fa8: 'Admin Links' # Admin Links
+    b411b8f5-d169-4801-b66e-c3fd38754198: 'Block 2 Header' # Block 2 Header
+    b645f402-c507-4643-a2be-88cea45d4e3a: Subheader # Subheader
+    b2726d4d-8027-4fbe-a668-d9f576fdf32b: Image # Image
+    ba22db9c-3729-4839-b4ca-c932e60acc0f: 'Link Card' # Link Card
+    bab64ad3-b203-4715-90a3-800c1148e162: 'Block 1 Description' # Block 1 Description
+    bb373d17-5b84-4f48-a329-67c0efa72028: 'Link Text' # Link Text
+    bb3916c5-d9ab-496b-8869-ede07bde2a34: 'Block 1 Image' # Block 1 Image
+    bc704474-771a-410e-9d62-be344dca8aaa: 'Block 2 Description' # Block 2 Description
+    bd7fda2f-49ea-44da-85c5-d7649275be72: 'Location Information' # Location Information
+    be0b2e7b-b1d6-421d-87f3-df7b18626362: Authors # Authors
+    be4220f5-2de3-4804-b69f-921b95aa2ce2: Banner # Banner
+    bed45c8b-d071-406d-97a7-0c338bed5b2a: Team # Team
+    c2f30dbc-032d-4ca3-a7dd-dc80469e7183: 'General Directory' # General Directory
+    c3d93cba-5e1d-4058-92ba-59f83011eb9c: Bio # Bio
+    c7b15c92-61d8-4bdd-90ee-8e008dc753b2: 'Callout Text' # Callout Text
+    c7d4e918-a5dc-4658-8215-a36486ae88ac: Description # Description
+    c8b4e00a-e8c7-484b-aba4-3d886a74949b: Categories # Categories
+    c8cafcba-fd75-43a8-b29b-3c05d5edb2ce: SEO # SEO
+    c42cc544-5152-4aaa-8cca-2493f76b5f85: Categories # Categories
+    c68fd3b1-3ec2-43c5-8f5e-b37d86aab57f: 'Pane Header' # Pane Header
+    c411a9a9-0eb1-4c27-87fe-480f00250580: Limited # Limited
+    c614886f-7b46-45cf-8f75-f3f09aeb988d: Team # Team
+    c1689705-1b2b-4956-94e2-3167e5694798: Button # Button
+    c2893576-c18f-4727-af8e-798d73c7526c: __blank__ # __blank__
+    c6069766-87da-4f0c-bcc5-5307d8c310a4: 'Content Page' # Content Page
+    c8686061-9159-48ab-90b6-910333e8b708: Description # Description
+    c9866329-4e1c-4d5f-aad8-7d651c38dd11: 'Article Listing' # Article Listing
+    cb81b757-fe4f-4892-ae2e-7e5ea7522b26: Sidebar # Sidebar
+    cc4c9591-2c11-4310-a6e0-03ff9e570375: 'Block 2 Image' # Block 2 Image
+    cd6ac74e-8d7c-40ad-aae5-f5d3891a9326: 'Background Color' # Background Color
+    cefca6b6-39d8-4ad9-9446-c8b35e5817ed: Header # Header
+    cf025d69-aa77-4586-a6a6-3f1e14fdfa84: 'Header Tags' # Header Tags
+    cfc399d3-c567-4548-8473-e12c69aff1fe: Image # Image
+    cfe2ab11-e0d6-4828-9b60-768ca1081018: 'Navigation - Main' # Navigation - Main
+    d0404680-bf4a-4adf-857d-859050680715: 'Callout Text' # Callout Text
+    d1c604ad-9342-4819-bf3c-07ec0c31e7da: 'Sidebar Button' # Sidebar Button
+    d3a62642-5d79-452c-98cb-50fde70b75c5: Description # Description
+    d6a4bbd6-911e-45f4-b838-4b79fe0b0592: 'Shared Sidebar' # Shared Sidebar
+    d9bf77d0-d4b0-4c0c-a3d2-ff9fc90e8cf0: Form # Form
+    d85b35a4-d58b-46a3-bae0-9922dba61af7: Image # Image
+    d330e721-cb22-48d5-8940-d6b1bdb7d73a: 'Contact Form' # Contact Form
+    d564b6c4-34ef-46c4-8987-a0297dde031c: Category # Category
+    d2675e11-a907-490e-9054-e8230587241c: Template # Template
+    d3829cc7-529e-4c9c-a1e0-7e4a16f52c48: 'About This Site' # About This Site
+    d9356de2-5608-4e72-8344-42b2448513c0: 'Block Quote' # Block Quote
+    d47056cb-eb48-4525-ba3a-0cc4578d9822: Header # Header
+    d82110cc-edc9-4c41-ad10-ee8342f8ccc4: Header # Header
+    da06540e-6d2a-4729-b490-c4c9f3f88aad: Image # Image
+    da6244fc-93ac-4243-8f34-8ebf68b0fa29: Link # Link
+    db5e1137-edb0-496d-bdd6-8ed9d93fb5f3: 'Video or Embed' # Video or Embed
+    dbb97585-9ba9-4f7d-a2a8-a586a900c4eb: Description # Description
+    dbfb1bb0-f32d-4ce9-8638-14016423614a: __blank__ # __blank__
+    dd9537da-caae-41d3-95bb-7f507ab61162: 'Location Image' # Location Image
+    ddce16c9-ccdd-4fc1-b278-5127e4d093f4: 'Block 1 Header' # Block 1 Header
+    df1e232d-c332-4d51-b635-ec93e9175bb0: Sitemap # Sitemap
+    dfe593ca-e841-4516-a9c5-55757299b965: Image # Image
+    e024f853-b241-4b91-8f8c-ca234868efcd: 'Public Schema' # Public Schema
+    e09390f1-1303-4a63-97fd-7e36a7cf53f1: 'Attribution (Optional)' # Attribution (Optional)
+    e3b19e15-0a87-4af5-8023-1295d6febb27: 'Article Type' # Article Type
+    e21f5e19-8916-455a-9924-6edef540c0b4: __blank__ # __blank__
+    e41f1a3f-f567-4994-88b6-60df880629a2: Location # Location
+    e49c213e-d44d-45d5-abc1-be74bac0d362: 'Client Name' # Client Name
+    e258acb8-56d0-4a36-923a-fa04fb32dc99: 'Phone Number' # Phone Number
+    e443c70e-6db5-423b-bd28-6ce9cc2cbb61: 'Page Content' # Page Content
+    e620e117-2859-4dfe-ac66-96a2e406d087: Subheader # Subheader
+    e9858c07-944f-4a6b-88e3-54d424d7a0f7: 'Image Position' # Image Position
+    e978128f-65ac-4eec-b298-916edc922462: 'Link Location' # Link Location
+    e7287984-7097-40d8-8370-741eb0af6b91: 'Article Type' # Article Type
+    eab5f956-0eae-4be5-9358-21a283aeb143: 'Column Content' # Column Content
+    eafebcd6-cb4c-4c7b-812c-71de561f8dc5: 'Background Color' # Background Color
+    ec0e74c9-d514-411d-aad9-0f5a32ffedd6: Categories # Categories
+    ec24a839-280b-4f72-b371-bef742973163: 'Email Address' # Email Address
+    ecc887d4-0e4e-4427-979f-884b8c6b5b66: Category # Category
+    ecca92ea-f080-4a79-b79c-fd3d411102c4: Header # Header
+    ed864d8e-5e1b-40af-88ae-0c7bcac705e5: Icon # Icon
+    ee3e359f-97fb-4b27-b2e8-a8e94d5c3ad0: 'Article Content' # Article Content
+    eeab7427-1cf0-4e89-9c47-8a728055aa59: 'Internal Redirect' # Internal Redirect
+    eee1b2bc-0e51-477d-a3ab-5b0f0b0849fe: Homepage # Homepage
+    eee29027-1221-4408-8d4f-103fe2b2605c: Department # Department
+    f2e19a8d-b052-4274-b359-f8e2ab12c5c2: 'Sort Name' # Sort Name
+    f3dd2941-c376-4623-95f1-3f82ed039243: Header # Header
+    f3ff10b4-41fb-428f-a1e2-df892ebcf03c: Link # Link
+    f5d400c1-98bf-4bc2-b501-ae4ad0292228: 'Landing Page' # Landing Page
+    f7b11a38-79ab-4370-aeab-d328f325fb07: 'Background Color' # Background Color
+    f8e2602d-6c90-4cb9-ab8a-8beb40d2da5e: Button # Button
+    f9bcdec5-cf62-455b-8211-a1b17b2712c8: Accordion # Accordion
+    f54d0229-2c59-4d50-9edb-8ae7ed11a8f5: News # News
+    f78ae159-631e-42f0-a454-dbcd2e3ea5f9: 'Custom Sidebar' # Custom Sidebar
+    f421154f-21a1-40e9-a942-52e65653be13: 'Quick Links Header' # Quick Links Header
+    f510271d-ad11-4cb9-b9d9-6a7ade9bbc3a: '404 Page Not Found Error' # 404 Page Not Found Error
+    fb09db4b-475e-43a7-8a3d-48be475228ae: Header # Header
+    fb4a3a4c-c46d-4bc7-ad48-de0c4c279bf3: 'Start Time' # Start Time
+    fb9a9cad-4aa3-46dd-9092-5fe2f5f2f43b: 'Image Grid' # Image Grid
+    fb76a5df-125f-4073-988b-2d2f9ad8cf28: Articles # Articles
+    fd52b31a-adb5-4423-896a-c3b867357a2d: Button # Button
+    fe34fcdb-ffd5-4177-b7ef-66dde6611b78: Content # Content
+    feb8d493-51e2-4efb-a0e4-b641e2c64337: 'Number of Columns' # Number of Columns
+    fff9e7e8-9086-42b2-86e5-dc8401f0873c: Alert # Alert
+plugins:
+  ckeditor:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.0.0.0
+  expanded-singles:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  feed-me:
+    edition: standard
+    enabled: true
+    schemaVersion: 5.1.1
+  field-manager:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  freeform:
+    edition: lite
+    enabled: true
+    licenseKey: 61JS2FSNWK5RQ82FFUU3N5HZ
+    schemaVersion: 5.2.2
+    settings:
+      ajaxByDefault: true
+      alertNotificationRecipients: null
+      allowFileTemplateEdit: true
+      autoScroll: true
+      autoScrollToErrors: true
+      badgeType: all
+      blockedEmails: null
+      blockedEmailsError: 'Invalid Email Address'
+      blockedIpAddresses: null
+      blockedKeywords: null
+      blockedKeywordsError: 'Invalid Entry Data'
+      bypassSpamCheckOnLoggedInUsers: false
+      clientDigestFrequency: 1
+      clientDigestRecipients: null
+      customErrorMessage: null
+      customHoneypotName: null
+      defaultTemplates: true
+      defaultView: dashboard
+      digestFrequency: 1
+      digestOnlyOnProduction: false
+      digestRecipients: null
+      displayFeed: true
+      emailTemplateDefault: files
+      emailTemplateDirectory: null
+      emailTemplateStorageType: files_database
+      exportHandlesAsNames: false
+      exportLabels: false
+      fieldDisplayOrder: name
+      fillWithGet: false
+      footerScripts: false
+      formFieldShowOnlyAllowedForms: false
+      formSubmitDisable: true
+      formSubmitExpiration: null
+      formTemplateDirectory: null
+      formattingTemplate: flexbox.twig
+      freeformHoneypot: true
+      freeformHoneypotEnhancement: false
+      hideBannerDemo: true
+      hideBannerOldFreeform: false
+      minimumSubmitTime: null
+      pluginName: null
+      purgableSpamAgeInDays: null
+      purgableSubmissionAgeInDays: null
+      purgableUnfinalizedAssetAgeInMinutes: 180
+      recaptchaBehaviour: display_error
+      recaptchaEnabled: false
+      recaptchaErrorMessage: 'Please verify that you are not a robot.'
+      recaptchaKey: null
+      recaptchaLazyLoad: false
+      recaptchaMinScore: 0.5
+      recaptchaSecret: null
+      recaptchaSize: normal
+      recaptchaTheme: light
+      recaptchaType: v2_checkbox
+      rememberPageSubmitOrder: true
+      removeNewlines: false
+      renderFormHtmlInCpViews: true
+      salesforce_client_id: null
+      salesforce_client_secret: null
+      salesforce_password: null
+      salesforce_username: null
+      saveFormSessionLimit: 10
+      saveFormTtl: 30
+      scriptInsertLocation: footer
+      scriptInsertType: pointers
+      sessionContext: payload
+      sessionContextCount: 100
+      sessionContextSecret: ''
+      sessionContextTimeToLiveMinutes: 180
+      sessionEntryMaxCount: 50
+      sessionEntryTTL: 10800
+      showErrorsForBlockedEmails: false
+      showErrorsForBlockedKeywords: false
+      showTutorial: true
+      spamFolderEnabled: true
+      spamProtectionBehaviour: simulate_success
+      submissionThrottlingCount: null
+      submissionThrottlingTimeFrame: null
+      successTemplateDirectory: null
+      twigInHtml: true
+      twigInHtmlIsolatedMode: true
+      updateSearchIndexes: true
+  image-resizer:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.0.0
+  retour:
+    edition: standard
+    enabled: true
+    licenseKey: 5JL3OUAG7RXS84RBI2S0IAOY
+    schemaVersion: 3.0.12
+  seomatic:
+    edition: standard
+    enabled: true
+    licenseKey: ONRNQBWFSY4GKU3X9Z5XE9HA
+    schemaVersion: 3.0.12
+    settings:
+      addHrefLang: true
+      addPaginatedHreflang: true
+      addXDefaultHrefLang: true
+      cpTitlePrefix: '⚙ '
+      cspNonce: ''
+      cspScriptSrcPolicies:
+        -
+          __assoc__:
+            -
+              - policy
+              - '''self'''
+      devModeCpTitlePrefix: '&#x1f6a7;⚙ '
+      devModeTitlePrefix: '&#x1f6a7; '
+      displayAnalysisSidebar: true
+      displayPreviewSidebar: true
+      enableJsonLdEndpoint: false
+      enableMetaContainerEndpoint: false
+      enableSeoFileLinkEndpoint: false
+      environment: live
+      generatorEnabled: true
+      headersEnabled: true
+      lowercaseCanonicalUrl: '1'
+      maxDescriptionLength: 155
+      maxTitleLength: 70
+      metaCacheDuration: 'null'
+      pluginName: 'SEO Tools'
+      regenerateSitemapsAutomatically: true
+      renderEnabled: true
+      separatorChar: '|'
+      sidebarDisplayPreviewTypes:
+        - google
+        - twitter
+        - facebook
+      siteGroupsSeparate: '1'
+      siteUrlOverride: ''
+      sitemapsEnabled: true
+      socialMediaPreviewTarget: true
+      submitSitemaps: true
+  sherlock:
+    edition: lite
+    enabled: true
+    schemaVersion: 4.5.0
+    settings:
+      maxScans: false
+      strictTransportSecurity:
+        canFail: true
+        threshold: 15552000
+  sprig:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.1
+system:
+  edition: pro
+  live: true
+  name: 'Client Name'
+  retryDuration: null
+  schemaVersion: 4.5.3.0
+  timeZone: America/New_York

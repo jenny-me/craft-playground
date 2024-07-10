@@ -1,0 +1,19 @@
+columnSuffix: null
+contentColumnType: text
+fieldGroup: eee1b2bc-0e51-477d-a3ab-5b0f0b0849fe # Homepage
+handle: heroHeader
+instructions: null
+name: 'Hero Header'
+searchable: true
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  columnType: null
+  initialRows: 4
+  multiline: false
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

@@ -1,0 +1,140 @@
+.form {
+	margin: 1em 0;
+  background: white;
+  box-shadow: 0px 1px 28px rgba(0, 0, 0, 0.07), 0px 1px 2px rgba(0, 0, 0, 0.13);
+  border-radius: 8px;
+  padding: 36px;
+  margin: 0 0 3em;
+
+  h2 {
+    border-bottom: 1px solid $hr-color;
+    padding: 0 0 10px;
+    margin: 0 0 30px;
+  }
+}
+
+.freeform-pages {
+  color: rgba($font-color, .6);
+  font-family: $accent-font;
+  text-transform: uppercase;
+
+  b {
+    color: $link-color;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+  }
+}
+
+$color-red: #E12115;
+
+.freeform-column {
+  text-align: left;
+
+  label {
+    display: block;
+    padding: .5em 0 .25em;
+
+    color: $color-blue;
+    font-size: .875em;
+    font-weight: 700;
+    line-height: 1.4;
+  }
+  input[type="text"], input[type="email"], input[type="tel"], input[type="url"], input[type="password"], textarea, select {
+    border: 1px solid $hr-color;
+    background: rgba($color-offwhite, .5);
+
+    width: 100%;
+    padding: .75em .75em;
+    margin: 0 0 .25em;
+    transition: all .2s ease-in-out;
+
+    &:active, &:focus {
+      border: 1px solid $color-black;
+      background: rgba($color-offwhite, 1);
+    }
+  }
+
+  select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: $color-offwhite url($image-path + 'icon-dropdown.svg') no-repeat;
+    background-position: calc(100% - 12px) 50%
+  }
+  .input-group-one-line {
+    label {
+      flex: 0 1 25%;
+      text-transform: none;
+    }
+  }
+  // button {
+  //   flex: 1;
+  //   display: block;
+  //   text-align: center;
+  // }
+}
+
+.ff-form-success {
+	background: #eef9f6;
+	border: 1px solid green;
+	padding: 16px 20px 18px;
+	text-align: center;
+	margin-bottom: 24px;
+
+  p {
+    margin: 0;
+    padding: 0;
+    color: green;
+  }
+}
+
+.ff-form-errors {
+  padding: 16px 20px 18px !important;
+  border: 1px solid $color-red !important;
+  background: lighten($color-red, 55%) !important;
+  border-radius: 0 !important;
+  color: $color-red !important;
+  text-align: center;
+
+  p {
+    margin: 0;
+    padding: 0;
+    color: $color-red;
+  }
+}
+
+.freeform-required:after {
+    content: "*";
+    margin-left: 4px !important;
+    color: $color-red !important;
+}
+
+.ff-errors>li {
+    color: $color-red !important;
+}
+
+
+.pay-bill-form {
+  label {
+    display: block;
+    padding: .5em 0 .25em;
+
+    color: $color-blue;
+    font-size: .875em;
+    font-weight: 700;
+    line-height: 1.4;
+  }
+  input[type="text"], input[type="email"], input[type="tel"], input[type="url"], input[type="password"], textarea, select {
+    border: 1px solid $hr-color;
+    background: rgba($color-offwhite, .5);
+
+    width: 100%;
+    padding: .5em .75em;
+    margin: 0 0 .75em;
+    transition: all .2s ease-in-out;
+
+    &:active, &:focus {
+      border: 1px solid $color-black;
+      background: rgba($color-offwhite, 1);
+    }
+  }
+}

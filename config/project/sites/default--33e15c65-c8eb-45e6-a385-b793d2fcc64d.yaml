@@ -1,0 +1,9 @@
+baseUrl: $PRIMARY_SITE_URL
+enabled: true
+handle: default
+hasUrls: true
+language: en-US
+name: 'Client Name'
+primary: true
+siteGroup: e49c213e-d44d-45d5-abc1-be74bac0d362 # Client Name
+sortOrder: 1

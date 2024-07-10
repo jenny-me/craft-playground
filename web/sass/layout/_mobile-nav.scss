@@ -1,0 +1,337 @@
+.menu {
+  align-self: stretch;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 80px;
+  margin-left: 1em;
+  padding: 10px;
+
+  background: $link-color;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: all .2s ease-out;
+
+  color: $color-white;
+  font-size: 14px;
+  font-family: $main-font;
+  text-transform: uppercase;
+
+  @media all and (min-width: $medium-screen) {
+    display: none;
+  }
+  * { pointer-events: none;}
+
+  .strokes {
+    width: 39px;
+    margin: 0 0 0px 0;
+
+    .stroke {
+      display: block;
+      height: 3px;
+      margin: 8px 0;
+      background: $color-white;
+      transition:  transform 0.3s, opacity 0.1s;
+    }
+  }
+
+  &:hover, &:focus, &:active {
+    cursor: pointer;
+    background: $hover-color;
+  }
+}
+
+.a11y-modal.fullScreenMenu {
+  outline: none;
+  padding: 0;
+
+  border: 0px;
+	background-color: rgba($color-white, 1);
+
+  max-height: initial;
+  max-width: initial;
+  height: 100%;
+  width: 100%;
+  transform: none;
+  z-index: 30;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  .menuContainer {
+    display: inherit;
+    opacity: 1;
+    transform: translateY(0);
+    // animation: menufade .25s linear;
+		padding: 1em 6%;
+
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		overflow-y: scroll;
+		-webkit-overflow-scrolling: touch;
+
+    color: $font-color;
+  }
+
+	@keyframes menufade {
+	  0% {
+	    opacity: 0;
+	    visibility: hidden;
+	    transform: translateY(48px);
+	  }
+	  100% {
+	    opacity: 1;
+	    visibility: visible;
+	    transform: translateY(0);
+	  }
+	}
+}
+
+.mobile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin: -1em -6vw 2em;
+
+  .logo {
+    flex: 1;
+    padding: 1em;
+
+    img {
+      width: 100%;
+      max-height: 50px;
+    }
+  }
+}
+
+.close-menu {
+  width: 80px;
+  height: 80px;
+
+  border: none;
+  background: $primary-color-alt;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: all .2s ease-in-out;
+  z-index: 6;
+  cursor: pointer;
+
+  // animation: slowfade .5s linear;
+
+  &:hover, &:active, &:focus {
+    box-shadow: 0 1px 12px 0 rgba($color-black, .1),
+  }
+
+  img {
+    margin: 0;
+  }
+  * { pointer-events: none;}
+}
+
+
+.mobile-btns {
+  ul {
+    margin: 2.5em 0 1em;
+    padding: 0;
+
+    display: flex;
+    justify-content: center;
+
+    li {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+
+      a {
+        display: block;
+        text-align: center;
+
+        @media (min-width: $xsmall-screen) {
+          min-width: 10em;
+        }
+      }
+
+      &:first-child {
+        margin-right: .5em;
+
+        a {
+          &, &:link, &:visited {
+            background: $secondary-color-alt;
+          }
+          &:hover, &:active, &:focus {
+            background: $secondary-color;
+          }
+        }
+      }
+      &:last-child {
+        a {
+          &, &:link, &:visited {
+            background: $primary-color-alt;
+            color: $color-white !important;
+          }
+          &:hover, &:active, &:focus {
+            background: $primary-color;
+          }
+        }
+      }
+    }
+  }
+}
+.mobile-menu {
+  .desk-search { display: none !important; }
+  .root-group {
+    > li  {
+      // top level
+      display: block;
+
+      > a {
+        font-size: 1.5em;
+      }
+    }
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    position: relative;
+
+    li {
+      margin: 0;
+      padding: 1em 0;
+      list-style-type: none;
+      line-height: 1.25;
+      border-bottom: 1px solid $hr-color
+    }
+
+    a {
+      &, &:link, &:visited {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        color: $font-color;
+        text-decoration: none;
+      }
+      &:hover, &:active, &:focus {
+        color: $secondary-color-alt;
+      }
+    }
+    .dropdown-menu {
+      padding: .5em 0 0 1em;
+
+      li {
+        border-bottom: none;
+        margin: 0;
+      }
+      a {
+        &, &:link, &:visited {
+          font-size: 1em;
+          font-weight: normal;
+        }
+        // &:hover, &:active, &:focus {}
+      }
+    }
+    .expandable {
+      > a span {
+        height: 30px;
+        width: 30px;
+        flex: 0 0 30px;
+        margin-left: 5px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        background: $color-offwhite;
+        border-radius: 50%;
+
+        img, svg {display: none;}
+
+        &:after {
+          display: block;
+          content: '';
+          height: 25px;
+          width: 25px;
+
+          background-image: url($image-path + "icon-chevron-left.svg");
+          background-repeat: no-repeat;
+          background-size: 25px;
+          background-position: center;
+
+          transform: rotate(-90deg);
+        }
+      }
+      > ul { display: none; }
+
+      &.expanded {
+        > a span:after {
+          transform: rotate(90deg);
+        }
+        > ul { display: block; }
+      }
+    }
+  }
+}
+.contact-btns {
+  ul {
+    margin: 0;
+    padding: .5em 0 1.5em;
+
+    display: flex;
+    justify-content: space-between;
+
+    li {
+      flex: 1;
+      margin: 0 1.5%;
+      padding: 0;
+      list-style-type: none;
+
+      &:first-child { margin-left: 0; }
+      &:last-child { margin-right: 0; }
+
+      a {
+        &, &:link, &:visited {
+          display: block;
+					padding: .5em 0;
+
+          background: $color-offwhite;
+          border: 1px solid $hr-color;
+					border-radius: 2em;
+
+          text-align: center;
+          color: $color-grey-dark;
+          text-decoration: none;
+
+          svg {
+            pointer-events: none;
+            height: 16px;
+            width: 16px;
+						transform: translate(3px, -1px);
+
+            path {
+              fill: $link-color;
+            }
+          }
+        }
+        &:hover, &:active, &:focus {
+          background-color: $hover-color;
+          color: $color-white;
+          svg {
+            path {
+              fill: $color-white;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+# CRAFT ENVIRONMENT
+/.env
+/.idea
+
+# COMPOSER
+/vendor
+
+# CRAFT FILES
+/web/dist/*
+/web/cpresources/*
+
+# ASSETS
+/web/assets/*
+/web/img/*
+
+# MISC FILES
+/web/.sass-cache/*
+config.codekit3
+.cache
+.DS_Store

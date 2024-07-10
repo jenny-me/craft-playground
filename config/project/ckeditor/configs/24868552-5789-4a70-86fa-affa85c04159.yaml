@@ -1,0 +1,42 @@
+css: '@import "/stylesheets/ckeditor.css"'
+headingLevels: false
+name: Button
+options:
+  code:
+    indentSequence: '  '
+  link:
+    addTargetToExternalLinks: false
+    decorators:
+      openInNewTab:
+        attributes:
+          target: _blank
+        label: 'Open in a new tab'
+        mode: manual
+      preventTracking:
+        attributes:
+          rel: 'noopener noreferrer'
+        label: 'Prevent SEO crawling'
+        mode: manual
+  style:
+    definitions:
+      -
+        classes:
+          - button
+        element: p
+        name: 'Dark (Primary) Button'
+      -
+        classes:
+          - white-button
+        element: p
+        name: 'White Button'
+      -
+        classes:
+          - arrow-link
+        element: p
+        name: 'Link with Arrow'
+toolbar:
+  - sourceEditing
+  - '|'
+  - style
+  - '|'
+  - link

@@ -1,0 +1,22 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 20a5a573-2119-4d7a-b5dd-92490fe7f46a # Articles
+handle: articleCategory
+instructions: ''
+name: Category
+searchable: true
+settings:
+  allowSelfRelations: false
+  limit: ''
+  localizeRelations: false
+  selectionLabel: 'Add category'
+  showSiteMenu: true
+  source: null
+  sources:
+    - 'section:c8b4e00a-e8c7-484b-aba4-3d886a74949b' # Categories
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Entries

@@ -1,0 +1,110 @@
+field: 6110132d-ee7c-4644-985f-d73ca7ea68be # Locations Rotator
+fieldLayouts:
+  cdefecaa-da0c-4c71-80df-69a7204768cc:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: dd9537da-caae-41d3-95bb-7f507ab61162 # Location Image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 0c0512ad-5e4f-4e93-850e-c889f84052cf
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: bd7fda2f-49ea-44da-85c5-d7649275be72 # Location Information
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: cdeb07eb-e0c5-4b82-b4b9-bfe22335bea7
+            userCondition: null
+            warning: null
+            width: 50
+        name: Content
+        uid: f0ce88b4-6399-4714-aac3-82f4944b17e1
+        userCondition: null
+fields:
+  bd7fda2f-49ea-44da-85c5-d7649275be72: # Location Information
+    columnSuffix: hkltowin
+    contentColumnType: text
+    fieldGroup: null
+    handle: locationInformation
+    instructions: null
+    name: 'Location Information'
+    searchable: false
+    settings:
+      availableTransforms: '*'
+      availableVolumes: '*'
+      ckeConfig: c411a9a9-0eb1-4c27-87fe-480f00250580 # Limited
+      columnType: text
+      defaultTransform: ''
+      enableSourceEditingForNonAdmins: true
+      purifierConfig: null
+      purifyHtml: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\ckeditor\Field
+  dd9537da-caae-41d3-95bb-7f507ab61162: # Location Image
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: locationImage
+    instructions: null
+    name: 'Location Image'
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      allowSubfolders: false
+      allowUploads: false
+      allowedKinds:
+        - image
+      branchLimit: null
+      defaultUploadLocationSource: 'volume:09c09568-4b70-4b1a-a334-24e0b0a5ed09' # Content Images
+      defaultUploadLocationSubpath: null
+      localizeRelations: false
+      maintainHierarchy: false
+      maxRelations: 1
+      minRelations: null
+      previewMode: full
+      restrictFiles: true
+      restrictLocation: false
+      restrictedDefaultUploadSubpath: null
+      restrictedLocationSource: 'volume:09c09568-4b70-4b1a-a334-24e0b0a5ed09' # Content Images
+      restrictedLocationSubpath: null
+      selectionCondition:
+        __assoc__:
+          -
+            - elementType
+            - craft\elements\Asset
+          -
+            - fieldContext
+            - global
+          -
+            - class
+            - craft\elements\conditions\assets\AssetCondition
+      selectionLabel: 'Add image'
+      showSiteMenu: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      sources:
+        - 'volume:09c09568-4b70-4b1a-a334-24e0b0a5ed09' # Content Images
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+handle: location
+name: Location
+sortOrder: 1

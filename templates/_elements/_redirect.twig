@@ -1,0 +1,7 @@
+{% if entry.redirect|length %}
+  {% redirect entry.redirect.one().url %}
+{% endif %}
+
+{% if entry.externalRedirect %}
+  {% redirect url(entry.externalRedirect) %}
+{% endif %}

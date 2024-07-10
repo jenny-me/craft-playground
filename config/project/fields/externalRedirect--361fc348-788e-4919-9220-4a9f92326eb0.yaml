@@ -1,0 +1,15 @@
+columnSuffix: null
+contentColumnType: string(255)
+fieldGroup: a5d1cc92-1351-49c1-bd93-82b6d2865609 # Utilities
+handle: externalRedirect
+instructions: 'If you would like to redirect this page to another site, please add the URL.'
+name: 'External Redirect'
+searchable: true
+settings:
+  maxLength: '255'
+  placeholder: null
+  types:
+    - url
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Url

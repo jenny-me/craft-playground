@@ -1,0 +1,80 @@
+field: 3a8c532c-4e83-4152-b1d1-e216f06aa2dd # Accordion
+fieldLayouts:
+  5db255b8-434b-49b0-b5f5-0abeddbd3be0:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: c68fd3b1-3ec2-43c5-8f5e-b37d86aab57f # Pane Header
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: be37831a-1ea6-46aa-9e75-00284e01601f
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 3f3a3e19-6765-4304-951b-ba5fc5834b45 # Pane Content
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 7c59d703-1c42-446a-8836-f75c7bf8febd
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: a401acc1-160c-4290-b326-7d7c61d15e98
+        userCondition: null
+fields:
+  3f3a3e19-6765-4304-951b-ba5fc5834b45: # Pane Content
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: paneContent
+    instructions: 'This content is hidden and will appear when the accordion tab is expanded.'
+    name: 'Pane Content'
+    searchable: true
+    settings:
+      availableTransforms: '*'
+      availableVolumes: '*'
+      ckeConfig: 93fb68e0-cc2c-4f3f-90fd-b0182086bfa1 # Default
+      columnType: text
+      defaultTransform: ''
+      enableSourceEditingForNonAdmins: true
+      purifierConfig: null
+      purifyHtml: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: true
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\ckeditor\Field
+  c68fd3b1-3ec2-43c5-8f5e-b37d86aab57f: # Pane Header
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: paneHeader
+    instructions: null
+    name: 'Pane Header'
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: 150
+      code: false
+      columnType: text
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: pane
+name: Pane
+sortOrder: 1

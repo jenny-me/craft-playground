@@ -1,0 +1,15 @@
+columnSuffix: null
+contentColumnType: string(255)
+fieldGroup: 6d067805-797c-4986-9eef-6cbe884e80b0 # Social Media
+handle: facebookLink
+instructions: ''
+name: 'Facebook Link'
+searchable: true
+settings:
+  maxLength: 255
+  placeholder: ''
+  types:
+    - url
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Url

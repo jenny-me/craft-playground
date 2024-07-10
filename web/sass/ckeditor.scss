@@ -1,0 +1,32 @@
+@import "abstracts/functions";
+@import "abstracts/variables";
+
+.ck.ck-content {
+  @import "base/base"; 
+  @import "components/button";
+  @import "components/images";
+  @import "components/tables";
+  @import "components/typography";
+
+  &[dir="ltr"] ul {
+    padding-left: 0;
+  }
+
+  // Media query doesn't work in editor
+  .image.image-style-block-align-left	{
+    float: left;
+    clear: left;
+    margin: 0 4% 1em 0;
+    max-width: 33%;
+	}
+  .image.image-style-block-align-right	{
+    float: right;
+    clear: right;
+    margin: 0 0 1em 4%;
+    max-width: 33%;
+  }
+	.image.image-style-align-center {
+    max-width: 100%;
+    margin: 0 0 1em;
+  }
+}

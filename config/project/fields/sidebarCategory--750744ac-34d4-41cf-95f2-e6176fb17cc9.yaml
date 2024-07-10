@@ -1,0 +1,19 @@
+columnSuffix: null
+contentColumnType: text
+fieldGroup: 96cc2c98-ff02-48eb-ae38-f6f12745a1dd # Sidebar
+handle: sidebarCategory
+instructions: ''
+name: 'Sidebar Subheader'
+searchable: true
+settings:
+  byteLimit: null
+  charLimit: null
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: ''
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

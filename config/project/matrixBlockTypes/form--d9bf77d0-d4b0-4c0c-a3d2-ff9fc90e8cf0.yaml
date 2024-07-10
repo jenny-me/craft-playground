@@ -1,0 +1,37 @@
+field: e443c70e-6db5-423b-bd28-6ce9cc2cbb61 # Page Content
+fieldLayouts:
+  fd0c3e98-85a5-49bd-873f-8afd05a3992d:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 0f4f2f41-4ea2-4d53-83e1-99345bd516ad # __blank__
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 7a40c1c2-8a72-4ca9-983d-2f5ae3066159
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: c91f2427-2239-47e7-bd18-242d05fff34c
+        userCondition: null
+fields:
+  0f4f2f41-4ea2-4d53-83e1-99345bd516ad: # __blank__
+    columnSuffix: null
+    contentColumnType: integer
+    fieldGroup: null
+    handle: form
+    instructions: null
+    name: __blank__
+    searchable: true
+    translationKeyFormat: null
+    translationMethod: none
+    type: Solspace\Freeform\FieldTypes\FormFieldType
+handle: form
+name: Form
+sortOrder: 9

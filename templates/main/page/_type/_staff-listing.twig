@@ -1,0 +1,80 @@
+{% extends "main/_layout/main" %}
+
+{% block main %}
+
+{% include "_elements/_redirect.twig" %}
+
+<main id="main" class="content">
+  {% include "_elements/_banner.twig" %}
+
+  <section class="main-content">
+    {% if entry.introduction %}
+    <p class="largetext">{{ entry.introduction }}</p>
+    {% endif %}
+
+    {% if entry.staffDepartment|length %}
+      {% set staffCat = entry.staffDepartment.all() %}
+    {% else %}
+      {% set staffCat = craft.entries.section('departments').all() %}
+    {% endif %}
+
+    {% if staffCat|length > 1 %}
+    <div class="staff-filter">
+      <div class="staff-filter-header">
+        <h2>Jump to:</h2>
+      </div>
+      <div class="staff-filter-list">
+        <ul>
+          {% for department in staffCat %}
+          <li><a href="#{{ department.slug }}">{{ department.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+    {% endif %}
+
+    {% for department in staffCat %}
+    <div id="{{ department.slug }}" class="staff-department">
+      <h2>{{ department.title }}</h2>
+      <div class="staff-grid">
+        {% for staff in craft.entries.section('team').relatedTo(department).orderBy('dirSortName').all() %}
+        <div class="staff-block">
+          {% set profileImg = staff.profileImage %}
+          {% if profileImg|length %}
+            <figure class="staff-image">
+            {% if staff.bio %}
+              <a href="{{ staff.url }}">
+                <img src="{{ profileImg.one().getUrl('smallImage') }}" alt="{{ staff.title }} Bio" class="lazyload" loading="lazy">
+              </a>
+            {% else %}
+              <img src="{{ profileImg.one().getUrl('smallImage') }}" alt="" class="lazyload" loading="lazy">
+            {% endif %}
+            </figure>
+          {% endif %}
+          <div class="staff-text">
+            {% if staff.bio %}
+            <p class="staff-name"><a href="{{ staff.url }}"><strong>{{ staff.title }}</strong></a></p>
+            {% else %}
+            <p class="staff-name"><strong>{{ staff.title }}</strong></p>
+            {% endif %}
+            {% if staff.jobTitle %}<p>{{ staff.jobTitle }}</p>{% endif %}
+            {% if staff.phoneNumber %}<p>{{ staff.phoneNumber }}</p>{% endif %}
+            {% if staff.emailAddress %}<p class="arrow-link"><a href="mailto:{{ staff.emailAddress }}">Email</a></p>{% endif %}
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    {% endfor %}
+  </section>
+  <section class="sub-content">
+    <div class="side-nav">
+      {% include 'main/_layout/_sub-nav.twig' %}
+    </div>
+    {% include "_elements/_sidebar.twig" %}
+  </section>
+
+  {% include '_elements/_feature.twig' %}
+</main>
+
+{% endblock %}

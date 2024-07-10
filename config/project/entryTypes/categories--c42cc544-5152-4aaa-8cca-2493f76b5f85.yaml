@@ -1,0 +1,38 @@
+fieldLayouts:
+  2b98e85d-a809-4779-8f1a-98ca29bae0ac:
+    tabs:
+      -
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+handle: categories
+hasTitleField: true
+name: Categories
+section: c8b4e00a-e8c7-484b-aba4-3d886a74949b # Categories
+sortOrder: 1
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

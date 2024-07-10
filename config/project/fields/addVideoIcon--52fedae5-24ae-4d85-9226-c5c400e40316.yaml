@@ -1,0 +1,14 @@
+columnSuffix: null
+contentColumnType: boolean
+fieldGroup: 20a5a573-2119-4d7a-b5dd-92490fe7f46a # Articles
+handle: addVideoIcon
+instructions: 'Select this option only when you want to layer a "play" icon on top of the image thumbnail. '
+name: 'Add Video Icon to Thumbnail'
+searchable: true
+settings:
+  default: false
+  offLabel: null
+  onLabel: null
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Lightswitch

@@ -1,0 +1,85 @@
+{% for block in entry.landingContent.all() %}
+{% switch block.type %}
+  {% case 'imageBlock' %}
+    {% set image = block.ibImage.one() %}
+    <div class="image-block {{ block.ibPosition }}">
+      <div class="block-image">
+        {% if image|length %}
+        <img src="{{ image.getUrl('largeImage') }}" alt="{{ image.alt }}" class="lazyload" loading="lazy" />
+        {% endif %}
+      </div>
+      <div class="block-text">
+        {% if block.ibCategory %}<p class="small-header">{{ block.ibCategory }}</p>{% endif %}
+        {% if block.ibHeader %}<h2>{{ block.ibHeader }}</h2>{% endif %}
+        {{ block.ibDescription }}
+        {% if block.ibButton %}
+        <div class="block-btn button">
+          {{ block.ibButton }}
+        </div>
+        {% endif %}
+      </div>
+    </div>
+
+  {% case 'contentCards' %}
+    <div class="content-cards">
+      <div class="content-card-list {% if block.contentCards.count() % 2 == 0 %}even{% else %}odd{% endif %}">
+        {% for card in block.contentCards.all() %}
+          <div class="content-card">
+            {% set image = card.sidebarImage.one() %}
+            {% if image|length %}
+            <img src="{{ image.getUrl() }}" alt="{{ image.alt }}" class="lazyload" loading="lazy">
+            {% endif %}
+            <div class="card-text">
+            {% if card.sidebarHeader %}<h3>{{ card.sidebarHeader }}</h3>{% endif %}
+            {{ card.sidebarText }}
+            {% if card.sidebarButton %}
+            <div class="card-btn text-button">
+              {{ card.sidebarButton }}
+            </div>
+            {% endif %}
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+
+
+  {% case 'featureBlock' %}
+    <div class="feature full-width">
+      <div class="feature-row {{ block.fbBkgdColor }} {{ block.fbPosition }}">
+        <div class="feature-image">
+          {% set image = block.fbImage.one() %}
+          {% if image %}
+          <img src="{{ image.getUrl('largeImage') }}" alt="{{ image.alt }}" class="lazyload" loading="lazy">
+          {% endif %}
+        </div>
+        <div class="feature-text">
+          <div class="feature-content">
+            {% if block.fbCategory %}<p class="small-header">{{ block.fbCategory }}</p>{% endif %}
+            {% if block.fbHeader %}<h2>{{ block.fbHeader }}</h2>{% endif %}
+            {{ block.fbDescription }}
+            {% if block.fbButton %}
+            <div class="feature-btn white-button">
+              {{ block.fbButton }}
+            </div>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+
+  {% case 'landingText' %}
+    <div class="landing-container">
+      {{ block.landingText }}
+    </div>
+
+  {% case 'lColumnContent' %}
+    <div class="landing-container column-content {{ block.lccNumColumns }}">
+      {% if block.lccHeader %}<h2 class="column-header">{{ block.lccHeader }}</h2>{% endif %}
+      <div class="columns">
+        {{ block.lccContent }}
+      </div>
+    </div>
+
+{% endswitch %}
+{% endfor %}

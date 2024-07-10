@@ -1,0 +1,15 @@
+.landing {
+  margin: 0 auto;
+  width: 90%;
+  max-width: $xlarge-screen;
+  
+  .main-content {
+    padding: 0;
+  }
+
+  .landing-container {
+    width: 90%;
+    max-width: $limited-width;
+    margin: 0 auto;
+  }
+}

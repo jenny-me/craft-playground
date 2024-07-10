@@ -1,0 +1,166 @@
+fieldLayouts:
+  f2bfeb4a-7893-4d84-b458-6ed66f91e5cf:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 23ce64bc-06ae-4f6a-af06-d90093f40000 # Top Links
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 7702d555-7b14-4b1d-8f94-f8c9c0312d9c
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: 8f97dab0-3691-4c40-a8b3-9c7f00ac9332
+            userCondition: null
+          -
+            elementCondition: null
+            fieldUid: b87e394d-cc4c-462d-ab8b-46b760bd6fa8 # Admin Links
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4b2e0a7a-2d34-4cc2-a15b-b938d010fc76
+            userCondition: null
+            warning: null
+            width: 100
+        name: Header
+        uid: e238b6f5-b78b-46a4-8e6d-92490cf544ca
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: a6b28964-bd73-45f3-a6f1-209fdaa99cff # Call To Action
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: de3b9d30-4f18-4f98-acaa-3f2968fa4cd5
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: 1bf50800-1bca-4926-aadb-ba4f76e0738b
+            userCondition: null
+          -
+            elementCondition: null
+            fieldUid: f421154f-21a1-40e9-a942-52e65653be13 # Quick Links Header
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 6ff71886-db49-4562-997e-a8a24f835ce4
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 539845be-b512-43f8-9249-1cfb872aa97a # Quick Links
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f1178b12-c138-49cf-a33a-f9a06689079e
+            userCondition: null
+            warning: null
+            width: 100
+        name: Footer
+        uid: 335adb19-263d-423d-83e1-643ec992f272
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 521f4dea-1281-409e-94da-85c00e2f8d5a # LinkedIn Link
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 9621e9b8-b935-4be8-bcbf-bd1fe65a7dee
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 607056ef-f785-421d-a9eb-eb27d95357fe # Facebook Link
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: be3f6512-49bb-4627-bfd1-41f235bdf38f
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: a846b7fe-56f9-4123-9528-69888b9452aa # YouTube Link
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 82111d90-dd41-4c4c-b7fe-076f120558a4
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 8967fdbd-93cf-4d35-9c4b-214f416053ec # Twitter Link
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 023398fc-5562-43cb-896c-b2fa14bd18f3
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 6e4da1df-02af-43ef-b8ff-ccd5306b03ca # Instagram Link
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f5de3b6f-458f-464a-b235-71532ca49ccf
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: a6663553-47f5-457f-acb0-1c791c775013 # TikTok Link
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e4a5de2a-3bd6-425c-8343-4b76cc1a58ce
+            userCondition: null
+            warning: null
+            width: 100
+        name: 'Social Media'
+        uid: 8ce661f4-bb01-455a-95f2-437218e23ac7
+        userCondition: null
+handle: generalInfo
+name: 'General Information'
+sortOrder: 3

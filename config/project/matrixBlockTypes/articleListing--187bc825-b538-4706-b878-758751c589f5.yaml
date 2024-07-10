@@ -1,0 +1,196 @@
+field: c9866329-4e1c-4d5f-aad8-7d651c38dd11 # Article Listing
+fieldLayouts:
+  3b406783-66b6-4997-b32e-b1c1a0095847:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: e3b19e15-0a87-4af5-8023-1295d6febb27 # Article Type
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 85c84d33-eeb1-4212-9bbe-c37883cdcc34
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: ec0e74c9-d514-411d-aad9-0f5a32ffedd6 # Categories
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 2e8dbf6b-e8da-4420-9e28-ea8dac71221f
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: 98033313-8533-4eeb-a2ec-fc58645d2b66 # Page Size
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4a97c2b8-5d43-4380-9a01-ecdb38d70a5c
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: 680fb09d-379d-4d5e-b9cd-a5a96bd6fe9b # Show Pagination
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a77bcf99-a018-4b97-954f-fd68f9b4b57f
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: a3b299fe-a607-489e-b61f-7deb5dd15f22 # Show Filters
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 595a43de-88f7-4c50-ba95-b255c9a6d978
+            userCondition: null
+            warning: null
+            width: 50
+        name: Content
+        uid: ef6e3530-582c-47c7-8be3-fb3103c4bce5
+        userCondition: null
+fields:
+  680fb09d-379d-4d5e-b9cd-a5a96bd6fe9b: # Show Pagination
+    columnSuffix: null
+    contentColumnType: boolean
+    fieldGroup: null
+    handle: alShowPagination
+    instructions: 'Choose whether or not to show pagination. Recommended for listings with over 10 entries.'
+    name: 'Show Pagination'
+    searchable: true
+    settings:
+      default: false
+      offLabel: null
+      onLabel: null
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Lightswitch
+  98033313-8533-4eeb-a2ec-fc58645d2b66: # Page Size
+    columnSuffix: null
+    contentColumnType: integer(10)
+    fieldGroup: null
+    handle: alPageSize
+    instructions: 'How many articles should be on each page. '
+    name: 'Page Size'
+    searchable: true
+    settings:
+      decimals: 0
+      defaultValue: 12
+      max: null
+      min: 0
+      prefix: null
+      previewCurrency: null
+      previewFormat: decimal
+      size: null
+      suffix: null
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Number
+  a3b299fe-a607-489e-b61f-7deb5dd15f22: # Show Filters
+    columnSuffix: null
+    contentColumnType: boolean
+    fieldGroup: null
+    handle: alShowFilters
+    instructions: 'Choose whether or not to show listing filters. '
+    name: 'Show Filters'
+    searchable: true
+    settings:
+      default: false
+      offLabel: null
+      onLabel: null
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Lightswitch
+  e3b19e15-0a87-4af5-8023-1295d6febb27: # Article Type
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: alType
+    instructions: null
+    name: 'Article Type'
+    searchable: true
+    settings:
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - News
+            -
+              - value
+              - news
+            -
+              - default
+              - '1'
+        -
+          __assoc__:
+            -
+              - label
+              - Blog
+            -
+              - value
+              - blog
+            -
+              - default
+              - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Checkboxes
+  ec0e74c9-d514-411d-aad9-0f5a32ffedd6: # Categories
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: alCategories
+    instructions: 'Select which categories to display in this listing. Leave blank to show all categories.'
+    name: Categories
+    searchable: true
+    settings:
+      allowSelfRelations: false
+      branchLimit: null
+      localizeRelations: false
+      maintainHierarchy: false
+      maxRelations: null
+      minRelations: null
+      selectionCondition:
+        __assoc__:
+          -
+            - elementType
+            - craft\elements\Entry
+          -
+            - fieldContext
+            - global
+          -
+            - class
+            - craft\elements\conditions\entries\EntryCondition
+      selectionLabel: null
+      showSiteMenu: true
+      sources:
+        - 'section:c8b4e00a-e8c7-484b-aba4-3d886a74949b' # Categories
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Entries
+handle: articleListing
+name: Listing
+sortOrder: 1

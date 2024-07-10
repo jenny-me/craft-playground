@@ -1,0 +1,22 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: ae5efb3a-2ce9-4bea-a606-d71f9faee980 # Team
+handle: staffDepartment
+instructions: ''
+name: Department
+searchable: true
+settings:
+  allowSelfRelations: false
+  limit: ''
+  localizeRelations: false
+  selectionLabel: 'Add department'
+  showSiteMenu: true
+  source: null
+  sources:
+    - 'section:2a8eda51-0fb9-4ceb-8f44-926b62a63b00' # Departments
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Entries

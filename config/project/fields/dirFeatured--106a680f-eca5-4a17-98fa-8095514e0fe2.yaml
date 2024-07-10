@@ -1,0 +1,14 @@
+columnSuffix: null
+contentColumnType: boolean
+fieldGroup: c2f30dbc-032d-4ca3-a7dd-dc80469e7183 # General Directory
+handle: dirFeatured
+instructions: 'This will add a "star icon" next to the title.'
+name: Featured
+searchable: false
+settings:
+  default: false
+  offLabel: null
+  onLabel: null
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Lightswitch

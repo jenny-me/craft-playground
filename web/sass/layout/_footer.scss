@@ -1,0 +1,143 @@
+
+$footer-bkgd: $color-white;
+
+.footer {
+  background: $footer-bkgd;  
+  border: $side-gap solid $bkgd-body;
+
+  .container {
+    width: 100%;
+    max-width: initial;
+  }
+
+  .divider {
+    display: inline-block;
+    margin: 0 3px;
+    color: $secondary-color;
+  }
+  p {
+    margin: 0;
+    padding: 0 0 .5em;
+  }
+  ul {
+    li {
+      margin: 0;
+      padding: 0 0 .5em;
+      list-style-type: none;
+    }
+  }
+}
+.footer-top {
+  padding: 2em 0;
+
+  .container {
+    text-align: center;
+    position: relative;
+
+    &:before {
+      display: block; content: '';
+      pointer-events: none;
+
+      position: absolute;
+      top: 50%; transform: translateY(-50%);
+
+      width: 100%; height: 6px;
+
+      background: rgba($primary-color, .12);
+    }
+  }
+
+}
+ul.social {
+  position: relative;
+  margin: 0 auto; padding: 0 1em; 
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  background: $footer-bkgd;
+
+  li {
+    margin: 0 8px;
+
+    &:first-child { margin-left: 0; }
+    &:last-child { margin-right: 0; }
+  }
+
+  a {
+    &, &:link, &:visited {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+
+      border: 1px solid rgba($primary-color, .25);
+      border-radius: 50px;
+
+      height: 48px; width: 48px;
+
+      svg {
+        height: 20px; max-width: 20px;
+
+        path {
+          fill: $primary-color;
+        }
+      }
+    }
+    &:hover, &:active, &:focus {
+      border-color: $secondary-color;
+      svg {
+        path {
+          fill: $secondary-color;
+        }
+      }
+    }
+  }
+  
+}
+
+.footer-btm {
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    padding: 2em 0;
+
+    font-size: .9em;
+    
+    > div {
+      margin-bottom: 1em;
+    }
+
+    @media all and (min-width: $medium-screen) {
+      flex-direction: row;
+    }
+  }
+  .copyright {
+    flex: 1;
+  }
+  .quick-links {
+    flex: 1;
+    @media all and (min-width: $medium-screen) {
+      text-align: center;
+    }
+  }
+  .designedBy {
+    flex: 1;
+
+    @media all and (min-width: $medium-screen) {
+      text-align: right;
+    }
+  }
+  p { padding: 0; }
+  a {
+    &, &:link, &:visited {
+      text-decoration: none;
+    }
+    &:hover, &:active, &:focus {
+      text-decoration: underline;
+    }
+  }
+
+}

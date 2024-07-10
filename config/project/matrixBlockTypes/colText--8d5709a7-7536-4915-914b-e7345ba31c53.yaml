@@ -1,0 +1,118 @@
+field: e443c70e-6db5-423b-bd28-6ce9cc2cbb61 # Page Content
+fieldLayouts:
+  c611cad7-9c6a-4e03-b26e-a91735d15d07:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 61616004-72ff-46da-b037-5933efe61b63 # Headline
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4e8f46bd-c738-46f0-8df9-7c75a057b374
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 0910906d-0628-46e6-a4b2-d9e5c7f28f07 # Left Column
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 22bba009-9116-4a2a-926a-77df347cfa7c
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: 6fda8caa-7ab8-4b02-9413-8ddafa5123b2 # Right Column
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 83ec1dd3-9941-4f3d-9ba8-953aa4eef9f9
+            userCondition: null
+            warning: null
+            width: 50
+        name: Content
+        uid: 6c0d61e6-9545-426b-9ea8-e5aa41dfcee7
+        userCondition: null
+fields:
+  6fda8caa-7ab8-4b02-9413-8ddafa5123b2: # Right Column
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: rightColumn
+    instructions: null
+    name: 'Right Column'
+    searchable: true
+    settings:
+      availableTransforms: '*'
+      availableVolumes: '*'
+      ckeConfig: 93fb68e0-cc2c-4f3f-90fd-b0182086bfa1 # Default
+      columnType: text
+      defaultTransform: null
+      enableSourceEditingForNonAdmins: true
+      purifierConfig: null
+      purifyHtml: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      showWordCount: false
+      wordLimit: null
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\ckeditor\Field
+  0910906d-0628-46e6-a4b2-d9e5c7f28f07: # Left Column
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: leftColumn
+    instructions: null
+    name: 'Left Column'
+    searchable: true
+    settings:
+      availableTransforms: '*'
+      availableVolumes: '*'
+      ckeConfig: 93fb68e0-cc2c-4f3f-90fd-b0182086bfa1 # Default
+      columnType: text
+      defaultTransform: null
+      enableSourceEditingForNonAdmins: true
+      purifierConfig: null
+      purifyHtml: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      showWordCount: false
+      wordLimit: null
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\ckeditor\Field
+  61616004-72ff-46da-b037-5933efe61b63: # Headline
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: ctHeadline
+    instructions: null
+    name: Headline
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: Optional
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: colText
+name: '2-Col Text'
+sortOrder: 2

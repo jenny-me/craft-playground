@@ -1,0 +1,96 @@
+.home .main-content {
+  margin: 0; padding: 0;
+}
+
+.condensed-list {
+  width: 100%;
+  //overflow: hidden;
+
+  position: relative;
+  margin: 2em 0;
+  border: $side-gap solid $bkgd-body;
+
+  display: flex;
+  flex-direction: column;
+
+  @media all and (min-width: $medium-screen) {
+    flex-direction: row;
+    width: 100%;
+    margin: 2em 0;
+
+    .cond-text {
+      flex: 0 0 25%;
+      margin-right: 2em;
+
+      text-align: right;
+    }
+    .cond-list {
+      flex: 1;
+    }
+  }
+}
+
+.locations {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  background: $color-offwhite;
+  border: $side-gap solid $bkgd-body;
+  
+	@media all and (min-width: $medium-screen) {
+    flex-direction: row-reverse;
+	}
+
+	.location-content {
+		flex: 0 0 50%;
+    background: url($image-path + 'state.svg') no-repeat center center;
+    background-size: auto 90%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .locations-inner {
+    max-width: $limited-width;
+    padding: 4em 0 2em;
+
+    @media all and (max-width: $medium-screen) {
+      padding: 4em 2em 0;
+    }
+  }
+
+	.location-rotator {
+		flex: 0 0 50%;
+
+    padding: 4em 2em 2em;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  #carousel {
+    max-width: 600px;
+  }
+  .slide {
+    background: $color-white;;
+    box-shadow: 0px 6px 12px 0px rgba(0, 21, 64, 0.20);
+
+    display: flex;
+  }
+  .location-img {
+    flex: 0 0 33%;
+    overflow: hidden;
+
+    img {
+      height: 100%; width: 100%;
+      object-fit: cover;
+    }
+  }
+  .location-text {
+    flex: 1;
+    
+    padding: 1em 2em;
+  }
+}

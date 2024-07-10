@@ -1,0 +1,69 @@
+{% macro navList(section, level = 1) %}
+
+{% set activeClass = " " %}
+{% if craft.entries.section(section).one()|length and 
+      craft.app.request.segments|first == craft.entries.section(section).one().slug %}
+  {% set activeClass = "active" %}
+{% endif %}
+
+{% set entries = craft.entries.section(section).hideFromMenu('not 1').level(level).all() %}
+
+{% for page in entries %}
+  {% set hasChildren = page.getChildren().hideFromMenu('not 1').count() %}
+
+  <li class="{% if hasChildren %}expandable{% endif %}">
+    <a href="{{ page.url }}"{% if page.level == 1 %} class="{{ activeClass }} {% if hasChildren %}dropdown{% endif %}"{% endif %}>{{ page.title }}<span>{% if hasChildren %}{{ svg('@webroot/images/icon-down.svg') }}{% endif %}{% if page.externalRedirect %}{{svg('@webroot/images/icon-external.svg')}}{% endif %}</span></a>
+
+      {% if hasChildren %}
+        <ul class="dropdown-menu level{{page.level}}">
+          {{ _self.subList(page, level+1) }}
+        </ul>
+      {% endif %}
+  
+  </li>
+{% endfor %}
+
+{% endmacro %}
+
+
+{% macro subList(parentPage, level = 2) %}
+
+{% set entries = parentPage.getChildren().hideFromMenu('not 1').level(level).all() %}
+{% set slugs = craft.app.request.segments %}
+
+{% for page in entries %}
+  {% set hasChildren = page.getChildren().hideFromMenu('not 1').count() %}
+
+  <li class="{% if hasChildren %}expandable{% endif %}{% if page.slug in slugs %} active extended{%endif%}">
+    <a href="{{ page.url }}"{% if page.level == 1 %} class="{% if page.slug in slugs %}active{% endif %} {% if hasChildren %}dropdown{% endif %}"{% endif %}>{{ page.title }}<span></span></a>
+
+      {% if hasChildren %}
+        <ul class="dropdown-menu level{{page.level}} child-nav">
+          {{ _self.subList(page, level+1) }}
+        </ul>
+      {% endif %}
+  
+  </li>
+{% endfor %}
+
+{% endmacro %}
+
+
+
+{% macro sideList(parentPage) %}
+
+{% set entries = parentPage.getChildren().hideFromMenu('not 1').all() %}
+{% set slugs = craft.app.request.segments %}
+{% set hasChildren = entries|length %}
+
+<li class="{% if hasChildren %}expandable{% endif %}{% if parentPage.slug in slugs %} extended{%endif%}">
+  <a href="{{ parentPage.url }}"{% if parentPage.level == 1 %} class="{% if parentPage.slug in slugs %}active{% endif %}  {% if hasChildren %}dropdown{% endif %}"{% endif %}>{{ parentPage.title }}<span></span></a>
+  {% if hasChildren %}
+    <ul class="dropdown-menu child-nav">
+      {{ _self.subList(parentPage) }}
+    </ul>
+  {% endif %}
+</li>
+
+
+{% endmacro %}

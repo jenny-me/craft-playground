@@ -1,0 +1,32 @@
+{
+  "buttons": ["html","formatting", "link"],
+  "formatting": ["p"],
+  "formattingAdd": {
+    "button": {
+      "title": "Dark (Primary) Button",
+      "api": "module.block.format",
+      "args": {
+          "tag": "p",
+          "class": "button"
+      }
+    },
+    "whiteButton": {
+      "title": "White Button",
+      "api": "module.block.format",
+      "args": {
+          "tag": "p",
+          "class": "white-button"
+      }
+    },
+    "arrowLink": {
+      "title": "Link with Arrow",
+      "api": "module.block.format",
+      "args": {
+          "tag": "p",
+          "class": "arrow-link"
+      }
+    }
+  },
+  "linkNewTab": true,
+  "toolbarFixed": true
+}

@@ -1,0 +1,166 @@
+field: 80580736-eca1-4c21-afef-b1b37b3d3808 # Homepage Content
+fieldLayouts:
+  7635bb79-5a87-4070-a145-c8ea1a97c0fd:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: ecca92ea-f080-4a79-b79c-fd3d411102c4 # Header
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e6048628-aa15-4442-a96a-197c269d94e8
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 1aa19e7f-1888-4f29-8ec2-32a2a0e8bc52 # Description
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 79ed5e19-fbf2-405f-b510-39b118d893c8
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 058a1fd5-a3f4-4155-bb70-d0c9e7c672f7 # Article Type
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: df226c7e-a143-4a85-a877-367f8ed85c4a
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: 82e71757-091a-4649-ba13-013bd4de4926 # Categories
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8731c066-2e3b-443b-b09d-c6fad05581f8
+            userCondition: null
+            warning: null
+            width: 50
+        name: Content
+        uid: 71793dce-cde1-4ca3-896e-01ca0a96c5de
+        userCondition: null
+fields:
+  1aa19e7f-1888-4f29-8ec2-32a2a0e8bc52: # Description
+    columnSuffix: bjqfhbsd
+    contentColumnType: text
+    fieldGroup: null
+    handle: halDescription
+    instructions: null
+    name: Description
+    searchable: false
+    settings:
+      availableTransforms: '*'
+      availableVolumes: '*'
+      ckeConfig: 22fb5883-b7a7-4de3-b53a-4dc7f6f13767 # Standard
+      columnType: text
+      defaultTransform: null
+      enableSourceEditingForNonAdmins: true
+      purifierConfig: null
+      purifyHtml: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      showWordCount: false
+      wordLimit: null
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\ckeditor\Field
+  058a1fd5-a3f4-4155-bb70-d0c9e7c672f7: # Article Type
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: halType
+    instructions: null
+    name: 'Article Type'
+    searchable: true
+    settings:
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - News
+            -
+              - value
+              - news
+            -
+              - default
+              - '1'
+        -
+          __assoc__:
+            -
+              - label
+              - Blog
+            -
+              - value
+              - blog
+            -
+              - default
+              - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Checkboxes
+  82e71757-091a-4649-ba13-013bd4de4926: # Categories
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: halCategories
+    instructions: 'Select which categories to display in this listing. Leave blank to show all categories.'
+    name: Categories
+    searchable: true
+    settings:
+      allowSelfRelations: false
+      branchLimit: null
+      localizeRelations: false
+      maintainHierarchy: false
+      maxRelations: null
+      minRelations: null
+      selectionLabel: 'Add category'
+      showSiteMenu: true
+      sources:
+        - 'section:c8b4e00a-e8c7-484b-aba4-3d886a74949b' # Categories
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Entries
+  ecca92ea-f080-4a79-b79c-fd3d411102c4: # Header
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: halHeader
+    instructions: null
+    name: Header
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: articleList
+name: 'Article List'
+sortOrder: 3

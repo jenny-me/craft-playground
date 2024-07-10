@@ -1,0 +1,11 @@
+fill: null
+format: null
+handle: smallImage
+height: null
+interlace: none
+mode: crop
+name: 'Small Image'
+position: center-center
+quality: null
+upscale: true
+width: 400

@@ -1,0 +1,97 @@
+field: e443c70e-6db5-423b-bd28-6ce9cc2cbb61 # Page Content
+fieldLayouts:
+  f9ed72b9-efd0-4c60-bbd6-82c6f60650bc:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 43c38197-b101-4bb7-a8ac-476bc3f711b3 # Grid Header
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 2a8ae602-6165-48a5-bb62-f55f83cf0119
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: 60ba6931-4f91-476d-8df6-1fc3352b6a09 # __blank__
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 13117ae8-ca2f-48d9-b26a-fc3c7d7cbea2
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: c0250100-1904-40c0-ae20-e242df8161fa
+        userCondition: null
+fields:
+  43c38197-b101-4bb7-a8ac-476bc3f711b3: # Grid Header
+    columnSuffix: hvqorfxv
+    contentColumnType: text
+    fieldGroup: null
+    handle: gridHeader
+    instructions: null
+    name: 'Grid Header'
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  60ba6931-4f91-476d-8df6-1fc3352b6a09: # __blank__
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: imageGrid
+    instructions: null
+    name: __blank__
+    searchable: true
+    settings:
+      allowSelfRelations: false
+      allowSubfolders: false
+      allowUploads: false
+      allowedKinds:
+        - image
+      branchLimit: null
+      defaultUploadLocationSource: 'volume:09c09568-4b70-4b1a-a334-24e0b0a5ed09' # Content Images
+      defaultUploadLocationSubpath: null
+      localizeRelations: false
+      maintainHierarchy: false
+      maxRelations: null
+      minRelations: null
+      previewMode: full
+      restrictFiles: true
+      restrictLocation: false
+      restrictedDefaultUploadSubpath: null
+      restrictedLocationSource: 'volume:09c09568-4b70-4b1a-a334-24e0b0a5ed09' # Content Images
+      restrictedLocationSubpath: null
+      selectionLabel: 'Add image'
+      showSiteMenu: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      sources:
+        - 'volume:09c09568-4b70-4b1a-a334-24e0b0a5ed09' # Content Images
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+handle: imageGrid
+name: 'Image Grid'
+sortOrder: 10

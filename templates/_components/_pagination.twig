@@ -1,0 +1,29 @@
+{% if totalPages > 1 %}
+<div class="pagination">
+  <div class="firstPage">
+   {% if page > 1 %}
+      <button sprig s-vals="{{ { page: page - 1 }|json_encode }}" s-push-url="?page={{ page - 1 }}" s-indicator="#indicator" s-swap="innerHTML show:top">
+        Previous
+      </button>
+    {% endif %}
+  </div>
+  <div class="middlePages">
+    {% set prePage = (page - 5) > 0 ? (page - 5) : 1 %}
+    {% set aftPage = (page + 5) < totalPages ? (page + 5) : totalPages %}
+    {% for i in prePage..aftPage %}
+      {% if i == page %}
+        {{ i }}
+      {% else %}
+        <a sprig s-vals="{{ { page: i }|json_encode }}" s-push-url="?page={{ i }}" s-indicator="#indicator" s-swap="innerHTML show:top">{{ i }}</a>
+      {% endif %}
+    {% endfor %}
+  </div>
+  <div class="lastPage">
+    {% if page < totalPages %}
+      <button sprig s-vals="{{ { page: page + 1 }|json_encode }}" s-push-url="?page={{ page + 1 }}" s-indicator="#indicator" s-swap="innerHTML show:top">
+        Next
+      </button>
+    {% endif %}
+  </div>
+</div>
+{% endif %}

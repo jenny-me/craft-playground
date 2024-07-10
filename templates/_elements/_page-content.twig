@@ -1,0 +1,93 @@
+<script src="/js/accordion.min.js"></script>
+
+{% for block in entry.pageContent.all() %}
+{% switch block.type %}
+  {% case 'text' %}
+    {{ block.text }}
+
+  {% case 'colText' %}
+    <div class="column-text">
+      {% if block.ctHeadline %}<h3>{{ block.ctHeadline }}</h3>{% endif %}
+      <div class="left-column">
+        {{ block.leftColumn }}
+      </div>
+      <div class="right-column">
+        {{ block.rightColumn }}
+      </div>
+    </div>
+
+  {% case 'columnContent' %}
+    <div class="column-content {{ block.ccNumColumns }}">
+      {% if block.ccHeader %}<h2 class="column-header">{{ block.ccHeader }}</h2>{% endif %}
+      <div class="columns">
+        {{ block.ccContent }}
+      </div>
+    </div>
+
+  {% case 'highlight' %}
+  <div class="highlight">
+    {{ block.highlight }}
+  </div>
+
+  {% case 'quote' %}
+    <blockquote>
+      <div class="quote-icon">{{ svg('@webroot/images/icon-quote.svg') }}</div>
+      <p>{{ block.quote|striptags('<br>')|raw }}</p>
+      {% if block.attribution %}
+      <p class="attribution">{{ block.attribution }}</p>
+      {% endif %}
+    </blockquote>
+
+  {% case 'callout' %}
+    <div class="callout">
+      {{ block.calloutText }}
+    </div>
+
+  {% case 'accordion' %}
+    {% if block.accordion.one()|length %}
+      <div class="accordion-block">
+        {% set fullAccordion = block.accordion.one() %}
+        <div id="{{ fullAccordion.slug }}" class="accordion">
+          {% for pane in fullAccordion.accordion.all() %}
+          <button id="accordion-open-{{ fullAccordion.slug }}-{{loop.index}}" class="accordion__button">
+            {{ pane.paneHeader }}
+          </button>
+          <div id="accordion-section-{{ fullAccordion.slug }}-{{loop.index}}" class="accordion__section open">
+              {{ pane.paneContent }}
+          </div>
+          {% endfor %}
+        </div>
+
+        <script type="text/javascript">
+            // Content slider
+            var accordion{{loop.index}} = new accordionBlock();
+            accordion{{loop.index}}.init({id: '{{ fullAccordion.slug }}'});
+        </script>
+      </div>
+    {% endif %}
+
+  {% case 'embed' %}
+    <div class="embed video">
+      {# Must be a plain text field. Redactor will allow initial save of widget with purifying turned off but will not save the code in the DB properly so it disappears on second page edit. #}
+      {{ block.embed|raw }}
+    </div>
+
+  {% case 'form' %}
+    <div class="form">
+      {{ block.form.render() }}
+    </div>
+
+  {% case 'imageGrid' %}
+    <div class="image-gallery">
+      {% if block.gridHeader %}<h3>{{ block.gridHeader }}</h3>{% endif %}
+      <div class="image-grid">
+        {% for img in block.imageGrid.all() %}
+        <figure>
+          <img src="{{ img.getUrl() }}" alt="{{ img.alt }}">
+        </figure>
+        {% endfor %}
+      </div>
+    </div>
+
+{% endswitch %}
+{% endfor %}

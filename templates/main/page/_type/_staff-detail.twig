@@ -1,0 +1,50 @@
+{% extends "main/_layout/main" %}
+
+{% block main %}
+
+{% include "_elements/_redirect.twig" %}
+
+{% set referrerArray = craft.app.request.referrer|split('/') %}
+{% set referrerPage = referrerArray[referrerArray|length - 1] %}
+{% if referrerPage %}
+  {% set parentPage = craft.entries().slug(referrerPage).one() %}
+{% else %}
+  {% set parentPage = craft.entries().type('staffListing').one() %}
+{% endif %}
+
+<main id="main" class="content">
+  <section class="text-banner">
+    <div class="container">
+      <div class="banner-icon"><img src="/images/icon-logo.svg" alt="" /></div>
+      <div class="banner-content">
+        <p class="small-header">{{ entry.jobTitle }}</p>
+        <h1>{{ entry.title }}</h1>
+      </div>
+    </div>
+  </section>
+
+  <section class="main-content">
+    <div class="staff-detail">
+      <div class="staff-image">
+        {% set profileImg = entry.profileImage %}
+        {% if profileImg|length %}
+        <img src="{{ profileImg.one().getUrl('smallImage') }}" alt="" class="lazyload" loading="lazy">
+        {% endif %}
+      </div>
+      <div class="staff-content">
+        {% if entry.staffDepartment|length %}
+        <p class="largetext">{% for dept in entry.staffDepartment.all()%}{% if loop.first == false %}, {% endif %}{{ dept.title }}{% endfor %}</p>
+        <hr>
+        {% endif %}
+        {{ entry.bio }}
+      </div>
+    </div>
+  </section>
+  <section class="sub-content">
+    <div class="side-nav">
+      {% include 'main/_layout/_sub-nav.twig' %}
+    </div>
+  </section>
+</main>
+
+{% endblock %}

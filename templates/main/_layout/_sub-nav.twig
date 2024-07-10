@@ -1,0 +1,23 @@
+{% cache %}
+{% if parentPage is defined %}
+  {% set currentPage = parentPage %}
+{% else %}
+  {% set currentPage = entry %}
+{% endif %}
+
+{% import "_elements/_macros.twig" as macros %}
+
+{% if currentPage.getAncestors()|length %}
+  {% set entries = currentPage.getAncestors().level(1).one() %}
+{% else %}
+  {% set entries = currentPage %}
+{% endif %}
+
+{% if entries|length %}
+  <nav class="sub-nav">
+    <ul class="nav sub-top">
+      {{ macros.sideList(entries, 1) }}
+    </ul>
+  </nav>
+{% endif %}
+{% endcache %}

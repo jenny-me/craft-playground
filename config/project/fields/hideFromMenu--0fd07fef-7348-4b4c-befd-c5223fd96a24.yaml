@@ -1,0 +1,14 @@
+columnSuffix: null
+contentColumnType: boolean
+fieldGroup: a5d1cc92-1351-49c1-bd93-82b6d2865609 # Utilities
+handle: hideFromMenu
+instructions: ''
+name: 'Hide From Menu'
+searchable: false
+settings:
+  default: false
+  offLabel: 'No'
+  onLabel: 'Yes'
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Lightswitch

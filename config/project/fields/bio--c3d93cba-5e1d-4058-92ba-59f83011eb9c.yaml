@@ -1,0 +1,21 @@
+columnSuffix: null
+contentColumnType: text
+fieldGroup: ae5efb3a-2ce9-4bea-a606-d71f9faee980 # Team
+handle: bio
+instructions: null
+name: Bio
+searchable: true
+settings:
+  availableTransforms: '*'
+  availableVolumes: '*'
+  ckeConfig: 93fb68e0-cc2c-4f3f-90fd-b0182086bfa1 # Default
+  columnType: text
+  defaultTransform: ''
+  enableSourceEditingForNonAdmins: true
+  purifierConfig: null
+  purifyHtml: true
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: true
+translationKeyFormat: null
+translationMethod: none
+type: craft\ckeditor\Field

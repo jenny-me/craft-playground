@@ -1,0 +1,51 @@
+field: e443c70e-6db5-423b-bd28-6ce9cc2cbb61 # Page Content
+fieldLayouts:
+  542c74af-c93c-4ca3-bdf2-ebd7ece7ee85:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 60f970f8-885e-42df-8003-3c556a2fb8c4 # __blank__
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ec3fad35-1aa2-4ddd-bd45-0086b1c4805a
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: ccc8285d-5654-4abd-903e-175bf0bc5c70
+        userCondition: null
+fields:
+  60f970f8-885e-42df-8003-3c556a2fb8c4: # __blank__
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: accordion
+    instructions: null
+    name: __blank__
+    searchable: true
+    settings:
+      allowSelfRelations: false
+      branchLimit: null
+      localizeRelations: false
+      maintainHierarchy: false
+      maxRelations: 1
+      minRelations: null
+      selectionLabel: 'Add accordion'
+      showSiteMenu: true
+      sources:
+        - 'section:9cf8b488-d41b-4b02-b945-b52944c6d419' # Accordions
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Entries
+handle: accordion
+name: Accordion
+sortOrder: 7

@@ -1,0 +1,34 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: a0fe5b36-2aa4-45c6-aa52-4f2b211d203b # Common
+handle: bannerImage
+instructions: '3:1 aspect ratio'
+name: 'Banner Image'
+searchable: true
+settings:
+  allowSelfRelations: false
+  allowUploads: true
+  allowedKinds:
+    - image
+  defaultUploadLocationSource: 'volume:09c09568-4b70-4b1a-a334-24e0b0a5ed09' # Content Images
+  defaultUploadLocationSubpath: ''
+  limit: '1'
+  localizeRelations: false
+  previewMode: full
+  restrictFiles: '1'
+  selectionLabel: 'Add image'
+  showSiteMenu: true
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: true
+  singleUploadLocationSource: 'volume:09c09568-4b70-4b1a-a334-24e0b0a5ed09' # Content Images
+  singleUploadLocationSubpath: ''
+  source: null
+  sources:
+    - 'volume:09c09568-4b70-4b1a-a334-24e0b0a5ed09' # Content Images
+  targetSiteId: null
+  useSingleFolder: false
+  validateRelatedElements: false
+  viewMode: list
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Assets

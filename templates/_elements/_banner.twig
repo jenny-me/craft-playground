@@ -1,0 +1,46 @@
+{% if parentPage is defined %}
+  {% set currentPage = parentPage %}
+{% else %}
+  {% set currentPage = entry %}
+{% endif %}
+
+{% set hasBanner = currentPage.bannerImage|length %}
+{% if hasBanner %}
+  <section class="banner">
+    <div class="container">
+      <div class="banner-image">
+        <picture>
+          <source srcset="{{ currentPage.bannerImage.one().getUrl({ 'transform': 'banner', 'format': 'webp' }) }}" type="image/webp">
+          <img src="{{ currentPage.bannerImage.one().getUrl('banner') }}" alt="" class="lazyload" loading="lazy" />
+        </picture>
+      </div>
+      <div class="banner-text">
+        <div class="banner-text-content">
+          {% set sectionLanding = currentPage.getAncestors().level(1).one() %}
+          {% if entry.pageSubheader %}<p class="small-header">{{ entry.pageSubheader }}</p>{% elseif sectionLanding|length %}<p class="small-header">{{ sectionLanding.title }}</p>{% endif %}
+          {% if entry.pageHeadline|length %}
+            <h1>{{ entry.pageHeadline }}</h1>
+          {% else %}
+            <h1>{{ entry.title }}</h1>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </section>
+{% else %}
+  <section class="text-banner">
+    <div class="container">
+      <div class="banner-icon"><img src="/images/icon-logo.svg" alt="" /></div>
+      <div class="banner-content">
+        {% set sectionLanding = currentPage.getAncestors().level(1).one() %}
+        {% if entry.pageSubheader %}<p class="small-header">{{ entry.pageSubheader }}</p>{% elseif sectionLanding|length %}<p class="small-header">{{ sectionLanding.title }}</p>{% endif %}
+
+        {% if entry.pageHeadline|length %}
+          <h1>{{ entry.pageHeadline }}</h1>
+        {% else %}
+          <h1>{{ entry.title }}</h1>
+        {% endif %}
+      </div>
+    </div>
+  </section>
+{% endif %}

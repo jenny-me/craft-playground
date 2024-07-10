@@ -1,0 +1,49 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 20a5a573-2119-4d7a-b5dd-92490fe7f46a # Articles
+handle: thumbnailImage
+instructions: 'This field is optional. By default, the thumbnail image will re-use the main image. If you want a custom thumbnail image, upload it here. Thumbnail images are cropped to a 2:3 ratio. '
+name: 'Thumbnail Image'
+searchable: true
+settings:
+  allowSelfRelations: false
+  allowSubfolders: false
+  allowUploads: true
+  allowedKinds:
+    - image
+  branchLimit: null
+  defaultUploadLocationSource: 'volume:09c09568-4b70-4b1a-a334-24e0b0a5ed09' # Content Images
+  defaultUploadLocationSubpath: null
+  localizeRelations: false
+  maintainHierarchy: false
+  maxRelations: 1
+  minRelations: null
+  previewMode: full
+  restrictFiles: true
+  restrictLocation: false
+  restrictedDefaultUploadSubpath: null
+  restrictedLocationSource: 'volume:09c09568-4b70-4b1a-a334-24e0b0a5ed09' # Content Images
+  restrictedLocationSubpath: null
+  selectionCondition:
+    __assoc__:
+      -
+        - elementType
+        - craft\elements\Asset
+      -
+        - fieldContext
+        - global
+      -
+        - class
+        - craft\elements\conditions\assets\AssetCondition
+  selectionLabel: 'Add image'
+  showSiteMenu: true
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: true
+  sources:
+    - 'volume:09c09568-4b70-4b1a-a334-24e0b0a5ed09' # Content Images
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: list
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Assets

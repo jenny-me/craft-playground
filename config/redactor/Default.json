@@ -1,0 +1,55 @@
+{
+  "buttons": ["html","formatting", "bold", "italic", "sup",  "unorderedlist", "orderedlist", "link", "table", "image", "line", "fullscreen"],
+  "plugins": ["properties", "fullscreen", "table"],
+  "formatting": ["p", "h2", "h3", "h4", "blockquote"],
+  "formattingAdd": {
+    "eyebrow": {
+      "title": "Small Header (Eyebrow)",
+      "api": "module.block.format",
+      "args": {
+          "tag": "p",
+          "class": "small-header"
+      }
+    },
+    "largetext": {
+      "title": "Large Text",
+      "api": "module.block.format",
+      "args": {
+          "tag": "p",
+          "class": "largetext"
+      }
+    },
+    "button": {
+      "title": "Dark (Primary) Button",
+      "api": "module.block.format",
+      "args": {
+          "tag": "p",
+          "class": "button"
+      }
+    },
+    "whiteButton": {
+      "title": "White Button",
+      "api": "module.block.format",
+      "args": {
+          "tag": "p",
+          "class": "white-button"
+      }
+    },
+    "arrowLink": {
+      "title": "Link with Arrow",
+      "api": "module.block.format",
+      "args": {
+          "tag": "p",
+          "class": "arrow-link"
+      }
+    }
+  },
+  "imagePosition": {
+    "left": "caption left",
+    "right": "caption right",
+    "center": "caption full"
+  },
+  "linkNewTab": true,
+  "toolbarFixed": true,
+  "minHeight": "200px"
+}

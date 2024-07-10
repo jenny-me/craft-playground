@@ -1,0 +1,28 @@
+.sitemap {
+  .desk-search { display: none !important; } 
+
+  ul {
+    li {
+      margin: 0 0 0 2em;
+      padding: 0;
+      list-style-type: disc;
+    }
+
+    &.root-group {
+      > li {
+        border-bottom: 1px solid $hr-color;
+        margin-bottom: 1em;
+        padding-bottom: 1em;
+        list-style-type: none;
+        list-style-image: none;
+
+        > a {
+          font-size: 1.25em;
+          font-weight: bold;
+
+          span { display: none; }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,38 @@
+$gap: auto;
+
+.content {
+  margin: 0 auto;
+  width: 90%;
+  max-width: $xlarge-screen;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "banner"
+    "content"
+    "sidebar"
+    "feature";
+
+  @media screen and (min-width: $medium-screen) {
+    grid-template-columns: $gap min(66%, calc(1160px * .66)) min(9%, calc(1160px * .09)) min(25%, calc(1160px * .25)) $gap;
+    grid-template-rows: auto max-content;
+    grid-template-areas:
+      "banner banner banner banner banner"
+      ". content . sidebar ."
+      "feature feature feature feature feature";
+  }
+
+
+  .banner, .text-banner {
+    grid-area: banner;
+  }
+  .main-content {
+    grid-area: content;
+  }
+  .sub-content {
+    grid-area: sidebar;
+  }
+  .feature {
+    grid-area: feature;
+  }
+}

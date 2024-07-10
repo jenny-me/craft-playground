@@ -1,0 +1,16 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: eee1b2bc-0e51-477d-a3ab-5b0f0b0849fe # Homepage
+handle: linkList
+instructions: null
+name: 'Link List'
+searchable: true
+settings:
+  contentTable: '{{%matrixcontent_linklist}}'
+  maxBlocks: 8
+  minBlocks: null
+  propagationKeyFormat: null
+  propagationMethod: all
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

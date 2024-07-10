@@ -1,0 +1,118 @@
+{% extends "main/_layout/main" %}
+
+{% block main %}
+
+{% include "_elements/_redirect.twig" %}
+
+<main id="main" class="content">
+  {% include "_elements/_banner.twig" %}
+
+  <section class="main-content">
+    {% if entry.introduction %}
+    <p class="largetext">{{ entry.introduction }}</p>
+    {% endif %}
+
+    <h2>Upcoming Events</h2>
+
+    {% set today = now|date_modify('-1 day')|atom %}
+    
+    {% set upStart = craft.entries.section('events').eventDate('>= '~ today).ids() %}
+    {% set upEnd = craft.entries.section('events').endDate('>= '~ today).ids() %}
+    {% set filteredUp = upStart|merge(upEnd) %}
+    {% set upcomingEvents = craft.entries.id(filteredUp).orderBy('eventDate asc') %}
+
+    {% set pastEvents = craft.entries
+      .section('events')
+      .orderBy('eventDate desc')
+      .eventDate('< '~ today)
+      .endDate(['or', null, '< '~ today]) %}
+
+    {% if upcomingEvents.count() > 0 %}
+    {% paginate upcomingEvents.limit(10) as upcomingInfo, upcomingEntries %}
+
+    <div class="event-list">
+      {% for post in upcomingEntries %}
+      <div class="event-card">
+        {% set artImage = post.thumbnailImage.one() %}
+        {% if artImage %}
+        <figure>
+          <img src="{{ artImage.getUrl('smallImage') }}" alt="" class="lazyload" loading="lazy" />
+        </figure>
+        {% endif %}
+        <span class="card-content">
+          <h3 class="event-header"><a href="{{ post.url }}">{{ post.title }}</a></h3>
+          {% if post.eventDate %}
+          <p class="date">
+            {{ svg('@webroot/images/icon-event.svg') }}
+            {{ post.eventDate | date("M d, Y") }}{% if post.endDate %} - {{ post.endDate | date("M d, Y") }}{% endif %}
+          </p>
+          {% endif %}
+          {{ post.introduction }}
+        </span>
+      </div>
+      {% endfor %}
+
+      {% if upcomingInfo.totalPages > 1 %}
+      <div class="pager">
+        {% if upcomingInfo.prevUrl %}<a href="{{ upcomingInfo.prevUrl }}" class="PagePrev">Previous Page</a>{% endif %}
+        {% for page, url in upcomingInfo.getPrevUrls(5) %}
+        <a href="{{ url }}" class="CurrentPage">{{ page }}</a>
+        {% endfor %}
+        <span class="CurrentPage">{{ upcomingInfo.currentPage }}</span>
+        {% for page, url in upcomingInfo.getNextUrls(5) %}
+        <a href="{{ url }}" class="CurrentPage">{{ page }}</a>
+        {% endfor %}
+        {% if upcomingInfo.nextUrl %}<a href="{{ upcomingInfo.nextUrl }}" class="PageNext">Next Page</a>{% endif %}
+      </div>
+      {% endif %}
+    </div>
+    {% else %}
+      {% if entry.noEventsMessage|length %}
+      {{ entry.noEventsMessage }}
+      {% endif %}
+    {% endif %}
+
+    {% if pastEvents.count() > 0 %}
+    <hr>
+    <h2 class="past-events-header">Past Events</h2>
+
+    {% paginate pastEvents.limit(10) as pastInfo, pastEntries %}
+    <div class="event-list past-event-list">
+      {% for post in pastEntries %}
+      <div class="event-text">
+        <h3 class="event-header"><a href="{{ post.url }}">{{ post.title }}</a></h3>
+        {% if post.eventDate %}
+        <p class="date">
+          {{ post.eventDate | date("M d, Y") }}{% if post.endDate %} - {{ post.endDate | date("M d, Y") }}{% endif %}
+        </p>
+        {% endif %}
+      </div>
+      {% endfor %}
+
+      {% if pastInfo.totalPages > 1 %}
+      <div class="pager">
+        {% if pastInfo.prevUrl %}<a href="{{ pastInfo.prevUrl }}" class="PagePrev">Previous Page</a>{% endif %}
+        {% for page, url in pastInfo.getPrevUrls(5) %}
+        <a href="{{ url }}" class="CurrentPage">{{ page }}</a>
+        {% endfor %}
+        <span class="CurrentPage">{{ pastInfo.currentPage }}</span>
+        {% for page, url in pastInfo.getNextUrls(5) %}
+        <a href="{{ url }}" class="CurrentPage">{{ page }}</a>
+        {% endfor %}
+        {% if pastInfo.nextUrl %}<a href="{{ pastInfo.nextUrl }}" class="PageNext">Next Page</a>{% endif %}
+      </div>
+      {% endif %}
+    </div>
+    {% endif %}
+  </section>
+  <section class="sub-content">
+    <div class="side-nav">
+      {% include 'main/_layout/_sub-nav.twig' %}
+    </div>
+    {% include "_elements/_sidebar.twig" %}
+  </section>
+
+  {% include '_elements/_feature.twig' %}
+</main>
+
+{% endblock %}

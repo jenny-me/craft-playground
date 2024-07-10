@@ -1,0 +1,82 @@
+{% set entryTypes = entryTypes ? entryTypes|split(',') %}
+{% set categories = categories ? categories|split(',') %}
+{% set topicQuery = craft.app.request.getParam('t') %}
+{% set searchQuery = craft.app.request.getParam('q') %}
+
+{% if topicQuery == "" %}
+  {% set topicQuery = null %}
+{% endif %}
+
+{% if categories %}
+  {% set allCats = craft.entries.section('categories').id(categories).orderBy('title asc').all() %}
+{% else %}
+  {% set allCats = craft.entries.section('categories').orderBy('title asc').all() %}
+{% endif %}
+
+{% if showFilter %}
+  <section class="filters">
+    <form class="directorySearch">
+      <div class="search-field">
+        <label for="topics" class="visuallyhidden">Filter by topic: </label>
+        <select sprig s-indicator="#indicator" id="topics" name="t" class="select">
+          <option value="">All topics</option>
+          {% for topic in allCats %}
+            <option value="{{ topic.id }}" {% if topic.id == topicQuery %}selected{% endif %}>{{ topic.title }}</option>
+          {% endfor %}
+        </select>
+      </div>
+
+      <div class="search-field">
+        <label for="keyword" class="visuallyhidden">Filter by keyword: </label>
+        <input sprig s-trigger="keyup changed delay:1s" s-indicator="#indicator" type="text" id="keyword" name="q" placeholder="Keyword Search" {% if searchQuery != '' %}value="{{ searchQuery }}"{% endif %}>
+      </div>
+    </form>
+  </section>
+{% endif %}
+
+<section class="listing-results">
+{% if topicQuery or searchQuery %}
+  {% set dirFilter = craft.entries
+    .section('articles')
+    .type(entryTypes)
+    .search(searchQuery)
+    .relatedTo(topicQuery) %}
+{% else %}
+  {% set dirFilter = craft.entries
+    .section('articles')
+    .type(entryTypes)
+    .relatedTo(allCats) %}
+{% endif %}
+
+{# Sets a default value if not defined by `s-vals` on the clicked element #}
+{% set page = page ?? 1 %}
+
+{# Sets the number of entries to offset the query by #}
+{% set offset = (page - 1) * limit %}
+
+{% set query = dirFilter.offset(offset).limit(limit) %}
+{% set entries = query.all() %}
+{% set totalEntries = query.count() %}
+{% set totalPages = (totalEntries / limit)|round(0, 'ceil') %}
+
+{% if totalEntries < 1 %}
+  <h2>Sorry, no results were found</h2>
+{% endif %}
+
+  <div class="card-grid">
+    {% for post in entries %}
+      {% include '_elements/_article-card.twig' %}
+    {% endfor %}
+  </div>
+
+  <div id="indicator">
+    <div class="loader">
+      <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+      <div class="loading-text">Loading</div>
+    </div>
+  </div>
+</section>
+
+{% if showPager %}
+  {% include "_components/_pagination.twig" %}
+{% endif %}

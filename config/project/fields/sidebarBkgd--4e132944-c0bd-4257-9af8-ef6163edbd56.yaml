@@ -1,0 +1,35 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 96cc2c98-ff02-48eb-ae38-f6f12745a1dd # Sidebar
+handle: sidebarBkgd
+instructions: ''
+name: 'Sidebar Background'
+searchable: true
+settings:
+  optgroups: true
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - Light
+        -
+          - value
+          - light
+        -
+          - default
+          - 1
+    -
+      __assoc__:
+        -
+          - label
+          - Dark
+        -
+          - value
+          - dark
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Dropdown

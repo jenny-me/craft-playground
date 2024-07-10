@@ -1,0 +1,46 @@
+field: ee3e359f-97fb-4b27-b2e8-a8e94d5c3ad0 # Article Content
+fieldLayouts:
+  aeeb8f88-3b78-485b-9803-6bbce6649fd1:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 2e7cbe9b-6277-43eb-9483-6b2f8e3bd00b # __blank__
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 412c204f-6c86-4884-af2f-ac6b660114b7
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 979eef13-343b-449c-88df-06d744a2fba2
+        userCondition: null
+fields:
+  2e7cbe9b-6277-43eb-9483-6b2f8e3bd00b: # __blank__
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: video
+    instructions: null
+    name: __blank__
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: true
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: video
+name: 'Video or Embed'
+sortOrder: 2

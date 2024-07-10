@@ -1,0 +1,27 @@
+defaultPlacement: end
+enableVersioning: true
+handle: aboutThisSite
+name: 'About This Site'
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  33e15c65-c8eb-45e6-a385-b793d2fcc64d: # Client Name
+    enabledByDefault: true
+    hasUrls: true
+    template: main/page/_entry
+    uriFormat: '{parent.uri}/{slug}'
+structure:
+  maxLevels: null
+  uid: d2d86809-118d-47fd-a47a-72bed4f1222d
+type: structure

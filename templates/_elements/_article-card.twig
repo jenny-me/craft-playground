@@ -1,0 +1,29 @@
+<div class="card">
+  <figure class="article-img">
+    {% set image = post.bannerImage.one() %}
+    {% set thumb = post.thumbnailImage.one() %}
+    {% if thumb|length %}
+      <img src="{{ thumb.getUrl('smallImage') }}" alt="" class="lazyload" loading="lazy" />
+    {% elseif image|length %}
+      <img src="{{ image.getUrl('smallImage') }}" alt="" class="lazyload" loading="lazy" />
+    {% else %}
+      <img src="/images/default-thumb.png" alt="" class="lazyload" loading="lazy" />
+    {% endif %}
+    {% if post.addVideoIcon %}
+    <span class="videoIcon">
+      <img src="/images/icon-play.svg" alt="Video" />
+    </span>
+    {% endif %}
+  </figure>
+  <div class="card-content">
+    {# {% set category = post.articleCategory.one() %}
+    {% if category %}
+    <p class="small-text">{{ category.title }}</p>
+    {% endif %} #}
+    <p class="small-header">{{ post.dirShortDescription }}</p>
+    <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+    {# <p class="date">
+      {{ post.postDate | date("F d, Y") }}
+    </p> #}
+  </div>
+</div>

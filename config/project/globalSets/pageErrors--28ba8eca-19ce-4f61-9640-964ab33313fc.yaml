@@ -1,0 +1,19 @@
+fieldLayouts:
+  187f8f75-8f05-464a-b508-e1ee0b6cd193:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: f510271d-ad11-4cb9-b9d9-6a7ade9bbc3a # 404 Page Not Found Error
+            instructions: null
+            label: null
+            required: '0'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Errors
+        sortOrder: 1
+handle: pageErrors
+name: 'Page Errors'
+sortOrder: 5

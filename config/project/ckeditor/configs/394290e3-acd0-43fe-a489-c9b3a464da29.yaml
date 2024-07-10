@@ -1,0 +1,31 @@
+css: '@import "/stylesheets/ckeditor.css"'
+headingLevels:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+name: Simple
+options:
+  code:
+    indentSequence: '  '
+  link:
+    addTargetToExternalLinks: false
+    decorators:
+      openInNewTab:
+        attributes:
+          target: _blank
+        label: 'Open in a new tab'
+        mode: manual
+      preventTracking:
+        attributes:
+          rel: 'noopener noreferrer'
+        label: 'Prevent SEO crawling'
+        mode: manual
+toolbar:
+  - sourceEditing
+  - '|'
+  - bold
+  - italic
+  - link

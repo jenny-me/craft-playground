@@ -1,0 +1,14 @@
+columnSuffix: null
+contentColumnType: time
+fieldGroup: 50457ffa-e50e-4b28-a515-7a099e2204af # Events
+handle: startTime
+instructions: ''
+name: 'Start Time'
+searchable: true
+settings:
+  max: '22:00'
+  min: '08:00'
+  minuteIncrement: 30
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Time

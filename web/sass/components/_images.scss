@@ -1,0 +1,85 @@
+
+.caption, .image {
+	margin: 0 0 1.5em;
+
+	color: rgba($font-color, .9);
+	font-size: .825em;
+	font-family: $accent-font;
+	font-weight: 200;
+	line-height: 1.5;
+
+	.caption-text {
+		display: block;
+		padding: 1em 0;
+	}
+
+	@media (min-width: $xsmall-screen) {
+		max-width: 33%;
+
+		&.left, &.image-style-block-align-left	{
+			float: left;
+			clear: left;
+			margin: 0 4% 1em 0;
+		}
+		&.right, &.image-style-block-align-right	{
+			float: right;
+			clear: right;
+			margin: 0 0 1em 4%;
+		}
+		&.full, &.image-style-align-center {
+			max-width: 100%;
+			margin: 0 0 1em;
+		}
+	}
+}
+
+// Styles for redactor
+figure {
+	margin: 2.5em 0;
+
+	figcaption {
+		font-size: 13px;
+		line-height: 1.2;
+		padding: 12px 0;
+		font-family: $accent-font;
+		border-bottom: 1px solid $hr-color;
+	}
+}
+
+figure.image-right {
+	width: 290px;
+	float: right;
+	margin: .375em 0 2em 2em;
+
+	@media(max-width: $xsmall-screen) {
+		width: 100%;
+		float: none;
+		max-width: 100%;
+		margin: 2em 0;
+	}
+}
+
+figure.image-left {
+	width: 290px;
+	float: left;
+	margin: .375em 2em 2em 0;
+
+	@media(max-width: $xsmall-screen) {
+		width: 100%;
+		float: none;
+		max-width: 100%;
+		margin: 2em 0;
+	}
+}
+
+figure.image-center {
+	width: 100%;
+	margin: 0 auto 2em auto;
+
+	@media(max-width: $xsmall-screen) {
+		width: 100%;
+		float: none;
+		max-width: 100%;
+		margin: 2em 0;
+	}
+}

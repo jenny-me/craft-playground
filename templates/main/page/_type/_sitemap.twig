@@ -1,0 +1,28 @@
+{% extends "main/_layout/main" %}
+
+{% block main %}
+
+<main id="main" class="content">
+  {% include "_elements/_banner.twig" %}
+
+  <section class="main-content">
+    {% if entry.introduction %}
+    <p class="largetext">{{ entry.introduction }}</p>
+    {% endif %}
+    
+    <div class="sitemap">
+      {% include "main/_layout/_main-nav.twig" %}
+    </div>
+  </section>
+
+  <section class="sub-content">
+    {# <div class="side-nav">
+      {% include 'main/_layout/_sub-nav.twig' %}
+    </div> #}
+    {# {% include "_elements/_sidebar.twig" %} #}
+  </section>
+
+  {% include '_elements/_feature.twig' %}
+</main>
+
+{% endblock %}

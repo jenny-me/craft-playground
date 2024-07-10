@@ -1,0 +1,178 @@
+{% extends "main/_layout/main" %}
+
+{% block main %}
+<main id="main" class="home">
+
+  <section id="hero" class="hero">
+    <div class="hero-image">
+      {% if entry.bannerImage|length %}
+      <picture>
+        <source srcset="{{ entry.bannerImage.one().getUrl({ 'transform': 'hero', 'format': 'webp' }) }}" type="image/webp">
+        <img src="{{ entry.bannerImage.one().getUrl('hero') }}" alt="" />
+      </picture>
+      {% endif %}
+    </div>
+    <div class="hero-text">
+      {% if entry.heroHeader %}
+        <h1>{{ entry.heroHeader }}</h1>
+      {% else %}
+        <h1 class="visuallyhidden">{{ siteName }}</h1>
+      {% endif %}
+      {{ entry.heroText }}
+
+      <div class="link-list">
+        <ul>
+          {% for linkCard in entry.linkList.all() %}
+          <li>
+            {% set cardIcon = linkCard.lcIcon.one() %}
+            {% if cardIcon and cardIcon.extension == 'svg' %}
+              <span class="link-icon"> {{ svg(cardIcon) }} </span>
+            {% endif %}
+            {% if linkCard.lcLocation|length %}
+            <h2><a href="{{ linkCard.lcLocation.one().url }}">{{ linkCard.lcHeader }}</a></h2>
+            {% else %}
+            <h2>{{ linkCard.lcHeader }}</h2>
+            {% endif %}
+            <div class="link-text">
+              {{ linkCard.lcContent }}
+            </div>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section class="main-content">
+    {% for block in entry.homepageContent.all() %}
+    {% switch block.type %}
+      {% case 'hImageBlock' %}
+        {% set image = block.hImage.one() %}
+        <div class="image-block {{ block.hPosition }}">
+          <div class="block-image">
+            {% if image|length %}
+            <img src="{{ image.getUrl('largeImage') }}" alt="" class="lazyload" loading="lazy" />
+            {% endif %}
+          </div>
+          <div class="block-text">
+            {% if block.hCategory %}<p class="small-header">{{ block.hCategory }}</p>{% endif %}
+            {% if block.hHeader %}<h2>{{ block.hHeader }}</h2>{% endif %}
+            {{ block.hDescription }}
+            {% if block.hStatistics %}
+              <ul class="statistics">
+                {% for row in block.hStatistics %}
+                  <li><strong>{{ row.statNumber }}</strong>{{ row.statDescription }}</li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+            {% if block.hButton %}
+            <div class="block-btn button">
+              {{ block.hButton }}
+            </div>
+            {% endif %}
+          </div>
+        </div>
+
+      {% case 'articleList' %}
+        <div class="condensed-list">
+          <div class="cond-text">
+            <h2>{{ block.halHeader }}</h2>
+            {{ block.halDescription }}
+          </div>
+          <div class="card-grid cond-list">
+              {% set entryTypes = [] %}
+              {% for option in block.halType %}
+                {% set entryTypes = entryTypes|merge([option.value]) %}
+              {% endfor %}
+              {% set categories = block.halCategories.all() %}
+              {% set clArticles = craft.entries.section('articles').type(entryTypes).relatedTo(categories).limit(3).all() %}
+              {% for post in clArticles %}
+                {% include '_elements/_article-card.twig' %}
+              {% endfor %}
+          </div>
+        </div>
+
+      {% case 'hFeatureBlock' %}
+        <div class="feature-row {{ block.hfbBkgdColor }} {{ block.hfbPosition }}">
+          <div class="feature-image">
+            {% set image = block.hfbImage.one() %}
+            {% if image %}
+            <figure>
+              <img src="{{ image.getUrl('largeImage') }}" alt="" class="lazyload" loading="lazy">
+            </figure>
+            {% endif %}
+          </div>
+          <div class="feature-text">
+            <div class="feature-content">
+              {% if block.hfbCategory %}<p class="small-header">{{ block.hfbCategory }}</p>{% endif %}
+              {% if block.hfbHeader %}<h2>{{ block.hfbHeader }}</h2>{% endif %}
+              {{ block.hfbDescription }}
+              {% if block.hfbButton %}
+              <div class="feature-btn white-button">
+                {{ block.hfbButton }}
+              </div>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+
+    {% endswitch %}
+    {% endfor %}
+  </section>
+  <div class="locations">
+    <div class="location-content">
+      <div class="locations-inner">
+        {{ entry.locationsContent }}
+      </div>
+    </div>
+    <div class="location-rotator">
+      <div id="carousel">
+        {% for location in entry.locationsRotator.all() %}
+          <div class="slide">
+            <div class="location-img">
+              {% if location.locationImage|length %}
+              <img src="{{ location.locationImage.one().getUrl('smallImage')}}" alt="">
+              {% endif %}
+            </div>
+            <div class="location-text">
+              {{ location.locationInformation }}
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="/js/a11y-slider.js"></script>
+  <script type="text/javascript">
+    (function() {
+      var carousel = new myCarousel();
+      carousel.init({
+        id: 'carousel',
+        slidenav: true,
+        arrowButtons: false,
+        animate: false
+      });
+    })();
+  </script>
+</main>
+
+{% if entry.alert %}
+{% for block in entry.alert.all() %}
+  <div class="alert">
+    <div class="alert-content">
+      {% if block.alertHeader %}<h2>{{ block.alertHeader }}</h2>{% endif %}
+      {{ block.alertDescription }}
+      {% if block.alertButton %}
+      <div class="alert-btn white-button">
+        {{ block.alertButton }}
+      </div>
+      {% endif %}
+    </div>
+    <button class="close-alert">
+      {{ svg('@webroot/images/icon-close.svg') }}
+      <span class="visuallyhidden">Close</span>
+    </button>
+  </div>
+{% endfor %}
+{% endif %}
+
+{% endblock %}
